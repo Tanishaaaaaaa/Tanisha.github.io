@@ -6,101 +6,457 @@
 <title>Tanisha Saxena — Software Engineer</title>
 
 <style>
-.hero{position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-240px;top:-180px;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 24%,transparent),transparent 68%);pointer-events:none;animation:float 8s ease-in-out infinite}.hero>div{position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent2) 12%,transparent);animation:pulse 2s infinite}.hero h1{max-width:980px}.hero p{max-width:760px}.btn{transition:transform .2s,background .2s,color .2s}.btn:hover{transform:translateY(-2px)}.btn.primary:hover{background:var(--accent);color:white}.hero-side{background:color-mix(in srgb,var(--surface) 70%,transparent);backdrop-filter:blur(12px);padding:25px;border:1px solid var(--line);border-radius:22px}.hero-side strong{font-variant-numeric:tabular-nums}.card{position:relative;overflow:hidden}.card:after{content:"";position:absolute;inset:auto -40px -70px auto;width:150px;height:150px;border-radius:50%;background:color-mix(in srgb,var(--accent) 8%,transparent);transition:.3s}.card:hover:after{transform:scale(1.4)}.section{scroll-margin-top:20px}.item{transition:padding-left .2s}.item:hover{padding-left:10px}.cert{transition:.2s transform,.2s border-color}.cert:hover{transform:translateY(-2px);border-color:var(--accent)}.quote{border-left:3px solid var(--accent);padding-left:25px}.footer a:hover{color:var(--accent)}@keyframes float{50%{transform:translate(-20px,18px)}}@keyframes pulse{50%{box-shadow:0 0 0 10px color-mix(in srgb,var(--accent2) 0%,transparent)}}@media(max-width:800px){.hero:before{width:300px;height:300px;right:-170px;top:-80px}}
+.hero{position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-240px;top:-180px;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 24%,transparent),transparent 68%);pointer-events:none;animation:float 8s ease-in-out infinite}
+.hero>div{position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:9px}
+.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent2) 12%,transparent);animation:pulse 2s infinite}
+.hero h1{max-width:980px}
+.hero p{max-width:760px}
+.btn{transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary:hover{background:var(--accent);color:white}
+.hero-side{background:color-mix(in srgb,var(--surface) 70%,transparent);backdrop-filter:blur(12px);padding:25px;border:1px solid var(--line);border-radius:22px}
+.hero-side strong{font-variant-numeric:tabular-nums}
+.card{position:relative;overflow:hidden}
+.card:after{content:"";position:absolute;inset:auto -40px -70px auto;width:150px;height:150px;border-radius:50%;background:color-mix(in srgb,var(--accent) 8%,transparent);transition:.3s}
+.card:hover:after{transform:scale(1.4)}
+.section{scroll-margin-top:20px}
+.item{transition:padding-left .2s}
+.item:hover{padding-left:10px}
+.cert{transition:.2s transform,.2s border-color}
+.cert:hover{transform:translateY(-2px);border-color:var(--accent)}
+.quote{border-left:3px solid var(--accent);padding-left:25px}
+.footer a:hover{color:var(--accent)}
+
+@keyframes float{
+50%{transform:translate(-20px,18px)}
+}
+@keyframes pulse{
+50%{box-shadow:0 0 0 10px color-mix(in srgb,var(--accent2) 0%,transparent)}
+}
+
+@media(max-width:800px){
+.hero:before{width:300px;height:300px;right:-170px;top:-80px}
+}
 </style>
 
 <style>
-:root{color-scheme:light dark;--bg:light-dark(#f7f5ef,#0b0d0f);--surface:light-dark(#fff,#121619);--surface2:light-dark(#f0eee7,#171c20);--text:light-dark(#151515,#f5f5f2);--muted:light-dark(#66645e,#a8ada9);--line:light-dark(#ddd9cf,#2a3034);--accent:light-dark(#8b5cf6,#a78bfa);--accent2:light-dark(#06b6d4,#22d3ee)}
+:root{
+color-scheme:light dark;
+--bg:light-dark(#f7f5ef,#0b0d0f);
+--surface:light-dark(#fff,#121619);
+--surface2:light-dark(#f0eee7,#171c20);
+--text:light-dark(#151515,#f5f5f2);
+--muted:light-dark(#66645e,#a8ada9);
+--line:light-dark(#ddd9cf,#2a3034);
+--accent:light-dark(#8b5cf6,#a78bfa);
+--accent2:light-dark(#06b6d4,#22d3ee)
+}
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
-.root{min-height:100vh;background:var(--bg)}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:auto;padding:0 28px}
 
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.brand{font-weight:800;letter-spacing:-.04em}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+line-height:1.55
+}
+
+.root{min-height:100vh;background:var(--bg)}
+
+a{color:inherit;text-decoration:none}
+
+.wrap{
+max-width:1120px;
+margin:auto;
+padding:0 28px
+}
+
+.nav{
+height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid var(--line)
+}
+
+.brand{
+font-weight:800;
+letter-spacing:-.04em
+}
+
 .brand span{color:var(--accent)}
-.links{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+
+.links{
+display:flex;
+gap:24px;
+font-size:14px;
+color:var(--muted)
+}
+
 .links a:hover{color:var(--text)}
 
-.hero{padding:92px 0 76px;display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:end}
-.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent2);font-weight:800}
-.hero h1{font-size:clamp(52px,8vw,94px);line-height:.92;letter-spacing:-.075em;margin:18px 0 28px;max-width:900px}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero p{font-size:20px;color:var(--muted);max-width:720px;margin:0}
-.hero-side{border-left:1px solid var(--line);padding-left:28px}
-.hero-side strong{display:block;font-size:42px;letter-spacing:-.06em}
+.hero{
+padding:92px 0 76px;
+display:grid;
+grid-template-columns:1.35fr .65fr;
+gap:60px;
+align-items:end
+}
+
+.eyebrow{
+font-size:13px;
+text-transform:uppercase;
+letter-spacing:.16em;
+color:var(--accent2);
+font-weight:800
+}
+
+.hero h1{
+font-size:clamp(52px,8vw,94px);
+line-height:.92;
+letter-spacing:-.075em;
+margin:18px 0 28px;
+max-width:900px
+}
+
+.hero h1 em{
+font-style:normal;
+color:var(--accent)
+}
+
+.hero p{
+font-size:20px;
+color:var(--muted);
+max-width:720px;
+margin:0
+}
+
+.hero-side{
+border-left:1px solid var(--line);
+padding-left:28px
+}
+
+.hero-side strong{
+display:block;
+font-size:42px;
+letter-spacing:-.06em
+}
+
 .hero-side small{color:var(--muted)}
 
-.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
-.btn{padding:12px 17px;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:700}
-.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.actions{
+display:flex;
+gap:12px;
+margin-top:30px;
+flex-wrap:wrap
+}
 
-.section{padding:82px 0;border-top:1px solid var(--line)}
-.section-head{display:flex;justify-content:space-between;gap:30px;align-items:baseline;margin-bottom:34px}
-.section h2{font-size:38px;letter-spacing:-.05em;margin:0}
-.section-head p{color:var(--muted);max-width:480px;margin:0}
+.btn{
+padding:12px 17px;
+border:1px solid var(--line);
+border-radius:999px;
+font-size:14px;
+font-weight:700
+}
 
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:25px;transition:.2s transform,.2s border-color}
-.card:hover{transform:translateY(-3px);border-color:var(--accent)}
-.card .num{font-size:12px;color:var(--accent);font-weight:800}
-.card h3{font-size:22px;letter-spacing:-.035em;margin:12px 0 8px}
-.card p{color:var(--muted);margin:0}
+.btn.primary{
+background:var(--text);
+color:var(--bg);
+border-color:var(--text)
+}
 
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
-.tag{font-size:12px;border:1px solid var(--line);padding:5px 9px;border-radius:999px;color:var(--muted)}
+.section{
+padding:82px 0;
+border-top:1px solid var(--line)
+}
 
-.feature{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.section-head{
+display:flex;
+justify-content:space-between;
+gap:30px;
+align-items:baseline;
+margin-bottom:34px
+}
+
+.section h2{
+font-size:38px;
+letter-spacing:-.05em;
+margin:0
+}
+
+.section-head p{
+color:var(--muted);
+max-width:480px;
+margin:0
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px
+}
+
+.card{
+background:var(--surface);
+border:1px solid var(--line);
+border-radius:20px;
+padding:25px;
+transition:.2s transform,.2s border-color
+}
+
+.card:hover{
+transform:translateY(-3px);
+border-color:var(--accent)
+}
+
+.card .num{
+font-size:12px;
+color:var(--accent);
+font-weight:800
+}
+
+.card h3{
+font-size:22px;
+letter-spacing:-.035em;
+margin:12px 0 8px
+}
+
+.card p{
+color:var(--muted);
+margin:0
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:7px;
+margin-top:18px
+}
+
+.tag{
+font-size:12px;
+border:1px solid var(--line);
+padding:5px 9px;
+border-radius:999px;
+color:var(--muted)
+}
+
+.feature{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px
+}
+
 .feature .card{min-height:285px}
-.feature .card:first-child{background:linear-gradient(135deg,var(--surface),color-mix(in srgb,var(--accent) 10%,var(--surface)))}
 
-.kicker{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
-.big{font-size:31px;letter-spacing:-.05em;margin:14px 0}
+.feature .card:first-child{
+background:linear-gradient(
+135deg,
+var(--surface),
+color-mix(in srgb,var(--accent) 10%,var(--surface))
+)
+}
 
-.timeline{position:relative;margin-top:12px}
-.item{display:grid;grid-template-columns:150px 1fr;gap:30px;padding:25px 0;border-bottom:1px solid var(--line)}
+.kicker{
+font-size:12px;
+color:var(--muted);
+text-transform:uppercase;
+letter-spacing:.12em
+}
+
+.big{
+font-size:31px;
+letter-spacing:-.05em;
+margin:14px 0
+}
+
+.timeline{
+position:relative;
+margin-top:12px
+}
+
+.item{
+display:grid;
+grid-template-columns:150px 1fr;
+gap:30px;
+padding:25px 0;
+border-bottom:1px solid var(--line)
+}
+
 .item:last-child{border-bottom:0}
-.date{font-size:13px;color:var(--accent2);font-weight:800}
-.item h3{margin:0 0 6px;font-size:21px}
-.item p{margin:0;color:var(--muted)}
 
-.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.cert{padding:17px 18px;background:var(--surface2);border:1px solid var(--line);border-radius:14px}
+.date{
+font-size:13px;
+color:var(--accent2);
+font-weight:800
+}
+
+.item h3{
+margin:0 0 6px;
+font-size:21px
+}
+
+.item p{
+margin:0;
+color:var(--muted)
+}
+
+.cert-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px
+}
+
+.cert{
+padding:17px 18px;
+background:var(--surface2);
+border:1px solid var(--line);
+border-radius:14px
+}
+
 .cert strong{display:block}
-.cert span{color:var(--muted);font-size:13px}
 
-.quote{font-size:28px;line-height:1.25;letter-spacing:-.04em;max-width:850px}
+.cert span{
+color:var(--muted);
+font-size:13px
+}
 
-.footer{padding:70px 0 45px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font-size:14px}
+.quote{
+font-size:28px;
+line-height:1.25;
+letter-spacing:-.04em;
+max-width:850px
+}
+
+.footer{
+padding:70px 0 45px;
+display:flex;
+justify-content:space-between;
+gap:30px;
+color:var(--muted);
+font-size:14px
+}
+
 .footer strong{color:var(--text)}
 
 @media(max-width:800px){
 .links{display:none}
-.hero{grid-template-columns:1fr;padding-top:64px}
-.hero-side{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}
-.grid,.feature,.cert-grid{grid-template-columns:1fr}
-.item{grid-template-columns:1fr;gap:8px}
+
+.hero{
+grid-template-columns:1fr;
+padding-top:64px
+}
+
+.hero-side{
+border-left:0;
+border-top:1px solid var(--line);
+padding:24px 0 0
+}
+
+.grid,
+.feature,
+.cert-grid{
+grid-template-columns:1fr
+}
+
+.item{
+grid-template-columns:1fr;
+gap:8px
+}
+
 .section{padding:60px 0}
+
 .hero h1{font-size:56px}
+
 .wrap{padding:0 20px}
+
 .footer{flex-direction:column}
 }
 </style>
 
 <style>
-.hero{min-height:calc(100vh - 76px);align-items:center}
-.hero-sub{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;color:var(--muted);font-size:13px}
-.pill{padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--surface) 65%,transparent)}
-.scroll-cue{margin-top:54px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:10px}
-.scroll-cue span{display:block;width:42px;height:1px;background:var(--line)}
-.availability{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:18px}
-.availability:before{content:"";width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 5px #22c55e22}
-.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 0;white-space:nowrap;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.18em}
-.marquee-track{display:inline-block;animation:marquee 24s linear infinite}
-.marquee i{font-style:normal;color:var(--accent);padding:0 22px}
+.hero{
+min-height:calc(100vh - 76px);
+align-items:center
+}
+
+.hero-sub{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:22px;
+color:var(--muted);
+font-size:13px
+}
+
+.pill{
+padding:7px 11px;
+border:1px solid var(--line);
+border-radius:999px;
+background:color-mix(in srgb,var(--surface) 65%,transparent)
+}
+
+.scroll-cue{
+margin-top:54px;
+font-size:12px;
+color:var(--muted);
+display:flex;
+align-items:center;
+gap:10px
+}
+
+.scroll-cue span{
+display:block;
+width:42px;
+height:1px;
+background:var(--line)
+}
+
+.availability{
+display:inline-flex;
+align-items:center;
+gap:8px;
+font-size:12px;
+color:var(--muted);
+margin-top:18px
+}
+
+.availability:before{
+content:"";
+width:7px;
+height:7px;
+border-radius:50%;
+background:#22c55e;
+box-shadow:0 0 0 5px #22c55e22
+}
+
+.marquee{
+overflow:hidden;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+padding:15px 0;
+white-space:nowrap;
+color:var(--muted);
+font-size:12px;
+text-transform:uppercase;
+letter-spacing:.18em
+}
+
+.marquee-track{
+display:inline-block;
+animation:marquee 24s linear infinite
+}
+
+.marquee i{
+font-style:normal;
+color:var(--accent);
+padding:0 22px
+}
 
 @keyframes marquee{
 to{transform:translateX(-50%)}
@@ -110,104 +466,835 @@ to{transform:translateX(-50%)}
 .hero{min-height:auto}
 }
 </style>
+
+<style>
+.lab-launch{
+margin-top:26px;
+display:grid;
+gap:10px
+}
+
+.lab-title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px
+}
+
+.lab-title span:first-child{
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:.15em;
+color:var(--accent2);
+font-weight:800
+}
+
+.lab-title span:last-child{
+font-size:11px;
+color:var(--muted)
+}
+
+.lab-btn{
+width:100%;
+display:grid;
+grid-template-columns:auto 1fr auto;
+align-items:center;
+gap:12px;
+text-align:left;
+border:1px solid var(--line);
+background:color-mix(in srgb,var(--surface) 82%,transparent);
+color:var(--text);
+backdrop-filter:blur(14px);
+padding:14px 15px;
+border-radius:17px;
+font:700 13px inherit;
+cursor:pointer;
+box-shadow:0 12px 35px #00000010;
+transition:.25s transform,.25s border-color,.25s background
+}
+
+.lab-btn:hover{
+transform:translateX(-4px);
+border-color:var(--accent);
+background:color-mix(in srgb,var(--accent) 7%,var(--surface))
+}
+
+.lab-btn .lab-icon{
+width:30px;
+height:30px;
+display:grid;
+place-items:center;
+border-radius:10px;
+background:var(--surface2);
+font-size:15px
+}
+
+.lab-btn .lab-copy{
+display:grid;
+gap:2px
+}
+
+.lab-btn .lab-copy small{
+font-size:11px;
+font-weight:500;
+color:var(--muted)
+}
+
+.lab-btn .lab-arrow{
+color:var(--muted);
+transition:.2s transform
+}
+
+.lab-btn:hover .lab-arrow{
+transform:translateX(3px);
+color:var(--accent)
+}
+
+.lab-modal{
+position:fixed;
+inset:0;
+background:#00000055;
+backdrop-filter:blur(6px);
+z-index:60;
+display:none;
+align-items:flex-end;
+justify-content:flex-end;
+padding:24px
+}
+
+.lab-modal.open{display:flex}
+
+.lab-panel{
+width:min(440px,100%);
+max-height:min(680px,calc(100vh - 48px));
+overflow:auto;
+background:var(--surface);
+color:var(--text);
+border:1px solid var(--line);
+border-radius:24px;
+padding:22px;
+box-shadow:0 25px 80px #00000033
+}
+
+.lab-head{
+display:flex;
+align-items:flex-start;
+justify-content:space-between;
+gap:18px
+}
+
+.lab-head h3{
+margin:0;
+font-size:24px;
+letter-spacing:-.04em
+}
+
+.lab-head p{
+margin:4px 0 0;
+color:var(--muted);
+font-size:13px
+}
+
+.lab-close{
+border:0;
+background:var(--surface2);
+color:var(--text);
+width:36px;
+height:36px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px
+}
+
+.chat-log{
+display:grid;
+gap:10px;
+margin:20px 0;
+max-height:330px;
+overflow:auto
+}
+
+.chat-msg{
+padding:11px 13px;
+border-radius:15px;
+background:var(--surface2);
+font-size:14px
+}
+
+.chat-msg.user{
+background:color-mix(in srgb,var(--accent) 12%,var(--surface));
+margin-left:28px
+}
+
+.quick{
+display:flex;
+flex-wrap:wrap;
+gap:7px;
+margin-bottom:12px
+}
+
+.quick button,
+.game-option{
+border:1px solid var(--line);
+background:transparent;
+color:var(--text);
+border-radius:999px;
+padding:8px 10px;
+font:600 12px inherit;
+cursor:pointer
+}
+
+.quick button:hover,
+.game-option:hover{
+border-color:var(--accent);
+background:color-mix(in srgb,var(--accent) 8%,transparent)
+}
+
+.chat-input{
+display:flex;
+gap:8px
+}
+
+.chat-input input{
+min-width:0;
+flex:1;
+border:1px solid var(--line);
+background:var(--surface2);
+color:var(--text);
+border-radius:12px;
+padding:11px 12px;
+font:14px inherit
+}
+
+.chat-input button,
+.game-next{
+border:0;
+background:var(--text);
+color:var(--bg);
+border-radius:12px;
+padding:11px 14px;
+font:800 13px inherit;
+cursor:pointer
+}
+
+.game-kicker{
+font-size:11px;
+color:var(--accent2);
+font-weight:800;
+letter-spacing:.12em;
+text-transform:uppercase;
+margin-top:20px
+}
+
+.game-question{
+font-size:21px;
+line-height:1.25;
+letter-spacing:-.03em;
+margin:8px 0 15px
+}
+
+.game-options{
+display:grid;
+gap:9px
+}
+
+.game-option{
+text-align:left;
+border-radius:13px;
+padding:12px
+}
+
+.game-result{
+margin-top:15px;
+padding:13px;
+border:1px solid var(--line);
+border-radius:14px;
+background:var(--surface2);
+font-size:13px;
+color:var(--muted)
+}
+
+.game-progress{
+height:4px;
+background:var(--surface2);
+border-radius:99px;
+overflow:hidden;
+margin-top:16px
+}
+
+.game-progress span{
+display:block;
+height:100%;
+width:33%;
+background:var(--accent);
+transition:.3s width
+}
+
+@media(max-width:800px){
+.lab-launch{margin-top:4px}
+
+.lab-btn:hover{
+transform:translateY(-2px)
+}
+}
+
+@media(max-width:600px){
+.lab-modal{padding:12px}
+
+.lab-panel{border-radius:20px}
+}
+
+.hero-side{position:relative}
+
+.hero-side:before{
+content:"01";
+position:absolute;
+top:12px;
+right:15px;
+font:800 10px ui-monospace,SFMono-Regular,Menlo,monospace;
+color:var(--muted);
+opacity:.65
+}
+
+.status-card{
+margin-top:26px;
+padding:14px 15px;
+border:1px dashed var(--line);
+border-radius:16px;
+background:color-mix(in srgb,var(--surface2) 55%,transparent);
+font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+font-size:11px
+}
+
+.status-row{
+display:flex;
+justify-content:space-between;
+gap:15px;
+padding:4px 0
+}
+
+.status-row span:first-child{color:var(--muted)}
+
+.status-live{color:#22c55e}
+
+.status-live:before{
+content:"●";
+margin-right:6px
+}
+
+.now-card{
+margin-top:18px;
+display:grid;
+grid-template-columns:8px 1fr;
+gap:10px;
+align-items:start
+}
+
+.now-card:before{
+content:"";
+width:8px;
+height:8px;
+margin-top:6px;
+border-radius:50%;
+background:var(--accent);
+box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 10%,transparent);
+animation:pulse 2s infinite
+}
+
+.now-card strong{font-size:12px}
+
+.now-card small{
+display:block;
+color:var(--muted);
+font-size:11px;
+margin-top:2px
+}
+
+.hero-note{
+display:inline-block;
+margin-top:22px;
+font:600 12px ui-monospace,SFMono-Regular,Menlo,monospace;
+color:var(--muted)
+}
+
+.hero-note b{color:var(--accent)}
+
+.section-head h2{position:relative}
+
+.section-head h2:after{
+content:"↘";
+font-size:17px;
+color:var(--accent);
+vertical-align:top;
+margin-left:7px
+}
+
+.feature .card:hover,
+.grid .card:hover{
+box-shadow:0 18px 55px #00000012
+}
+
+.kicker{
+font-family:ui-monospace,SFMono-Regular,Menlo,monospace
+}
+
+.footer{
+border-top:1px solid var(--line)
+}
+</style>
 </head>
 
 <body>
+
 <div class="root">
 
 <div class="wrap">
+
 <nav class="nav">
-<a class="brand" href="#top">tanisha<span>.</span></a>
+
+<a class="brand" href="#top">
+tanisha<span>.</span>
+</a>
 
 <div class="links">
+
 <a href="#work">Work</a>
 <a href="#builds">Builds</a>
+<a href="#notes">Notes</a>
 <a href="#journey">Journey</a>
 <a href="#credentials">Credentials</a>
-<a href="https://github.com/Tanishaaaaaaa" target="_blank">GitHub ↗</a>
-<a href="https://www.linkedin.com/in/tanisha-saxena-978237277/" target="_blank">LinkedIn ↗</a>
+
+<a href="https://dev.to/tanisha_saxena_6ee4977663" target="_blank">
+DEV.to ↗
+</a>
+
+<a href="https://github.com/Tanishaaaaaaa" target="_blank">
+GitHub ↗
+</a>
+
+<a href="https://www.linkedin.com/in/tanisha-saxena-978237277/" target="_blank">
+LinkedIn ↗
+</a>
+
 </div>
+
 </nav>
+
 </div>
 
 <main id="top" class="wrap">
 
+<!-- ASK TANISHA -->
+
+<div id="ask"
+class="lab-modal"
+role="dialog"
+aria-modal="true"
+aria-labelledby="ask-title">
+
+<div class="lab-panel">
+
+<div class="lab-head">
+
+<div>
+
+<h3 id="ask-title">
+✦ Ask Tanisha
+</h3>
+
+<p>
+A tiny portfolio guide — ask about the work, not the buzzwords.
+</p>
+
+</div>
+
+<button
+class="lab-close"
+type="button"
+aria-label="Close">
+×
+</button>
+
+</div>
+
+<div id="chat-log" class="chat-log">
+
+<div class="chat-msg">
+Hey 👋 I’m the portfolio version of Tanisha.
+Ask me about her engineering work, AI projects,
+research, or what she likes building.
+</div>
+
+</div>
+
+<div class="quick">
+
+<button
+type="button"
+data-q="What does Tanisha work on?">
+What does she work on?
+</button>
+
+<button
+type="button"
+data-q="Tell me about her AI work.">
+AI & research
+</button>
+
+<button
+type="button"
+data-q="What has she built?">
+Projects
+</button>
+
+<button
+type="button"
+data-q="What makes her an engineer?">
+Engineering style
+</button>
+
+</div>
+
+<form class="chat-input" id="chat-form">
+
+<input
+id="chat-input"
+aria-label="Ask about Tanisha"
+placeholder="Ask something about Tanisha…">
+
+<button type="submit">
+Ask
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- DEBUG TANISHA -->
+
+<div id="debug"
+class="lab-modal"
+role="dialog"
+aria-modal="true"
+aria-labelledby="debug-title">
+
+<div class="lab-panel">
+
+<div class="lab-head">
+
+<div>
+
+<h3 id="debug-title">
+⌘ Debug Tanisha
+</h3>
+
+<p>
+60 seconds. Three production decisions. No trick questions.
+</p>
+
+</div>
+
+<button
+class="lab-close"
+type="button"
+aria-label="Close">
+×
+</button>
+
+</div>
+
+<div class="game-progress">
+
+<span id="game-progress"></span>
+
+</div>
+
+<div id="game-content"></div>
+
+</div>
+
+</div>
+
+
+<!-- MARQUEE -->
+
 <div class="marquee">
+
 <div class="marquee-track">
-BACKEND <i>✦</i>
-CLOUD NATIVE <i>✦</i>
-DATA SYSTEMS <i>✦</i>
-AI / ML <i>✦</i>
-DISTRIBUTED SYSTEMS <i>✦</i>
-JAVA <i>✦</i>
-KUBERNETES <i>✦</i>
-BACKEND <i>✦</i>
-CLOUD NATIVE <i>✦</i>
-DATA SYSTEMS <i>✦</i>
-AI / ML <i>✦</i>
-DISTRIBUTED SYSTEMS <i>✦</i>
-JAVA <i>✦</i>
-KUBERNETES <i>✦</i>
+
+BACKEND
+<i>✦</i>
+
+CLOUD NATIVE
+<i>✦</i>
+
+DATA SYSTEMS
+<i>✦</i>
+
+AI / ML
+<i>✦</i>
+
+DISTRIBUTED SYSTEMS
+<i>✦</i>
+
+JAVA
+<i>✦</i>
+
+KUBERNETES
+<i>✦</i>
+
+BACKEND
+<i>✦</i>
+
+CLOUD NATIVE
+<i>✦</i>
+
+DATA SYSTEMS
+<i>✦</i>
+
+AI / ML
+<i>✦</i>
+
+DISTRIBUTED SYSTEMS
+<i>✦</i>
+
+JAVA
+<i>✦</i>
+
+KUBERNETES
+<i>✦</i>
+
 </div>
+
 </div>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
 <div>
 
-<div class="eyebrow">Software Engineer · Bengaluru</div>
+<div class="eyebrow">
+Software Engineer · Bengaluru
+</div>
 
 <h1>
-Building systems that <em>actually do something.</em>
+Building systems that
+<em>actually do something.</em>
 </h1>
 
 <p>
 I’m Tanisha — a backend & data systems engineer who likes turning messy problems into reliable software, from cloud-native microservices to AI-powered prototypes.
 </p>
 
+<div class="hero-note">
+// currently shipping <b>reliable things</b>, occasionally breaking them
+</div>
+
 <div class="hero-sub">
+
 <span class="pill">Backend</span>
 <span class="pill">Cloud Native</span>
 <span class="pill">Data Systems</span>
 <span class="pill">AI / ML</span>
+
 </div>
 
 <div class="actions">
-<a class="btn primary" href="#work">Explore my work ↓</a>
-<a class="btn" href="https://github.com/Tanishaaaaaaa" target="_blank">GitHub ↗</a>
-<a class="btn" href="https://www.linkedin.com/in/tanisha-saxena-978237277/" target="_blank">LinkedIn ↗</a>
+
+<a class="btn primary" href="#work">
+Explore my work ↓
+</a>
+
+<a
+class="btn"
+href="https://github.com/Tanishaaaaaaa"
+target="_blank">
+GitHub ↗
+</a>
+
+<a
+class="btn"
+href="https://www.linkedin.com/in/tanisha-saxena-978237277/"
+target="_blank">
+LinkedIn ↗
+</a>
+
 </div>
 
 <div class="scroll-cue">
+
 <span></span>
 scroll to explore
+
 </div>
 
 </div>
+
 
 <div class="hero-side">
 
 <strong>1+ yr</strong>
-<small>professional software engineering experience</small>
+
+<small>
+professional software engineering experience
+</small>
 
 <br><br>
 
 <strong>1 → ∞</strong>
-<small>Always building, always learning</small>
+
+<small>
+Always building, always learning
+</small>
 
 <div class="availability">
 Building in production at Schneider Electric
+</div>
+
+
+<!-- SYSTEM STATUS -->
+
+<div class="status-card">
+
+<div class="status-row">
+
+<span>system.status</span>
+
+<span class="status-live">
+ONLINE
+</span>
+
+</div>
+
+<div class="status-row">
+
+<span>stack</span>
+
+<span>
+JAVA · K8S · CLOUD
+</span>
+
+</div>
+
+<div class="status-row">
+
+<span>mode</span>
+
+<span>
+BUILD / LEARN / REPEAT
+</span>
+
+</div>
+
+</div>
+
+
+<!-- NOW -->
+
+<div class="now-card">
+
+<div>
+
+<strong>NOW</strong>
+
+<small>
+Making backend systems less dramatic.
+</small>
+
+</div>
+
+</div>
+
+
+<!-- PLAYGROUND -->
+
+<div class="lab-launch">
+
+<div class="lab-title">
+
+<span>
+tiny playground
+</span>
+
+<span>
+pick your side quest ↘
+</span>
+
+</div>
+
+
+<button
+class="lab-btn ai"
+type="button"
+data-open="ask">
+
+<span class="lab-icon">
+✦
+</span>
+
+<span class="lab-copy">
+
+Ask Tanisha
+
+<small>
+Ask the portfolio anything
+</small>
+
+</span>
+
+<span class="lab-arrow">
+→
+</span>
+
+</button>
+
+
+<button
+class="lab-btn"
+type="button"
+data-open="debug">
+
+<span class="lab-icon">
+⌘
+</span>
+
+<span class="lab-copy">
+
+Debug Tanisha
+
+<small>
+Make 3 production calls
+</small>
+
+</span>
+
+<span class="lab-arrow">
+→
+</span>
+
+</button>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- WORK -->
+
 <section id="work" class="section">
 
 <div class="section-head">
 
-<h2>What I work on</h2>
+<h2>
+What I work on
+</h2>
 
 <p>
 My sweet spot sits where backend engineering, data systems, cloud infrastructure and intelligent workflows overlap.
@@ -215,61 +1302,82 @@ My sweet spot sits where backend engineering, data systems, cloud infrastructure
 
 </div>
 
+
 <div class="grid">
 
 <article class="card">
 
-<div class="num">01 / BACKEND</div>
+<div class="num">
+01 / BACKEND
+</div>
 
-<h3>Cloud-native services</h3>
+<h3>
+Cloud-native services
+</h3>
 
 <p>
 Designing and maintaining scalable microservices and REST APIs with Java, Spring Boot, C# and distributed-system patterns.
 </p>
 
 <div class="tags">
+
 <span class="tag">Java</span>
 <span class="tag">Spring Boot</span>
 <span class="tag">C#</span>
 <span class="tag">REST</span>
+
 </div>
 
 </article>
 
+
 <article class="card">
 
-<div class="num">02 / DATA</div>
+<div class="num">
+02 / DATA
+</div>
 
-<h3>Data & knowledge systems</h3>
+<h3>
+Data & knowledge systems
+</h3>
 
 <p>
 Working with data pipelines, ontology/graph concepts, SPARQL and SQL/NoSQL systems to make complex information usable.
 </p>
 
 <div class="tags">
+
 <span class="tag">SPARQL</span>
 <span class="tag">Graph</span>
 <span class="tag">SQL</span>
 <span class="tag">NoSQL</span>
+
 </div>
 
 </article>
 
+
 <article class="card">
 
-<div class="num">03 / CLOUD</div>
+<div class="num">
+03 / CLOUD
+</div>
 
-<h3>Production thinking</h3>
+<h3>
+Production thinking
+</h3>
 
 <p>
 Observability, logging, debugging, containers and CI/CD — the unglamorous stuff that makes software survive real users.
 </p>
 
 <div class="tags">
+
 <span class="tag">Azure</span>
 <span class="tag">AWS</span>
 <span class="tag">Docker</span>
 <span class="tag">Kubernetes</span>
+
 </div>
 
 </article>
@@ -278,11 +1386,16 @@ Observability, logging, debugging, containers and CI/CD — the unglamorous stuf
 
 </section>
 
+
+<!-- BUILDS -->
+
 <section id="builds" class="section">
 
 <div class="section-head">
 
-<h2>Things I’ve built</h2>
+<h2>
+Things I’ve built
+</h2>
 
 <p>
 Not everything belongs in a corporate job description. These are the projects that show how I think when I get to explore.
@@ -290,98 +1403,134 @@ Not everything belongs in a corporate job description. These are the projects th
 
 </div>
 
+
 <div class="feature">
+
 
 <article class="card">
 
-<div class="kicker">Hackathon · 2026</div>
+<div class="kicker">
+Hackathon · 2026
+</div>
 
-<div class="big">🌊 StormShield AI</div>
+<div class="big">
+🌊 StormShield AI
+</div>
 
 <p>
 An AI-powered flood and weather guardian built with OmniShield. The system combines live environmental data with XGBoost to forecast water levels 30 minutes ahead, Gemini-powered safety guidance, real-time alerts and interactive visualizations.
 </p>
 
 <div class="tags">
+
 <span class="tag">Python</span>
 <span class="tag">FastAPI</span>
 <span class="tag">XGBoost</span>
 <span class="tag">Gemini</span>
 <span class="tag">Streamlit</span>
+
 </div>
 
 </article>
 
+
 <article class="card">
 
-<div class="kicker">AI · Healthcare</div>
+<div class="kicker">
+AI · Healthcare
+</div>
 
-<div class="big">🏥 NovaCare — AI Healthcare Workflow Automation</div>
+<div class="big">
+🏥 NovaCare — AI Healthcare Workflow Automation
+</div>
 
 <p>
 An AI-focused healthcare project designed around accessible, intelligent support and user-centric care workflows, combining software engineering with applied AI concepts.Integrated Amazon Nova models (Sonic, Lite, Act, Multimodal Embeddings) with a Python FastAPI backend and PostgreSQL to automate patient triage and intake, cutting manual registration steps by ~70%.
 </p>
 
 <div class="tags">
+
 <span class="tag">AI / ML</span>
 <span class="tag">Healthcare</span>
 <span class="tag">Intelligent Systems</span>
+
 </div>
 
 </article>
 
+
 <article class="card">
 
-<div class="kicker">Project</div>
+<div class="kicker">
+Project
+</div>
 
-<div class="big">⚙️ Multicloud File Sharing using CP-ABE</div>
+<div class="big">
+⚙️ Multicloud File Sharing using CP-ABE
+</div>
 
 <p>
 Engineered a privacy-preserving multicloud file-sharing platform leveraging Ciphertext-Policy Attribute-Based Encryption (CP-ABE). The system embeds fine-grained access control policies directly into encrypted data, enabling secure multi-authority file distribution across heterogeneous cloud environments while guaranteeing data confidentiality against semi-trusted cloud providers.
 </p>
 
 <div class="tags">
+
 <span class="tag">Software Engineering</span>
 <span class="tag">Problem Solving</span>
 <span class="tag">Development</span>
+
 </div>
 
 </article>
 
+
 <article class="card">
 
-<div class="kicker">WID SheSparks · 2026</div>
+<div class="kicker">
+WID SheSparks · 2026
+</div>
 
-<div class="big">♻️ EcoPilot Gateway</div>
+<div class="big">
+♻️ EcoPilot Gateway
+</div>
 
 <p>
 An AI gateway for responsible token governance and cost-aware model routing. A knowledge base and LLM router classify prompts and route each request to the appropriate model, avoiding unnecessary use of premium cloud AI credits while keeping model selection intentional and efficient.
 </p>
 
 <div class="tags">
+
 <span class="tag">LLM Router</span>
 <span class="tag">Knowledge Base</span>
 <span class="tag">Token Governance</span>
 <span class="tag">AI Gateway</span>
 <span class="tag">Cost Optimization</span>
+
 </div>
 
 </article>
 
+
 <article class="card">
 
-<div class="kicker">Research · AI / ML</div>
+<div class="kicker">
+Research · AI / ML
+</div>
 
-<div class="big">🧠 Intelligent Exam Proctoring</div>
+<div class="big">
+🧠 Intelligent Exam Proctoring
+</div>
 
 <p>
 An automated online exam-proctoring system focused on authentication and abnormal-behaviour monitoring using image processing and deep learning.
 </p>
 
 <div class="tags">
+
 <span class="tag">Computer Vision</span>
 <span class="tag">Deep Learning</span>
 <span class="tag">Image Processing</span>
+
 </div>
 
 </article>
@@ -390,25 +1539,188 @@ An automated online exam-proctoring system focused on authentication and abnorma
 
 </section>
 
-<section class="section">
+
+<!-- DEV.TO -->
+
+<section id="notes" class="section">
 
 <div class="section-head">
 
-<h2>Proof, not just projects</h2>
+<h2>
+Field notes from the dev trenches
+</h2>
 
 <p>
-A few milestones that shaped the person behind the code.
+The less-serious side of being a developer: weird workdays, questionable architecture and turning everyday frustrations into things worth building.
 </p>
 
 </div>
 
-<div class="grid">
+
+<div class="feature">
+
 
 <article class="card">
 
-<div class="num">03rd PLACE</div>
+<div class="kicker">
+Dev journal · DEV.to
+</div>
 
-<h3>WID SheSparks 2026 Ideathon</h3>
+<div class="big">
+“A totally accurate day in the life of a software developer.”
+</div>
+
+<p>
+17 browser tabs, a “quick question” that is never quick, debugging rituals and the mysterious bug that only makes sense at 10:47 PM. Basically: a normal Tuesday.
+</p>
+
+<div class="tags">
+
+<span class="tag">Developer Life</span>
+<span class="tag">Debugging</span>
+<span class="tag">Relatable</span>
+
+</div>
+
+<div class="actions">
+
+<a
+class="btn"
+href="https://dev.to/tanisha_saxena_6ee4977663/a-totally-accurate-day-in-the-life-of-a-software-developer-3i1m"
+target="_blank">
+
+Read the chaos ↗
+
+</a>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<div class="kicker">
+Hot take · DEV.to
+</div>
+
+<div class="big">
+“It worked on my machine… so why is production on fire?”
+</div>
+
+<p>
+A playful look at the universal developer experience: local success, production betrayal, and the tiny gap between “works for me” and “please don't page me again.”
+</p>
+
+<div class="tags">
+
+<span class="tag">Production</span>
+<span class="tag">Debugging</span>
+<span class="tag">Developer Humor</span>
+
+</div>
+
+<div class="actions">
+
+<a
+class="btn"
+href="https://dev.to/tanisha_saxena_6ee4977663/it-worked-on-my-machine-so-why-is-production-on-fire-4b3d"
+target="_blank">
+
+Read the hot take ↗
+
+</a>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<div class="kicker">
+Builder brain · DEV.to
+</div>
+
+<div class="big">
+“What if complaining was a product requirement?”
+</div>
+
+<p>
+Problem Radar turns everyday frustrations into hackathon-ready ideas, complete with users, solutions, tech stack and a build plan. Because apparently complaining can be productive.
+</p>
+
+<div class="tags">
+
+<span class="tag">Hackathons</span>
+<span class="tag">React</span>
+<span class="tag">Problem Solving</span>
+
+</div>
+
+<div class="actions">
+
+<a
+class="btn"
+href="https://dev.to/tanisha_saxena_6ee4977663/-i-built-an-app-that-turns-daily-frustrations-into-hackathon-ideas-and-it-might-replace-4lai"
+target="_blank">
+
+Read the idea ↗
+
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+
+<div class="actions">
+
+<a
+class="btn primary"
+href="https://dev.to/tanisha_saxena_6ee4977663"
+target="_blank">
+
+Explore all my DEV.to writing ↗
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- PROOF -->
+
+<section class="section">
+
+<div class="section-head">
+
+<h2>
+Proof, not just projects
+</h2>
+
+<p>
+A few milestones that shaped the person behind the code — from building and competing to publishing research and contributing to technical communities.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<article class="card">
+
+<div class="num">
+03rd PLACE
+</div>
+
+<h3>
+WID SheSparks 2026 Ideathon
+</h3>
 
 <p>
 Secured 3rd place for EcoPilot Gateway, a sustainability-focused AI gateway exploring token governance, knowledge-based prompt classification and intelligent model routing.
@@ -416,22 +1728,33 @@ Secured 3rd place for EcoPilot Gateway, a sustainability-focused AI gateway expl
 
 </article>
 
+
 <article class="card">
 
-<div class="num">IEEE</div>
+<div class="num">
+RESEARCH
+</div>
 
-<h3>IEEE Lead Researcher & Conference Presenter</h3>
+<h3>
+IEEE Lead Researcher & Conference Presenter
+</h3>
 
 <p>
 Recognized as lead researcher and author at IEEE CONECCT 2025 and IEEE COMPUTE 2024 for contributions to applied machine learning. Published research on Explainable AI (integrating ARIMA with SHAP for time-series forecasting) and presented poster sessions on deep-learning-based behavioral anomaly detection.
 </p>
 
 </article>
+
+
 <article class="card">
 
-<div class="num">NPTEL</div>
+<div class="num">
+AUTHOR
+</div>
 
-<h3>NPTEL Believer and Discipline Star Award Winner</h3>
+<h3>
+NPTEL Believer and Discipline Star Award Winner
+</h3>
 
 <p>
 Awarded for exceptional commitment to continuous upskilling by sitting for and successfully getting certified in 5 proctored technical exams in a single semester (Jan–Apr 2025). Completed certifications with Elite + Silver medals across Data Analytics with Python, Business Intelligence, and Java Programming.
@@ -439,11 +1762,13 @@ Awarded for exceptional commitment to continuous upskilling by sitting for and s
 
 </article>
 
-<article class="card">
+<div class="num">
+LEARNING
+</div>
 
-<div class="num">LEARNING</div>
-
-<h3>McKinsey Forward</h3>
+<h3>
+McKinsey Forward
+</h3>
 
 <p>
 Completed the McKinsey.org Forward Learning Program, focused on structured problem solving, communication, adaptability and professional growth.
@@ -455,58 +1780,176 @@ Completed the McKinsey.org Forward Learning Program, focused on structured probl
 
 </section>
 
+
+<!-- JOURNEY -->
+
 <section id="journey" class="section">
 
 <div class="section-head">
 
-<h2>The journey</h2>
+<h2>
+The journey
+</h2>
 
 <p>
-From Information Science student to building production software — with plenty of experiments in between.
+Chronological, because the interesting part is seeing how the experiments turned into the engineer I am today.
 </p>
 
 </div>
+
 
 <div class="timeline">
 
-<div class="item">
-
-<div class="date">2025 — NOW</div>
-
-<div>
-<h3>Software Engineer · Schneider Electric</h3>
-
-<p>
-Building enterprise-scale cloud-native systems, including high-volume notification and alerting services across email, push and SMS, alongside data/knowledge-system work.
-</p>
-</div>
-
-</div>
 
 <div class="item">
 
-<div class="date">2021 — 2025</div>
+<div class="date">
+2021 — 2025
+</div>
 
 <div>
-<h3>B.E. (Honors), Information Science · Ramaiah Institute of Technology</h3>
+
+<h3>
+B.E. with Honors, Information Science · Ramaiah Institute of Technology
+</h3>
 
 <p>
-Graduated with a 9.18/10. Built across software engineering, AI/ML, web development and research while contributing to IEEE and student projects.
+2021 – Jun 2025 · Grade 9.18/10 · Bengaluru. Built a foundation across software engineering, AI/ML, web development and research while contributing to technical communities and student projects.
 </p>
+
 </div>
 
 </div>
+
 
 <div class="item">
 
-<div class="date">2023 — 2025</div>
+<div class="date">
+Aug 2022 — Jan 2024
+</div>
 
 <div>
-<h3>Research, documentation & community</h3>
+
+<h3>
+Frontend Coordinator · NFThing + {dw3ll}
+</h3>
 
 <p>
-Worked on AI/ML research and technical documentation, while volunteering in education initiatives supporting school students.
+Part-time · Remote · London Area, United Kingdom. Worked across front-end development, Git and collaborative product workflows.
 </p>
+
+</div>
+
+</div>
+
+
+<div class="item">
+
+<div class="date">
+Sep — Oct 2023
+</div>
+
+<div>
+
+<h3>
+Information Technology Specialist · Emaar Farm Technik
+</h3>
+
+<p>
+Internship · Remote · Mumbai, Maharashtra. Worked with MongoDB and information technology infrastructure.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="item">
+
+<div class="date">
+Oct — Nov 2023
+</div>
+
+<div>
+
+<h3>
+Internship Trainee · Alfido Tech
+</h3>
+
+<p>
+Internship · Remote · Bengaluru. Worked with Java, JDBC and related development technologies.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="item">
+
+<div class="date">
+Jan — Aug 2025
+</div>
+
+<div>
+
+<h3>
+Software Development Intern · Schneider Electric
+</h3>
+
+<p>
+Internship · Bangalore Urban, Karnataka. Worked in software development and DevOps-oriented workflows, including Azure DevOps Server.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="item">
+
+<div class="date">
+Aug 2025 — NOW
+</div>
+
+<div>
+
+<h3>
+Software Developer · Schneider Electric
+</h3>
+
+<p>
+Full-time · On-site · Bengaluru, Karnataka.
+</p>
+
+<ul class="journey-list">
+
+<li>
+Engineered enterprise notification microservices in Java Spring Boot and C# for email, push, and SMS channels, serving 10+ internal and external clients.
+</li>
+
+<li>
+Built Kafka-based event processors for high-volume, low-latency messaging and a centralized template management system.
+</li>
+
+<li>
+Reduced production debugging time by 30% by architecting observability frameworks using Dynatrace.
+</li>
+
+<li>
+Built authentication middleware, request validation logic, and standardized third-party integrations using OpenAPI/Swagger.
+</li>
+
+<li>
+Manage and query enterprise ontology data using SPARQL against Ontotext GraphDB with Azure Blob Storage and Cosmos DB.
+</li>
+
+<li>
+Piloted event-driven data workflows with Azure Dapr and managed cloud-native deployments on Azure Container Apps.
+</li>
+
+</ul>
+
 </div>
 
 </div>
@@ -515,11 +1958,16 @@ Worked on AI/ML research and technical documentation, while volunteering in educ
 
 </section>
 
+
+<!-- CREDENTIALS -->
+
 <section id="credentials" class="section">
 
 <div class="section-head">
 
-<h2>Credentials</h2>
+<h2>
+Credentials
+</h2>
 
 <p>
 A growing toolkit — with a bias toward learning things well enough to build with them.
@@ -527,76 +1975,172 @@ A growing toolkit — with a bias toward learning things well enough to build wi
 
 </div>
 
+
 <div class="cert-grid">
 
 <div class="cert">
-<strong>Salesforce Certified AI Associate</strong>
-<span>Salesforce · Oct 2024</span>
+
+<strong>
+Salesforce Certified AI Associate
+</strong>
+
+<span>
+Salesforce · Oct 2024
+</span>
+
 </div>
 
-<div class="cert">
-<strong>Contentstack for Developers + Launch</strong>
-<span>Contentstack · Sep 2024</span>
-</div>
 
 <div class="cert">
-<strong>AWS Knowledge: Cloud Essentials</strong>
-<span>Amazon Web Services · Jul 2024</span>
+
+<strong>
+Contentstack for Developers + Launch
+</strong>
+
+<span>
+Contentstack · Sep 2024
+</span>
+
 </div>
 
-<div class="cert">
-<strong>Postman API Fundamentals Student Expert</strong>
-<span>Postman · Jul 2024</span>
-</div>
 
 <div class="cert">
-<strong>Google Cloud Computing Foundations</strong>
-<span>Google · May 2024</span>
+
+<strong>
+AWS Knowledge: Cloud Essentials
+</strong>
+
+<span>
+Amazon Web Services · Jul 2024
+</span>
+
 </div>
 
-<div class="cert">
-<strong>AI Foundation Certification</strong>
-<span>Infosys Springboard · Nov 2023</span>
-</div>
 
 <div class="cert">
-<strong>Research: AI / ML systems</strong>
-<span>Academic + IEEE ecosystem</span>
+
+<strong>
+Postman API Fundamentals Student Expert
+</strong>
+
+<span>
+Postman · Jul 2024
+</span>
+
+</div>
+
+
+<div class="cert">
+
+<strong>
+Google Cloud Computing Foundations
+</strong>
+
+<span>
+Google · May 2024
+</span>
+
+</div>
+
+
+<div class="cert">
+
+<strong>
+AI Foundation Certification
+</strong>
+
+<span>
+Infosys Springboard · Nov 2023
+</span>
+
+</div>
+
+
+<div class="cert">
+
+<strong>
+Java Development
+</strong>
+
+<span>
+Alfido Tech
+</span>
+
+</div>
+
+
+<div class="cert">
+
+<strong>
+Research: AI / ML systems
+</strong>
+
+<span>
+Academic + IEEE ecosystem
+</span>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- QUOTE -->
+
 <section class="section">
 
 <p class="quote">
+
 “I like building at the intersection of reliable engineering and curiosity — the kind of work where you learn something new because the problem refuses to be boring.”
+
 </p>
 
 </section>
 
 </main>
 
+
+<!-- FOOTER -->
+
 <div class="wrap">
 
 <footer class="footer">
 
 <div>
-<strong>Tanisha Saxena</strong>
+
+<strong>
+Tanisha Saxena
+</strong>
+
 <br>
+
 Software Engineer · Bengaluru, India
+
 </div>
+
 
 <div>
 
-<a href="https://github.com/Tanishaaaaaaa" target="_blank">GitHub ↗</a>
+<a
+href="https://github.com/Tanishaaaaaaa"
+target="_blank">
+GitHub ↗
+</a>
+
 <br>
 
-<a href="https://www.linkedin.com/in/tanisha-saxena-978237277/" target="_blank">LinkedIn ↗</a>
+<a
+href="https://www.linkedin.com/in/tanisha-saxena-978237277/"
+target="_blank">
+LinkedIn ↗
+</a>
+
 <br>
 
-<span>Built with curiosity.</span>
+<span>
+Built with curiosity.
+</span>
 
 </div>
 
@@ -606,31 +2150,449 @@ Software Engineer · Bengaluru, India
 
 </div>
 
+
 <script>
 
 const navLinks=[
-  ...document.querySelectorAll('.links a[href^="#"]')
+...document.querySelectorAll('.links a[href^="#"]')
 ];
 
-const sections=navLinks
-  .map(a=>document.querySelector(a.getAttribute('href')))
-  .filter(Boolean);
+const sections=
+navLinks
+.map(a=>document.querySelector(a.getAttribute('href')))
+.filter(Boolean);
 
 const activate=()=>{
-  let current=
-    sections.find(s=>s.getBoundingClientRect().top>80)?.id
-    ||sections.at(-1)?.id;
 
-  navLinks.forEach(a=>{
-    a.style.color=
-      a.getAttribute('href')==='#'+current
-      ?'var(--text)'
-      :'';
-  });
+let current=
+sections.find(
+s=>s.getBoundingClientRect().top>80
+)?.id
+||
+sections.at(-1)?.id;
+
+navLinks.forEach(
+a=>
+a.style.color=
+a.getAttribute('href')==='#'+current
+?'var(--text)'
+:''
+);
+
 };
 
-addEventListener('scroll',activate,{passive:true});
+addEventListener(
+'scroll',
+activate,
+{passive:true}
+);
+
 activate();
+
+
+/* ASK TANISHA */
+
+const answers={
+
+"what does tanisha work on?":
+"Tanisha is a backend & data systems engineer at Schneider Electric, working with cloud-native microservices, notification and alerting systems, APIs, data/knowledge systems and production observability.",
+
+"tell me about her ai work.":
+"Her AI side spans applied projects like StormShield AI, EcoPilot Gateway and Nova Care, plus academic research in intelligent exam proctoring. She has also published a thesis and poster and contributed as a research author.",
+
+"what has she built?":
+"Her portfolio includes StormShield AI, Nova Care, CP Abe, EcoPilot Gateway and Intelligent Exam Proctoring — a mix of AI, software engineering, cloud and research work.",
+
+"what makes her an engineer?":
+"She likes the part after the demo: failure modes, APIs, data flow, observability, debugging and making systems reliable enough for real users. Her sweet spot is where backend engineering meets curiosity."
+
+};
+
+
+const openModal=
+id=>
+document
+.getElementById(id)
+?.classList
+.add('open');
+
+
+const closeModal=
+m=>
+m.classList.remove('open');
+
+
+document
+.querySelectorAll('[data-open]')
+.forEach(
+b=>
+b.addEventListener(
+'click',
+()=>{
+openModal(b.dataset.open)
+}
+)
+);
+
+
+document
+.querySelectorAll('.lab-close')
+.forEach(
+b=>
+b.addEventListener(
+'click',
+()=>{
+closeModal(b.closest('.lab-modal'))
+}
+)
+);
+
+
+document
+.querySelectorAll('.lab-modal')
+.forEach(
+m=>
+m.addEventListener(
+'click',
+e=>{
+if(e.target===m)
+closeModal(m)
+}
+)
+);
+
+
+const log=
+document.getElementById('chat-log');
+
+
+const addChat=
+(text,user=false)=>{
+
+const d=
+document.createElement('div');
+
+d.className=
+'chat-msg'+
+(user?' user':'');
+
+d.textContent=text;
+
+log.appendChild(d);
+
+log.scrollTop=
+log.scrollHeight;
+
+};
+
+
+const reply=
+q=>{
+
+const key=
+q.toLowerCase().trim();
+
+let r=
+answers[key];
+
+if(!r){
+
+if(
+key.includes('schneider')||
+key.includes('work')
+)
+r=
+answers['what does tanisha work on?'];
+
+else if(
+key.includes('ai')||
+key.includes('research')||
+key.includes('thesis')||
+key.includes('poster')
+)
+r=
+answers['tell me about her ai work.'];
+
+else if(
+key.includes('project')||
+key.includes('build')
+)
+r=
+answers['what has she built?'];
+
+else if(
+key.includes('skill')||
+key.includes('engineering')||
+key.includes('backend')
+)
+r=
+answers['what makes her an engineer?'];
+
+else
+r=
+'Try asking about her work, projects, AI & research, or engineering style.';
+
+}
+
+addChat(r);
+
+};
+
+
+document
+.querySelectorAll('[data-q]')
+.forEach(
+b=>
+b.addEventListener(
+'click',
+()=>{
+addChat(b.dataset.q,true);
+reply(b.dataset.q);
+}
+)
+);
+
+
+document
+.getElementById('chat-form')
+.addEventListener(
+'submit',
+e=>{
+
+e.preventDefault();
+
+const i=
+document.getElementById('chat-input');
+
+const q=
+i.value.trim();
+
+if(!q)return;
+
+addChat(q,true);
+
+reply(q);
+
+i.value='';
+
+}
+);
+
+
+/* DEBUG TANISHA */
+
+const questions=[
+
+{
+q:'A notification service is suddenly slow. What do you inspect first?',
+o:[
+'Add more servers immediately',
+'Check logs, metrics and traces',
+'Rewrite the service',
+'Restart everything'
+],
+a:1,
+r:'Observability first. Understand the failure before changing the system.'
+},
+
+{
+q:'A downstream SMS provider starts timing out. What protects the rest of the system?',
+o:[
+'Let every request wait',
+'Retry forever',
+'Use timeouts + controlled retries / circuit breaking',
+'Ignore the errors'
+],
+a:2,
+r:'Bounded failure is the goal: protect resources while recovering safely.'
+},
+
+{
+q:'Your system now has 10× the traffic. What should happen next?',
+o:[
+'Hope autoscaling handles it',
+'Measure bottlenecks, then scale deliberately',
+'Delete features',
+'Move everything to one bigger server'
+],
+a:1,
+r:'Scale from evidence: identify the bottleneck, then choose the right architectural response.'
+}
+
+];
+
+
+let qi=0;
+let score=0;
+
+
+const renderGame=()=>{
+
+const q=
+questions[qi];
+
+const c=
+document.getElementById('game-content');
+
+
+document
+.getElementById('game-progress')
+.style.width=
+(qi/questions.length*100)+'%';
+
+
+c.innerHTML=
+
+'<div class="game-kicker">Scenario '+
+(qi+1)+
+' / '+
+questions.length+
+'</div>'+
+
+'<div class="game-question">'+
+q.q+
+'</div>'+
+
+'<div class="game-options">'+
+
+q.o
+.map(
+(x,i)=>
+'<button class="game-option" type="button" data-i="'+i+'">'+
+String.fromCharCode(65+i)+
+' · '+
+x+
+'</button>'
+)
+.join('')+
+
+'</div>';
+
+
+c
+.querySelectorAll('.game-option')
+.forEach(
+b=>
+b.addEventListener(
+'click',
+()=>{
+
+if(
+Number(b.dataset.i)===q.a
+)
+score++;
+
+
+c.innerHTML=
+
+'<div class="game-kicker">Signal detected</div>'+
+
+'<div class="game-question">'+
+
+(
+Number(b.dataset.i)===q.a
+?'✓ Good instinct.'
+:'→ Interesting choice.'
+)+
+
+'</div>'+
+
+'<div class="game-result">'+
+q.r+
+'</div>'+
+
+'<br>'+
+
+'<button class="game-next" type="button">'+
+
+(
+qi<questions.length-1
+?'Next scenario →'
+:'See result →'
+)+
+
+'</button>';
+
+
+c
+.querySelector('.game-next')
+.addEventListener(
+'click',
+()=>{
+
+if(qi<questions.length-1){
+
+qi++;
+
+renderGame();
+
+}
+
+else{
+
+document
+.getElementById('game-progress')
+.style.width='100%';
+
+
+c.innerHTML=
+
+'<div class="game-kicker">Production survived</div>'+
+
+'<div class="game-question">'+
+'You scored '+
+score+
+'/'+
+questions.length+
+'.'+
+'</div>'+
+
+'<div class="game-result">'+
+'The point isn’t getting every answer right — it’s thinking about failure, observability and trade-offs. That’s the kind of engineering Tanisha enjoys.'+
+'</div>'+
+
+'<br>'+
+
+'<button class="game-next" type="button" id="game-close">'+
+'Back to portfolio ↗'+
+'</button>';
+
+
+document
+.getElementById('game-close')
+.addEventListener(
+'click',
+()=>
+closeModal(
+document.getElementById('debug')
+)
+);
+
+}
+
+}
+);
+
+}
+)
+);
+
+};
+
+
+document
+.querySelector('[data-open="debug"]')
+.addEventListener(
+'click',
+()=>{
+
+qi=0;
+score=0;
+
+renderGame();
+
+}
+);
 
 </script>
 
