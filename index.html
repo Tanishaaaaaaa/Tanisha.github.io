@@ -1,2592 +1,797 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="dark">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tanisha Saxena — Software Engineer</title>
-
-<style>
-.hero{position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-240px;top:-180px;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 24%,transparent),transparent 68%);pointer-events:none;animation:float 8s ease-in-out infinite}
-.hero>div{position:relative;z-index:1}
-.eyebrow{display:inline-flex;align-items:center;gap:9px}
-.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent2) 12%,transparent);animation:pulse 2s infinite}
-.hero h1{max-width:980px}
-.hero p{max-width:760px}
-.btn{transition:transform .2s,background .2s,color .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary:hover{background:var(--accent);color:white}
-.hero-side{background:color-mix(in srgb,var(--surface) 70%,transparent);backdrop-filter:blur(12px);padding:25px;border:1px solid var(--line);border-radius:22px}
-.hero-side strong{font-variant-numeric:tabular-nums}
-.card{position:relative;overflow:hidden}
-.card:after{content:"";position:absolute;inset:auto -40px -70px auto;width:150px;height:150px;border-radius:50%;background:color-mix(in srgb,var(--accent) 8%,transparent);transition:.3s}
-.card:hover:after{transform:scale(1.4)}
-.section{scroll-margin-top:20px}
-.item{transition:padding-left .2s}
-.item:hover{padding-left:10px}
-.cert{transition:.2s transform,.2s border-color}
-.cert:hover{transform:translateY(-2px);border-color:var(--accent)}
-.quote{border-left:3px solid var(--accent);padding-left:25px}
-.footer a:hover{color:var(--accent)}
-
-@keyframes float{
-50%{transform:translate(-20px,18px)}
-}
-@keyframes pulse{
-50%{box-shadow:0 0 0 10px color-mix(in srgb,var(--accent2) 0%,transparent)}
-}
-
-@media(max-width:800px){
-.hero:before{width:300px;height:300px;right:-170px;top:-80px}
-}
-</style>
-
-<style>
-:root{
-color-scheme:light dark;
---bg:light-dark(#f7f5ef,#0b0d0f);
---surface:light-dark(#fff,#121619);
---surface2:light-dark(#f0eee7,#171c20);
---text:light-dark(#151515,#f5f5f2);
---muted:light-dark(#66645e,#a8ada9);
---line:light-dark(#ddd9cf,#2a3034);
---accent:light-dark(#8b5cf6,#a78bfa);
---accent2:light-dark(#06b6d4,#22d3ee)
-}
-
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
-
-body{
-margin:0;
-background:var(--bg);
-color:var(--text);
-font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-line-height:1.55
-}
-
-.root{min-height:100vh;background:var(--bg)}
-
-a{color:inherit;text-decoration:none}
-
-.wrap{
-max-width:1120px;
-margin:auto;
-padding:0 28px
-}
-
-.nav{
-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-border-bottom:1px solid var(--line)
-}
-
-.brand{
-font-weight:800;
-letter-spacing:-.04em
-}
-
-.brand span{color:var(--accent)}
-
-.links{
-display:flex;
-gap:24px;
-font-size:14px;
-color:var(--muted)
-}
-
-.links a:hover{color:var(--text)}
-
-.hero{
-padding:92px 0 76px;
-display:grid;
-grid-template-columns:1.35fr .65fr;
-gap:60px;
-align-items:end
-}
-
-.eyebrow{
-font-size:13px;
-text-transform:uppercase;
-letter-spacing:.16em;
-color:var(--accent2);
-font-weight:800
-}
-
-.hero h1{
-font-size:clamp(52px,8vw,94px);
-line-height:.92;
-letter-spacing:-.075em;
-margin:18px 0 28px;
-max-width:900px
-}
-
-.hero h1 em{
-font-style:normal;
-color:var(--accent)
-}
-
-.hero p{
-font-size:20px;
-color:var(--muted);
-max-width:720px;
-margin:0
-}
-
-.hero-side{
-border-left:1px solid var(--line);
-padding-left:28px
-}
-
-.hero-side strong{
-display:block;
-font-size:42px;
-letter-spacing:-.06em
-}
-
-.hero-side small{color:var(--muted)}
-
-.actions{
-display:flex;
-gap:12px;
-margin-top:30px;
-flex-wrap:wrap
-}
-
-.btn{
-padding:12px 17px;
-border:1px solid var(--line);
-border-radius:999px;
-font-size:14px;
-font-weight:700
-}
-
-.btn.primary{
-background:var(--text);
-color:var(--bg);
-border-color:var(--text)
-}
-
-.section{
-padding:82px 0;
-border-top:1px solid var(--line)
-}
-
-.section-head{
-display:flex;
-justify-content:space-between;
-gap:30px;
-align-items:baseline;
-margin-bottom:34px
-}
-
-.section h2{
-font-size:38px;
-letter-spacing:-.05em;
-margin:0
-}
-
-.section-head p{
-color:var(--muted);
-max-width:480px;
-margin:0
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px
-}
-
-.card{
-background:var(--surface);
-border:1px solid var(--line);
-border-radius:20px;
-padding:25px;
-transition:.2s transform,.2s border-color
-}
-
-.card:hover{
-transform:translateY(-3px);
-border-color:var(--accent)
-}
-
-.card .num{
-font-size:12px;
-color:var(--accent);
-font-weight:800
-}
-
-.card h3{
-font-size:22px;
-letter-spacing:-.035em;
-margin:12px 0 8px
-}
-
-.card p{
-color:var(--muted);
-margin:0
-}
-
-.tags{
-display:flex;
-flex-wrap:wrap;
-gap:7px;
-margin-top:18px
-}
-
-.tag{
-font-size:12px;
-border:1px solid var(--line);
-padding:5px 9px;
-border-radius:999px;
-color:var(--muted)
-}
-
-.feature{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px
-}
-
-.feature .card{min-height:285px}
-
-.feature .card:first-child{
-background:linear-gradient(
-135deg,
-var(--surface),
-color-mix(in srgb,var(--accent) 10%,var(--surface))
-)
-}
-
-.kicker{
-font-size:12px;
-color:var(--muted);
-text-transform:uppercase;
-letter-spacing:.12em
-}
-
-.big{
-font-size:31px;
-letter-spacing:-.05em;
-margin:14px 0
-}
-
-.timeline{
-position:relative;
-margin-top:12px
-}
-
-.item{
-display:grid;
-grid-template-columns:150px 1fr;
-gap:30px;
-padding:25px 0;
-border-bottom:1px solid var(--line)
-}
-
-.item:last-child{border-bottom:0}
-
-.date{
-font-size:13px;
-color:var(--accent2);
-font-weight:800
-}
-
-.item h3{
-margin:0 0 6px;
-font-size:21px
-}
-
-.item p{
-margin:0;
-color:var(--muted)
-}
-
-.cert-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px
-}
-
-.cert{
-padding:17px 18px;
-background:var(--surface2);
-border:1px solid var(--line);
-border-radius:14px
-}
-
-.cert strong{display:block}
-
-.cert span{
-color:var(--muted);
-font-size:13px
-}
-
-.quote{
-font-size:28px;
-line-height:1.25;
-letter-spacing:-.04em;
-max-width:850px
-}
-
-.footer{
-padding:70px 0 45px;
-display:flex;
-justify-content:space-between;
-gap:30px;
-color:var(--muted);
-font-size:14px
-}
-
-.footer strong{color:var(--text)}
-
-@media(max-width:800px){
-.links{display:none}
-
-.hero{
-grid-template-columns:1fr;
-padding-top:64px
-}
-
-.hero-side{
-border-left:0;
-border-top:1px solid var(--line);
-padding:24px 0 0
-}
-
-.grid,
-.feature,
-.cert-grid{
-grid-template-columns:1fr
-}
-
-.item{
-grid-template-columns:1fr;
-gap:8px
-}
-
-.section{padding:60px 0}
-
-.hero h1{font-size:56px}
-
-.wrap{padding:0 20px}
-
-.footer{flex-direction:column}
-}
-</style>
-
-<style>
-.hero{
-min-height:calc(100vh - 76px);
-align-items:center
-}
-
-.hero-sub{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-top:22px;
-color:var(--muted);
-font-size:13px
-}
-
-.pill{
-padding:7px 11px;
-border:1px solid var(--line);
-border-radius:999px;
-background:color-mix(in srgb,var(--surface) 65%,transparent)
-}
-
-.scroll-cue{
-margin-top:54px;
-font-size:12px;
-color:var(--muted);
-display:flex;
-align-items:center;
-gap:10px
-}
-
-.scroll-cue span{
-display:block;
-width:42px;
-height:1px;
-background:var(--line)
-}
-
-.availability{
-display:inline-flex;
-align-items:center;
-gap:8px;
-font-size:12px;
-color:var(--muted);
-margin-top:18px
-}
-
-.availability:before{
-content:"";
-width:7px;
-height:7px;
-border-radius:50%;
-background:#22c55e;
-box-shadow:0 0 0 5px #22c55e22
-}
-
-.marquee{
-overflow:hidden;
-border-top:1px solid var(--line);
-border-bottom:1px solid var(--line);
-padding:15px 0;
-white-space:nowrap;
-color:var(--muted);
-font-size:12px;
-text-transform:uppercase;
-letter-spacing:.18em
-}
-
-.marquee-track{
-display:inline-block;
-animation:marquee 24s linear infinite
-}
-
-.marquee i{
-font-style:normal;
-color:var(--accent);
-padding:0 22px
-}
-
-@keyframes marquee{
-to{transform:translateX(-50%)}
-}
-
-@media(max-width:800px){
-.hero{min-height:auto}
-}
-</style>
-
-<style>
-.lab-launch{
-margin-top:26px;
-display:grid;
-gap:10px
-}
-
-.lab-title{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:10px
-}
-
-.lab-title span:first-child{
-font-size:11px;
-text-transform:uppercase;
-letter-spacing:.15em;
-color:var(--accent2);
-font-weight:800
-}
-
-.lab-title span:last-child{
-font-size:11px;
-color:var(--muted)
-}
-
-.lab-btn{
-width:100%;
-display:grid;
-grid-template-columns:auto 1fr auto;
-align-items:center;
-gap:12px;
-text-align:left;
-border:1px solid var(--line);
-background:color-mix(in srgb,var(--surface) 82%,transparent);
-color:var(--text);
-backdrop-filter:blur(14px);
-padding:14px 15px;
-border-radius:17px;
-font:700 13px inherit;
-cursor:pointer;
-box-shadow:0 12px 35px #00000010;
-transition:.25s transform,.25s border-color,.25s background
-}
-
-.lab-btn:hover{
-transform:translateX(-4px);
-border-color:var(--accent);
-background:color-mix(in srgb,var(--accent) 7%,var(--surface))
-}
-
-.lab-btn .lab-icon{
-width:30px;
-height:30px;
-display:grid;
-place-items:center;
-border-radius:10px;
-background:var(--surface2);
-font-size:15px
-}
-
-.lab-btn .lab-copy{
-display:grid;
-gap:2px
-}
-
-.lab-btn .lab-copy small{
-font-size:11px;
-font-weight:500;
-color:var(--muted)
-}
-
-.lab-btn .lab-arrow{
-color:var(--muted);
-transition:.2s transform
-}
-
-.lab-btn:hover .lab-arrow{
-transform:translateX(3px);
-color:var(--accent)
-}
-
-.lab-modal{
-position:fixed;
-inset:0;
-background:#00000055;
-backdrop-filter:blur(6px);
-z-index:60;
-display:none;
-align-items:flex-end;
-justify-content:flex-end;
-padding:24px
-}
-
-.lab-modal.open{display:flex}
-
-.lab-panel{
-width:min(440px,100%);
-max-height:min(680px,calc(100vh - 48px));
-overflow:auto;
-background:var(--surface);
-color:var(--text);
-border:1px solid var(--line);
-border-radius:24px;
-padding:22px;
-box-shadow:0 25px 80px #00000033
-}
-
-.lab-head{
-display:flex;
-align-items:flex-start;
-justify-content:space-between;
-gap:18px
-}
-
-.lab-head h3{
-margin:0;
-font-size:24px;
-letter-spacing:-.04em
-}
-
-.lab-head p{
-margin:4px 0 0;
-color:var(--muted);
-font-size:13px
-}
-
-.lab-close{
-border:0;
-background:var(--surface2);
-color:var(--text);
-width:36px;
-height:36px;
-border-radius:50%;
-cursor:pointer;
-font-size:18px
-}
-
-.chat-log{
-display:grid;
-gap:10px;
-margin:20px 0;
-max-height:330px;
-overflow:auto
-}
-
-.chat-msg{
-padding:11px 13px;
-border-radius:15px;
-background:var(--surface2);
-font-size:14px
-}
-
-.chat-msg.user{
-background:color-mix(in srgb,var(--accent) 12%,var(--surface));
-margin-left:28px
-}
-
-.quick{
-display:flex;
-flex-wrap:wrap;
-gap:7px;
-margin-bottom:12px
-}
-
-.quick button,
-.game-option{
-border:1px solid var(--line);
-background:transparent;
-color:var(--text);
-border-radius:999px;
-padding:8px 10px;
-font:600 12px inherit;
-cursor:pointer
-}
-
-.quick button:hover,
-.game-option:hover{
-border-color:var(--accent);
-background:color-mix(in srgb,var(--accent) 8%,transparent)
-}
-
-.chat-input{
-display:flex;
-gap:8px
-}
-
-.chat-input input{
-min-width:0;
-flex:1;
-border:1px solid var(--line);
-background:var(--surface2);
-color:var(--text);
-border-radius:12px;
-padding:11px 12px;
-font:14px inherit
-}
-
-.chat-input button,
-.game-next{
-border:0;
-background:var(--text);
-color:var(--bg);
-border-radius:12px;
-padding:11px 14px;
-font:800 13px inherit;
-cursor:pointer
-}
-
-.game-kicker{
-font-size:11px;
-color:var(--accent2);
-font-weight:800;
-letter-spacing:.12em;
-text-transform:uppercase;
-margin-top:20px
-}
-
-.game-question{
-font-size:21px;
-line-height:1.25;
-letter-spacing:-.03em;
-margin:8px 0 15px
-}
-
-.game-options{
-display:grid;
-gap:9px
-}
-
-.game-option{
-text-align:left;
-border-radius:13px;
-padding:12px
-}
-
-.game-result{
-margin-top:15px;
-padding:13px;
-border:1px solid var(--line);
-border-radius:14px;
-background:var(--surface2);
-font-size:13px;
-color:var(--muted)
-}
-
-.game-progress{
-height:4px;
-background:var(--surface2);
-border-radius:99px;
-overflow:hidden;
-margin-top:16px
-}
-
-.game-progress span{
-display:block;
-height:100%;
-width:33%;
-background:var(--accent);
-transition:.3s width
-}
-
-@media(max-width:800px){
-.lab-launch{margin-top:4px}
-
-.lab-btn:hover{
-transform:translateY(-2px)
-}
-}
-
-@media(max-width:600px){
-.lab-modal{padding:12px}
-
-.lab-panel{border-radius:20px}
-}
-
-.hero-side{position:relative}
-
-.hero-side:before{
-content:"01";
-position:absolute;
-top:12px;
-right:15px;
-font:800 10px ui-monospace,SFMono-Regular,Menlo,monospace;
-color:var(--muted);
-opacity:.65
-}
-
-.status-card{
-margin-top:26px;
-padding:14px 15px;
-border:1px dashed var(--line);
-border-radius:16px;
-background:color-mix(in srgb,var(--surface2) 55%,transparent);
-font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-font-size:11px
-}
-
-.status-row{
-display:flex;
-justify-content:space-between;
-gap:15px;
-padding:4px 0
-}
-
-.status-row span:first-child{color:var(--muted)}
-
-.status-live{color:#22c55e}
-
-.status-live:before{
-content:"●";
-margin-right:6px
-}
-
-.now-card{
-margin-top:18px;
-display:grid;
-grid-template-columns:8px 1fr;
-gap:10px;
-align-items:start
-}
-
-.now-card:before{
-content:"";
-width:8px;
-height:8px;
-margin-top:6px;
-border-radius:50%;
-background:var(--accent);
-box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 10%,transparent);
-animation:pulse 2s infinite
-}
-
-.now-card strong{font-size:12px}
-
-.now-card small{
-display:block;
-color:var(--muted);
-font-size:11px;
-margin-top:2px
-}
-
-.hero-note{
-display:inline-block;
-margin-top:22px;
-font:600 12px ui-monospace,SFMono-Regular,Menlo,monospace;
-color:var(--muted)
-}
-
-.hero-note b{color:var(--accent)}
-
-.section-head h2{position:relative}
-
-.section-head h2:after{
-content:"↘";
-font-size:17px;
-color:var(--accent);
-vertical-align:top;
-margin-left:7px
-}
-
-.feature .card:hover,
-.grid .card:hover{
-box-shadow:0 18px 55px #00000012
-}
-
-.kicker{
-font-family:ui-monospace,SFMono-Regular,Menlo,monospace
-}
-
-.footer{
-border-top:1px solid var(--line)
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanisha Saxena | Y2K Cyber Retro Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Retro Pixel & Mono Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=VT323&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0b0d12',
+                        'obsidian-card': '#121620',
+                        'electric-lime': '#00ff66',
+                        'cyber-pink': '#ff2a85',
+                        'electric-cyan': '#00f0ff',
+                        'acid-yellow': '#f3ff00',
+                        'win-navy': '#000080',
+                        'win-gray': '#c0c0c0'
+                    },
+                    fontFamily: {
+                        pixel: ['"Press Start 2P"', 'cursive'],
+                        vt: ['VT323', 'monospace'],
+                        mono: ['"Space Mono"', 'monospace'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0b0d12;
+            color: #00ff66;
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+            background-image: radial-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        /* CRT Scanline Overlay */
+        .crt-overlay {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+            background-size: 100% 3px, 6px 100%;
+            pointer-events: none;
+        }
+
+        /* Y2K Windows Frame Styling */
+        .win-frame {
+            border: 2px solid #00f0ff;
+            box-shadow: 5px 5px 0px #ff2a85, -2px -2px 0px #00ff66;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .win-frame:hover {
+            box-shadow: 7px 7px 0px #ff2a85, -3px -3px 0px #00ff66;
+        }
+
+        .win-header {
+            background: linear-gradient(90deg, #000080, #1084d0);
+            color: white;
+            font-family: 'VT323', monospace;
+        }
+
+        /* Glow effects */
+        .glow-lime {
+            text-shadow: 0 0 8px rgba(0, 255, 102, 0.7);
+        }
+        .glow-pink {
+            text-shadow: 0 0 8px rgba(255, 42, 133, 0.7);
+        }
+        .glow-cyan {
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.7);
+        }
+
+        /* Custom Retro Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0d12;
+            border-left: 1px solid #00f0ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff2a85;
+            border: 1px solid #00ff66;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ff66;
+        }
+
+        .retro-btn {
+            transition: all 0.1s ease;
+            box-shadow: 3px 3px 0px #00f0ff;
+        }
+        .retro-btn:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0px #00f0ff;
+        }
+        .retro-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #00f0ff;
+        }
+
+        /* Ticker Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 28s linear infinite;
+        }
+
+        /* Custom Pixel Cursor Effect */
+        a, button, input {
+            cursor: pointer;
+        }
+    </style>
 </head>
-
-<body>
-
-<div class="root">
-
-<div class="wrap">
-
-<nav class="nav">
-
-<a class="brand" href="#top">
-tanisha<span>.</span>
-</a>
-
-<div class="links">
-
-<a href="#work">Work</a>
-<a href="#builds">Builds</a>
-<a href="#notes">Notes</a>
-<a href="#journey">Journey</a>
-<a href="#credentials">Credentials</a>
-
-<a href="https://dev.to/tanisha_saxena_6ee4977663" target="_blank">
-DEV.to ↗
-</a>
-
-<a href="https://github.com/Tanishaaaaaaa" target="_blank">
-GitHub ↗
-</a>
-
-<a href="https://www.linkedin.com/in/tanisha-saxena-978237277/" target="_blank">
-LinkedIn ↗
-</a>
-
-</div>
-
-</nav>
-
-</div>
-
-<main id="top" class="wrap">
-
-<!-- ASK TANISHA -->
-
-<div id="ask"
-class="lab-modal"
-role="dialog"
-aria-modal="true"
-aria-labelledby="ask-title">
-
-<div class="lab-panel">
-
-<div class="lab-head">
-
-<div>
-
-<h3 id="ask-title">
-✦ Ask Tanisha
-</h3>
-
-<p>
-A tiny portfolio guide — ask about the work, not the buzzwords.
-</p>
-
-</div>
-
-<button
-class="lab-close"
-type="button"
-aria-label="Close">
-×
-</button>
-
-</div>
-
-<div id="chat-log" class="chat-log">
-
-<div class="chat-msg">
-Hey 👋 I’m the portfolio version of Tanisha.
-Ask me about her engineering work, AI projects,
-research, or what she likes building.
-</div>
-
-</div>
-
-<div class="quick">
-
-<button
-type="button"
-data-q="What does Tanisha work on?">
-What does she work on?
-</button>
-
-<button
-type="button"
-data-q="Tell me about her AI work.">
-AI & research
-</button>
-
-<button
-type="button"
-data-q="What has she built?">
-Projects
-</button>
-
-<button
-type="button"
-data-q="What makes her an engineer?">
-Engineering style
-</button>
-
-</div>
-
-<form class="chat-input" id="chat-form">
-
-<input
-id="chat-input"
-aria-label="Ask about Tanisha"
-placeholder="Ask something about Tanisha…">
-
-<button type="submit">
-Ask
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-
-<!-- DEBUG TANISHA -->
-
-<div id="debug"
-class="lab-modal"
-role="dialog"
-aria-modal="true"
-aria-labelledby="debug-title">
-
-<div class="lab-panel">
-
-<div class="lab-head">
-
-<div>
-
-<h3 id="debug-title">
-⌘ Debug Tanisha
-</h3>
-
-<p>
-60 seconds. Three production decisions. No trick questions.
-</p>
-
-</div>
-
-<button
-class="lab-close"
-type="button"
-aria-label="Close">
-×
-</button>
-
-</div>
-
-<div class="game-progress">
-
-<span id="game-progress"></span>
-
-</div>
-
-<div id="game-content"></div>
-
-</div>
-
-</div>
-
-
-<!-- MARQUEE -->
-
-<div class="marquee">
-
-<div class="marquee-track">
-
-BACKEND
-<i>✦</i>
-
-CLOUD NATIVE
-<i>✦</i>
-
-DATA SYSTEMS
-<i>✦</i>
-
-AI / ML
-<i>✦</i>
-
-DISTRIBUTED SYSTEMS
-<i>✦</i>
-
-JAVA
-<i>✦</i>
-
-KUBERNETES
-<i>✦</i>
-
-BACKEND
-<i>✦</i>
-
-CLOUD NATIVE
-<i>✦</i>
-
-DATA SYSTEMS
-<i>✦</i>
-
-AI / ML
-<i>✦</i>
-
-DISTRIBUTED SYSTEMS
-<i>✦</i>
-
-JAVA
-<i>✦</i>
-
-KUBERNETES
-<i>✦</i>
-
-</div>
-
-</div>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div>
-
-<div class="eyebrow">
-Software Engineer · Bengaluru
-</div>
-
-<h1>
-Building systems that
-<em>actually do something.</em>
-</h1>
-
-<p>
-I’m Tanisha — a backend & data systems engineer who likes turning messy problems into reliable software, from cloud-native microservices to AI-powered prototypes.
-</p>
-
-<div class="hero-note">
-// currently shipping <b>reliable things</b>, occasionally breaking them
-</div>
-
-<div class="hero-sub">
-
-<span class="pill">Backend</span>
-<span class="pill">Cloud Native</span>
-<span class="pill">Data Systems</span>
-<span class="pill">AI / ML</span>
-
-</div>
-
-<div class="actions">
-
-<a class="btn primary" href="#work">
-Explore my work ↓
-</a>
-
-<a
-class="btn"
-href="https://github.com/Tanishaaaaaaa"
-target="_blank">
-GitHub ↗
-</a>
-
-<a
-class="btn"
-href="https://www.linkedin.com/in/tanisha-saxena-978237277/"
-target="_blank">
-LinkedIn ↗
-</a>
-
-</div>
-
-<div class="scroll-cue">
-
-<span></span>
-scroll to explore
-
-</div>
-
-</div>
-
-
-<div class="hero-side">
-
-<strong>1+ yr</strong>
-
-<small>
-professional software engineering experience
-</small>
-
-<br><br>
-
-<strong>1 → ∞</strong>
-
-<small>
-Always building, always learning
-</small>
-
-<div class="availability">
-Building in production at Schneider Electric
-</div>
-
-
-<!-- SYSTEM STATUS -->
-
-<div class="status-card">
-
-<div class="status-row">
-
-<span>system.status</span>
-
-<span class="status-live">
-ONLINE
-</span>
-
-</div>
-
-<div class="status-row">
-
-<span>stack</span>
-
-<span>
-JAVA · K8S · CLOUD
-</span>
-
-</div>
-
-<div class="status-row">
-
-<span>mode</span>
-
-<span>
-BUILD / LEARN / REPEAT
-</span>
-
-</div>
-
-</div>
-
-
-<!-- NOW -->
-
-<div class="now-card">
-
-<div>
-
-<strong>NOW</strong>
-
-<small>
-Making backend systems less dramatic.
-</small>
-
-</div>
-
-</div>
-
-
-<!-- PLAYGROUND -->
-
-<div class="lab-launch">
-
-<div class="lab-title">
-
-<span>
-tiny playground
-</span>
-
-<span>
-pick your side quest ↘
-</span>
-
-</div>
-
-
-<button
-class="lab-btn ai"
-type="button"
-data-open="ask">
-
-<span class="lab-icon">
-✦
-</span>
-
-<span class="lab-copy">
-
-Ask Tanisha
-
-<small>
-Ask the portfolio anything
-</small>
-
-</span>
-
-<span class="lab-arrow">
-→
-</span>
-
-</button>
-
-
-<button
-class="lab-btn"
-type="button"
-data-open="debug">
-
-<span class="lab-icon">
-⌘
-</span>
-
-<span class="lab-copy">
-
-Debug Tanisha
-
-<small>
-Make 3 production calls
-</small>
-
-</span>
-
-<span class="lab-arrow">
-→
-</span>
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- WORK -->
-
-<section id="work" class="section">
-
-<div class="section-head">
-
-<h2>
-What I work on
-</h2>
-
-<p>
-My sweet spot sits where backend engineering, data systems, cloud infrastructure and intelligent workflows overlap.
-</p>
-
-</div>
-
-
-<div class="grid">
-
-<article class="card">
-
-<div class="num">
-01 / BACKEND
-</div>
-
-<h3>
-Cloud-native services
-</h3>
-
-<p>
-Designing and maintaining scalable microservices and REST APIs with Java, Spring Boot, C# and distributed-system patterns.
-</p>
-
-<div class="tags">
-
-<span class="tag">Java</span>
-<span class="tag">Spring Boot</span>
-<span class="tag">C#</span>
-<span class="tag">REST</span>
-
-</div>
-
-</article>
-
-
-<article class="card">
-
-<div class="num">
-02 / DATA
-</div>
-
-<h3>
-Data & knowledge systems
-</h3>
-
-<p>
-Working with data pipelines, ontology/graph concepts, SPARQL and SQL/NoSQL systems to make complex information usable.
-</p>
-
-<div class="tags">
-
-<span class="tag">SPARQL</span>
-<span class="tag">Graph</span>
-<span class="tag">SQL</span>
-<span class="tag">NoSQL</span>
-
-</div>
-
-</article>
-
-
-<article class="card">
-
-<div class="num">
-03 / CLOUD
-</div>
-
-<h3>
-Production thinking
-</h3>
-
-<p>
-Observability, logging, debugging, containers and CI/CD — the unglamorous stuff that makes software survive real users.
-</p>
-
-<div class="tags">
-
-<span class="tag">Azure</span>
-<span class="tag">AWS</span>
-<span class="tag">Docker</span>
-<span class="tag">Kubernetes</span>
-
-</div>
-
-</article>
-
-</div>
-
-</section>
-
-
-<!-- BUILDS -->
-
-<section id="builds" class="section">
-
-<div class="section-head">
-
-<h2>
-Things I’ve built
-</h2>
-
-<p>
-Not everything belongs in a corporate job description. These are the projects that show how I think when I get to explore.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-
-<article class="card">
-
-<div class="kicker">
-Hackathon · 2026
-</div>
-
-<div class="big">
-🌊 StormShield AI
-</div>
-
-<p>
-An AI-powered flood and weather guardian built with OmniShield. The system combines live environmental data with XGBoost to forecast water levels 30 minutes ahead, Gemini-powered safety guidance, real-time alerts and interactive visualizations.
-</p>
-
-<div class="tags">
-
-<span class="tag">Python</span>
-<span class="tag">FastAPI</span>
-<span class="tag">XGBoost</span>
-<span class="tag">Gemini</span>
-<span class="tag">Streamlit</span>
-
-</div>
-
-</article>
-
-
-<article class="card">
-
-<div class="kicker">
-AI · Healthcare
-</div>
-
-<div class="big">
-🏥 NovaCare — AI Healthcare Workflow Automation
-</div>
-
-<p>
-An AI-focused healthcare project designed around accessible, intelligent support and user-centric care workflows, combining software engineering with applied AI concepts.Integrated Amazon Nova models (Sonic, Lite, Act, Multimodal Embeddings) with a Python FastAPI backend and PostgreSQL to automate patient triage and intake, cutting manual registration steps by ~70%.
-</p>
-
-<div class="tags">
-
-<span class="tag">AI / ML</span>
-<span class="tag">Healthcare</span>
-<span class="tag">Intelligent Systems</span>
-
-</div>
-
-</article>
-
-
-<article class="card">
-
-<div class="kicker">
-Project
-</div>
-
-<div class="big">
-⚙️ Multicloud File Sharing using CP-ABE
-</div>
-
-<p>
-Engineered a privacy-preserving multicloud file-sharing platform leveraging Ciphertext-Policy Attribute-Based Encryption (CP-ABE). The system embeds fine-grained access control policies directly into encrypted data, enabling secure multi-authority file distribution across heterogeneous cloud environments while guaranteeing data confidentiality against semi-trusted cloud providers.
-</p>
-
-<div class="tags">
-
-<span class="tag">Software Engineering</span>
-<span class="tag">Problem Solving</span>
-<span class="tag">Development</span>
-
-</div>
-
-</article>
-
-
-<article class="card">
-
-<div class="kicker">
-WID SheSparks · 2026
-</div>
-
-<div class="big">
-♻️ EcoPilot Gateway
-</div>
-
-<p>
-An AI gateway for responsible token governance and cost-aware model routing. A knowledge base and LLM router classify prompts and route each request to the appropriate model, avoiding unnecessary use of premium cloud AI credits while keeping model selection intentional and efficient.
-</p>
-
-<div class="tags">
-
-<span class="tag">LLM Router</span>
-<span class="tag">Knowledge Base</span>
-<span class="tag">Token Governance</span>
-<span class="tag">AI Gateway</span>
-<span class="tag">Cost Optimization</span>
-
-</div>
-
-</article>
-
-
-<article class="card">
-
-<div class="kicker">
-Research · AI / ML
-</div>
-
-<div class="big">
-🧠 Intelligent Exam Proctoring
-</div>
-
-<p>
-An automated online exam-proctoring system focused on authentication and abnormal-behaviour monitoring using image processing and deep learning.
-</p>
-
-<div class="tags">
-
-<span class="tag">Computer Vision</span>
-<span class="tag">Deep Learning</span>
-<span class="tag">Image Processing</span>
-
-</div>
-
-</article>
-
-</div>
-
-</section>
-
-
-<!-- DEV.TO -->
-
-<section id="notes" class="section">
-
-<div class="section-head">
-
-<h2>
-Field notes from the dev trenches
-</h2>
-
-<p>
-The less-serious side of being a developer: weird workdays, questionable architecture and turning everyday frustrations into things worth building.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-
-<article class="card">
-
-<div class="kicker">
-Dev journal · DEV.to
-</div>
-
-<div class="big">
-“A totally accurate day in the life of a software developer.”
-</div>
-
-<p>
-17 browser tabs, a “quick question” that is never quick, debugging rituals and the mysterious bug that only makes sense at 10:47 PM. Basically: a normal Tuesday.
-</p>
-
-<div class="tags">
-
-<span class="tag">Developer Life</span>
-<span class="tag">Debugging</span>
-<span class="tag">Relatable</span>
-
-</div>
-
-<div class="actions">
-
-<a
-class="btn"
-href="https://dev.to/tanisha_saxena_6ee4977663/a-totally-accurate-day-in-the-life-of-a-software-developer-3i1m"
-target="_blank">
-
-Read the chaos ↗
-
-</a>
-
-</div>
-
-</article>
-
-
-<article class="card">
-
-<div class="kicker">
-Hot take · DEV.to
-</div>
-
-<div class="big">
-“It worked on my machine… so why is production on fire?”
-</div>
-
-<p>
-A playful look at the universal developer experience: local success, production betrayal, and the tiny gap between “works for me” and “please don't page me again.”
-</p>
-
-<div class="tags">
-
-<span class="tag">Production</span>
-<span class="tag">Debugging</span>
-<span class="tag">Developer Humor</span>
-
-</div>
-
-<div class="actions">
-
-<a
-class="btn"
-href="https://dev.to/tanisha_saxena_6ee4977663/it-worked-on-my-machine-so-why-is-production-on-fire-4b3d"
-target="_blank">
-
-Read the hot take ↗
-
-</a>
-
-</div>
-
-</article>
-
-
-<article class="card">
-
-<div class="kicker">
-Builder brain · DEV.to
-</div>
-
-<div class="big">
-“What if complaining was a product requirement?”
-</div>
-
-<p>
-Problem Radar turns everyday frustrations into hackathon-ready ideas, complete with users, solutions, tech stack and a build plan. Because apparently complaining can be productive.
-</p>
-
-<div class="tags">
-
-<span class="tag">Hackathons</span>
-<span class="tag">React</span>
-<span class="tag">Problem Solving</span>
-
-</div>
-
-<div class="actions">
-
-<a
-class="btn"
-href="https://dev.to/tanisha_saxena_6ee4977663/-i-built-an-app-that-turns-daily-frustrations-into-hackathon-ideas-and-it-might-replace-4lai"
-target="_blank">
-
-Read the idea ↗
-
-</a>
-
-</div>
-
-</article>
-
-</div>
-
-
-<div class="actions">
-
-<a
-class="btn primary"
-href="https://dev.to/tanisha_saxena_6ee4977663"
-target="_blank">
-
-Explore all my DEV.to writing ↗
-
-</a>
-
-</div>
-
-</section>
-
-
-<!-- PROOF -->
-
-<section class="section">
-
-<div class="section-head">
-
-<h2>
-Proof, not just projects
-</h2>
-
-<p>
-A few milestones that shaped the person behind the code — from building and competing to publishing research and contributing to technical communities.
-</p>
-
-</div>
-
-
-<div class="grid">
-
-
-<article class="card">
-
-<div class="num">
-03rd PLACE
-</div>
-
-<h3>
-WID SheSparks 2026 Ideathon
-</h3>
-
-<p>
-Secured 3rd place for EcoPilot Gateway, a sustainability-focused AI gateway exploring token governance, knowledge-based prompt classification and intelligent model routing.
-</p>
-
-</article>
-
-
-<article class="card">
-
-<div class="num">
-RESEARCH
-</div>
-
-<h3>
-IEEE Lead Researcher & Conference Presenter
-</h3>
-
-<p>
-Recognized as lead researcher and author at IEEE CONECCT 2025 and IEEE COMPUTE 2024 for contributions to applied machine learning. Published research on Explainable AI (integrating ARIMA with SHAP for time-series forecasting) and presented poster sessions on deep-learning-based behavioral anomaly detection.
-</p>
-
-</article>
-
-
-<article class="card">
-
-<div class="num">
-AUTHOR
-</div>
-
-<h3>
-NPTEL Believer and Discipline Star Award Winner
-</h3>
-
-<p>
-Awarded for exceptional commitment to continuous upskilling by sitting for and successfully getting certified in 5 proctored technical exams in a single semester (Jan–Apr 2025). Completed certifications with Elite + Silver medals across Data Analytics with Python, Business Intelligence, and Java Programming.
-</p>
-
-</article>
-
-<article class="card">
-  <div class="num">LEARNING</div>
-  <h3>McKinsey Forward</h3>
-  <p>Completed the McKinsey.org Forward Learning Program, focused on structured problem solving, communication, adaptability and professional growth.</p>
-</article>
-
-</div>
-
-</section>
-
-
-<!-- JOURNEY -->
-
-<section id="journey" class="section">
-
-<div class="section-head">
-
-<h2>
-The journey
-</h2>
-
-<p>
-Chronological, because the interesting part is seeing how the experiments turned into the engineer I am today.
-</p>
-
-</div>
-
-
-<div class="timeline">
-
-
-<div class="item">
-
-<div class="date">
-2021 — 2025
-</div>
-
-<div>
-
-<h3>
-B.E. with Honors, Information Science · Ramaiah Institute of Technology
-</h3>
-
-<p>
-2021 – Jun 2025 · Grade 9.18/10 · Bengaluru. Built a foundation across software engineering, AI/ML, web development and research while contributing to technical communities and student projects.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="item">
-
-<div class="date">
-Aug 2022 — Jan 2024
-</div>
-
-<div>
-
-<h3>
-Frontend Coordinator · NFThing + {dw3ll}
-</h3>
-
-<p>
-Part-time · Remote · London Area, United Kingdom. Worked across front-end development, Git and collaborative product workflows.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="item">
-
-<div class="date">
-Sep — Oct 2023
-</div>
-
-<div>
-
-<h3>
-Information Technology Specialist · Emaar Farm Technik
-</h3>
-
-<p>
-Internship · Remote · Mumbai, Maharashtra. Worked with MongoDB and information technology infrastructure.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="item">
-
-<div class="date">
-Oct — Nov 2023
-</div>
-
-<div>
-
-<h3>
-Internship Trainee · Alfido Tech
-</h3>
-
-<p>
-Internship · Remote · Bengaluru. Worked with Java, JDBC and related development technologies.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="item">
-
-<div class="date">
-Jan — Aug 2025
-</div>
-
-<div>
-
-<h3>
-Software Development Intern · Schneider Electric
-</h3>
-
-<p>
-Internship · Bangalore Urban, Karnataka. Worked in software development and DevOps-oriented workflows, including Azure DevOps Server.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="item">
-
-<div class="date">
-Aug 2025 — NOW
-</div>
-
-<div>
-
-<h3>
-Software Developer · Schneider Electric
-</h3>
-
-<p>
-Full-time · On-site · Bengaluru, Karnataka.
-</p>
-
-<ul class="journey-list">
-
-<li>
-Engineered enterprise notification microservices in Java Spring Boot and C# for email, push, and SMS channels, serving 10+ internal and external clients.
-</li>
-
-<li>
-Built Kafka-based event processors for high-volume, low-latency messaging and a centralized template management system.
-</li>
-
-<li>
-Reduced production debugging time by 30% by architecting observability frameworks using Dynatrace.
-</li>
-
-<li>
-Built authentication middleware, request validation logic, and standardized third-party integrations using OpenAPI/Swagger.
-</li>
-
-<li>
-Manage and query enterprise ontology data using SPARQL against Ontotext GraphDB with Azure Blob Storage and Cosmos DB.
-</li>
-
-<li>
-Piloted event-driven data workflows with Azure Dapr and managed cloud-native deployments on Azure Container Apps.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CREDENTIALS -->
-
-<section id="credentials" class="section">
-
-<div class="section-head">
-
-<h2>
-Credentials
-</h2>
-
-<p>
-A growing toolkit — with a bias toward learning things well enough to build with them.
-</p>
-
-</div>
-
-
-<div class="cert-grid">
-
-<div class="cert">
-
-<strong>
-Salesforce Certified AI Associate
-</strong>
-
-<span>
-Salesforce · Oct 2024
-</span>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Contentstack for Developers + Launch
-</strong>
-
-<span>
-Contentstack · Sep 2024
-</span>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-AWS Knowledge: Cloud Essentials
-</strong>
-
-<span>
-Amazon Web Services · Jul 2024
-</span>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Postman API Fundamentals Student Expert
-</strong>
-
-<span>
-Postman · Jul 2024
-</span>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Google Cloud Computing Foundations
-</strong>
-
-<span>
-Google · May 2024
-</span>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-AI Foundation Certification
-</strong>
-
-<span>
-Infosys Springboard · Nov 2023
-</span>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Java Development
-</strong>
-
-<span>
-Alfido Tech
-</span>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Research: AI / ML systems
-</strong>
-
-<span>
-Academic + IEEE ecosystem
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- QUOTE -->
-
-<section class="section">
-
-<p class="quote">
-
-“I like building at the intersection of reliable engineering and curiosity — the kind of work where you learn something new because the problem refuses to be boring.”
-
-</p>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<div class="wrap">
-
-<footer class="footer">
-
-<div>
-
-<strong>
-Tanisha Saxena
-</strong>
-
-<br>
-
-Software Engineer · Bengaluru, India
-
-</div>
-
-
-<div>
-
-<a
-href="https://github.com/Tanishaaaaaaa"
-target="_blank">
-GitHub ↗
-</a>
-
-<br>
-
-<a
-href="https://www.linkedin.com/in/tanisha-saxena-978237277/"
-target="_blank">
-LinkedIn ↗
-</a>
-
-<br>
-
-<span>
-Built with curiosity.
-</span>
-
-</div>
-
-</footer>
-
-</div>
-
-</div>
-
-
-<script>
-
-const navLinks=[
-...document.querySelectorAll('.links a[href^="#"]')
-];
-
-const sections=
-navLinks
-.map(a=>document.querySelector(a.getAttribute('href')))
-.filter(Boolean);
-
-const activate=()=>{
-
-let current=
-sections.find(
-s=>s.getBoundingClientRect().top>80
-)?.id
-||
-sections.at(-1)?.id;
-
-navLinks.forEach(
-a=>
-a.style.color=
-a.getAttribute('href')==='#'+current
-?'var(--text)'
-:''
-);
-
-};
-
-addEventListener(
-'scroll',
-activate,
-{passive:true}
-);
-
-activate();
-
-
-/* ASK TANISHA */
-
-const answers={
-
-"what does tanisha work on?":
-"Tanisha is a backend & data systems engineer at Schneider Electric, working with cloud-native microservices, notification and alerting systems, APIs, data/knowledge systems and production observability.",
-
-"tell me about her ai work.":
-"Her AI side spans applied projects like StormShield AI, EcoPilot Gateway and Nova Care, plus academic research in intelligent exam proctoring. She has also published a thesis and poster and contributed as a research author.",
-
-"what has she built?":
-"Her portfolio includes StormShield AI, Nova Care, CP Abe, EcoPilot Gateway and Intelligent Exam Proctoring — a mix of AI, software engineering, cloud and research work.",
-
-"what makes her an engineer?":
-"She likes the part after the demo: failure modes, APIs, data flow, observability, debugging and making systems reliable enough for real users. Her sweet spot is where backend engineering meets curiosity."
-
-};
-
-
-const openModal=
-id=>
-document
-.getElementById(id)
-?.classList
-.add('open');
-
-
-const closeModal=
-m=>
-m.classList.remove('open');
-
-
-document
-.querySelectorAll('[data-open]')
-.forEach(
-b=>
-b.addEventListener(
-'click',
-()=>{
-openModal(b.dataset.open)
-}
-)
-);
-
-
-document
-.querySelectorAll('.lab-close')
-.forEach(
-b=>
-b.addEventListener(
-'click',
-()=>{
-closeModal(b.closest('.lab-modal'))
-}
-)
-);
-
-
-document
-.querySelectorAll('.lab-modal')
-.forEach(
-m=>
-m.addEventListener(
-'click',
-e=>{
-if(e.target===m)
-closeModal(m)
-}
-)
-);
-
-
-const log=
-document.getElementById('chat-log');
-
-
-const addChat=
-(text,user=false)=>{
-
-const d=
-document.createElement('div');
-
-d.className=
-'chat-msg'+
-(user?' user':'');
-
-d.textContent=text;
-
-log.appendChild(d);
-
-log.scrollTop=
-log.scrollHeight;
-
-};
-
-
-const reply=
-q=>{
-
-const key=
-q.toLowerCase().trim();
-
-let r=
-answers[key];
-
-if(!r){
-
-if(
-key.includes('schneider')||
-key.includes('work')
-)
-r=
-answers['what does tanisha work on?'];
-
-else if(
-key.includes('ai')||
-key.includes('research')||
-key.includes('thesis')||
-key.includes('poster')
-)
-r=
-answers['tell me about her ai work.'];
-
-else if(
-key.includes('project')||
-key.includes('build')
-)
-r=
-answers['what has she built?'];
-
-else if(
-key.includes('skill')||
-key.includes('engineering')||
-key.includes('backend')
-)
-r=
-answers['what makes her an engineer?'];
-
-else
-r=
-'Try asking about her work, projects, AI & research, or engineering style.';
-
-}
-
-addChat(r);
-
-};
-
-
-document
-.querySelectorAll('[data-q]')
-.forEach(
-b=>
-b.addEventListener(
-'click',
-()=>{
-addChat(b.dataset.q,true);
-reply(b.dataset.q);
-}
-)
-);
-
-
-document
-.getElementById('chat-form')
-.addEventListener(
-'submit',
-e=>{
-
-e.preventDefault();
-
-const i=
-document.getElementById('chat-input');
-
-const q=
-i.value.trim();
-
-if(!q)return;
-
-addChat(q,true);
-
-reply(q);
-
-i.value='';
-
-}
-);
-
-
-/* DEBUG TANISHA */
-
-const questions=[
-
-{
-q:'A notification service is suddenly slow. What do you inspect first?',
-o:[
-'Add more servers immediately',
-'Check logs, metrics and traces',
-'Rewrite the service',
-'Restart everything'
-],
-a:1,
-r:'Observability first. Understand the failure before changing the system.'
-},
-
-{
-q:'A downstream SMS provider starts timing out. What protects the rest of the system?',
-o:[
-'Let every request wait',
-'Retry forever',
-'Use timeouts + controlled retries / circuit breaking',
-'Ignore the errors'
-],
-a:2,
-r:'Bounded failure is the goal: protect resources while recovering safely.'
-},
-
-{
-q:'Your system now has 10× the traffic. What should happen next?',
-o:[
-'Hope autoscaling handles it',
-'Measure bottlenecks, then scale deliberately',
-'Delete features',
-'Move everything to one bigger server'
-],
-a:1,
-r:'Scale from evidence: identify the bottleneck, then choose the right architectural response.'
-}
-
-];
-
-
-let qi=0;
-let score=0;
-
-
-const renderGame=()=>{
-
-const q=
-questions[qi];
-
-const c=
-document.getElementById('game-content');
-
-
-document
-.getElementById('game-progress')
-.style.width=
-(qi/questions.length*100)+'%';
-
-
-c.innerHTML=
-
-'<div class="game-kicker">Scenario '+
-(qi+1)+
-' / '+
-questions.length+
-'</div>'+
-
-'<div class="game-question">'+
-q.q+
-'</div>'+
-
-'<div class="game-options">'+
-
-q.o
-.map(
-(x,i)=>
-'<button class="game-option" type="button" data-i="'+i+'">'+
-String.fromCharCode(65+i)+
-' · '+
-x+
-'</button>'
-)
-.join('')+
-
-'</div>';
-
-
-c
-.querySelectorAll('.game-option')
-.forEach(
-b=>
-b.addEventListener(
-'click',
-()=>{
-
-if(
-Number(b.dataset.i)===q.a
-)
-score++;
-
-
-c.innerHTML=
-
-'<div class="game-kicker">Signal detected</div>'+
-
-'<div class="game-question">'+
-
-(
-Number(b.dataset.i)===q.a
-?'✓ Good instinct.'
-:'→ Interesting choice.'
-)+
-
-'</div>'+
-
-'<div class="game-result">'+
-q.r+
-'</div>'+
-
-'<br>'+
-
-'<button class="game-next" type="button">'+
-
-(
-qi<questions.length-1
-?'Next scenario →'
-:'See result →'
-)+
-
-'</button>';
-
-
-c
-.querySelector('.game-next')
-.addEventListener(
-'click',
-()=>{
-
-if(qi<questions.length-1){
-
-qi++;
-
-renderGame();
-
-}
-
-else{
-
-document
-.getElementById('game-progress')
-.style.width='100%';
-
-
-c.innerHTML=
-
-'<div class="game-kicker">Production survived</div>'+
-
-'<div class="game-question">'+
-'You scored '+
-score+
-'/'+
-questions.length+
-'.'+
-'</div>'+
-
-'<div class="game-result">'+
-'The point isn’t getting every answer right — it’s thinking about failure, observability and trade-offs. That’s the kind of engineering Tanisha enjoys.'+
-'</div>'+
-
-'<br>'+
-
-'<button class="game-next" type="button" id="game-close">'+
-'Back to portfolio ↗'+
-'</button>';
-
-
-document
-.getElementById('game-close')
-.addEventListener(
-'click',
-()=>
-closeModal(
-document.getElementById('debug')
-)
-);
-
-}
-
-}
-);
-
-}
-)
-);
-
-};
-
-
-document
-.querySelector('[data-open="debug"]')
-.addEventListener(
-'click',
-()=>{
-
-qi=0;
-score=0;
-
-renderGame();
-
-}
-);
-
-</script>
-
+<body class="relative min-h-screen pb-12 select-none">
+
+    <!-- CRT Overlay Screen Layer -->
+    <div id="crtOverlay" class="crt-overlay fixed inset-0 z-50 transition-opacity duration-300 opacity-100"></div>
+
+    <div class="bg-black border-b-2 border-electric-cyan text-electric-lime py-1.5 px-4 flex justify-between items-center text-sm font-mono sticky top-0 z-40 bg-opacity-95 backdrop-blur-md">
+        <div class="overflow-hidden flex-1 mr-4">
+            <div class="animate-marquee font-vt text-xl tracking-wider text-acid-yellow">
+                ✦ STATUS: ONLINE // BACKEND & DATA SYSTEMS ENGINEER @ SCHNEIDER ELECTRIC ✦ WID SHESPARKS 2026 3RD PLACE ✦ GRAPHDB & KAFKA SPECIALIST ✦ BUILDING CLOUD NATIVE MICROSERVICES ✦ OPEN FOR HIGH-IMPACT BACKEND ROLES ✦
+            </div>
+        </div>
+        <div class="flex items-center space-x-3 shrink-0 font-vt text-xl">
+            <span id="liveClock" class="text-electric-cyan font-bold">00:00:00 AM</span>
+            <button id="toggleCrtBtn" class="bg-obsidian-card border border-electric-lime px-2 py-0.5 text-xs text-electric-lime hover:bg-electric-lime hover:text-black transition-colors" title="Toggle CRT Scanlines">
+                [CRT: ON]
+            </button>
+            <button id="audioToggleBtn" class="bg-obsidian-card border border-cyber-pink px-2 py-0.5 text-xs text-cyber-pink hover:bg-cyber-pink hover:text-black transition-colors">
+                🔊 SFX: ON
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content Workspace Container -->
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-10">
+
+        <section class="win-frame bg-obsidian-card rounded-none overflow-hidden">
+            <!-- Window Title Bar -->
+            <div class="win-header px-3 py-1.5 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-microchip text-acid-yellow text-sm"></i>
+                    <span class="font-bold tracking-wide text-lg">C:\WINDOWS\SYSTEM32\TANISHA_SAXENA.EXE</span>
+                </div>
+                <div class="flex space-x-1 text-black text-xs font-pixel">
+                    <button class="bg-win-gray px-2 py-0.5 border border-white hover:bg-gray-300">_</button>
+                    <button class="bg-win-gray px-2 py-0.5 border border-white hover:bg-gray-300">□</button>
+                    <button class="bg-win-gray px-2 py-0.5 border border-white text-red-600 font-bold hover:bg-red-400 hover:text-white">X</button>
+                </div>
+            </div>
+
+            <!-- Main Hero Bio Body -->
+            <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                <div class="lg:col-span-2 space-y-5">
+                    <div class="inline-flex items-center gap-2 bg-cyber-pink bg-opacity-20 border border-cyber-pink text-cyber-pink px-3 py-1 text-xs font-mono tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-cyber-pink animate-ping"></span>
+                        Software Engineer @ Schneider Electric
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-pixel text-electric-lime glow-lime leading-tight">
+                        TANISHA SAXENA
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-200 font-mono leading-relaxed">
+                        Architecting distributed event data pipelines, semantic knowledge graphs, and cloud-native microservices. Specialist in <span class="text-electric-cyan font-bold">Java Spring Boot</span>, <span class="text-electric-cyan font-bold">Apache Kafka</span>, <span class="text-acid-yellow font-bold">SPARQL / GraphDB</span>, and <span class="text-cyber-pink font-bold">Azure Dapr</span>.
+                    </p>
+
+                    <!-- Tech Stack Badges -->
+                    <div class="flex flex-wrap gap-2 text-xs font-mono pt-1">
+                        <span class="bg-obsidian border border-electric-lime text-electric-lime px-2.5 py-1">JAVA / SPRING BOOT</span>
+                        <span class="bg-obsidian border border-electric-cyan text-electric-cyan px-2.5 py-1">APACHE KAFKA</span>
+                        <span class="bg-obsidian border border-acid-yellow text-acid-yellow px-2.5 py-1">ONTOTEXT GRAPHDB</span>
+                        <span class="bg-obsidian border border-cyber-pink text-cyber-pink px-2.5 py-1">AZURE DAPR</span>
+                        <span class="bg-obsidian border border-purple-400 text-purple-400 px-2.5 py-1">FASTAPI / AI</span>
+                    </div>
+
+                    <!-- Call To Actions -->
+                    <div class="flex flex-wrap gap-3 pt-3">
+                        <a href="mailto:tanishasaxena.work@gmail.com" class="retro-btn bg-electric-lime text-black font-bold px-5 py-2.5 font-mono text-sm flex items-center space-x-2 hover:bg-acid-yellow">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>CONTACT_ENGINEER()</span>
+                        </a>
+                        <a href="https://github.com/Tanishaaaaaaa" target="_blank" class="retro-btn bg-obsidian border border-electric-cyan text-electric-cyan font-bold px-4 py-2.5 font-mono text-sm flex items-center space-x-2 hover:bg-electric-cyan hover:text-black">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GITHUB</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="retro-btn bg-obsidian border border-cyber-pink text-cyber-pink font-bold px-4 py-2.5 font-mono text-sm flex items-center space-x-2 hover:bg-cyber-pink hover:text-black">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LINKEDIN</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Retro Diagnostic Box -->
+                <div class="border-2 border-dashed border-electric-cyan p-5 bg-obsidian space-y-3 font-vt text-xl">
+                    <div class="text-acid-yellow border-b border-gray-800 pb-1 font-pixel text-xs flex justify-between">
+                        <span>SYS_DIAGNOSTICS.LOG</span>
+                        <span class="text-electric-lime">OK</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-400">ACADEMICS:</span>
+                        <span class="text-electric-lime font-bold">9.18 / 10 CGPA</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-400">DEGREE:</span>
+                        <span class="text-electric-cyan">B.E. ISE (2025)</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-400">LOCATION:</span>
+                        <span class="text-acid-yellow">Bengaluru, IN</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-400">HONORS:</span>
+                        <span class="text-cyber-pink">SheSparks '26 3rd</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-400">IEEE PAPERS:</span>
+                        <span class="text-electric-lime">CONECCT & COMPUTE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Interactive CLI Terminal Section -->
+            <section class="win-frame bg-obsidian-card flex flex-col h-[440px]">
+                <div class="win-header px-3 py-1.5 flex justify-between items-center">
+                    <span class="font-vt text-xl">✦ ASK_TANISHA_CLI_v2.0.exe</span>
+                    <span class="text-xs font-mono text-electric-cyan">[INTERACTIVE TERMINAL]</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between overflow-hidden font-mono text-sm bg-black">
+                    <div id="terminalOutput" class="overflow-y-auto space-y-2 pr-2 text-gray-300 flex-1">
+                        <p class="text-electric-lime font-vt text-xl">Tanisha Saxena System Terminal [Version 2.0.26]</p>
+                        <p class="text-gray-400 text-xs">Type <span class="text-acid-yellow font-bold">'help'</span> to see system commands or type custom queries!</p>
+                    </div>
+                    <form id="terminalForm" class="mt-3 flex items-center border-t border-gray-800 pt-2">
+                        <span class="text-cyber-pink font-bold mr-2">guest@tanisha-os:~$</span>
+                        <input type="text" id="terminalInput" class="bg-transparent text-electric-lime outline-none flex-1 font-mono text-sm placeholder-gray-600" placeholder="try 'skills', 'experience', 'projects'..." autocomplete="off">
+                    </form>
+                </div>
+            </section>
+
+            <!-- Debug Outage Simulator Mini-Game Section -->
+            <section class="win-frame bg-obsidian-card flex flex-col h-[440px] relative">
+                <div class="win-header px-3 py-1.5 flex justify-between items-center">
+                    <span class="font-vt text-xl text-acid-yellow">⌘ DEBUG_PRODUCTION_SIMULATOR.exe</span>
+                    <span class="text-xs font-mono text-acid-yellow font-bold">[MINI-GAME]</span>
+                </div>
+
+                <div class="p-5 flex-1 flex flex-col justify-between font-mono text-sm relative bg-black">
+                    
+                    <!-- Overlay Start Game Modal -->
+                    <div id="gameStartOverlay" class="absolute inset-0 bg-obsidian bg-opacity-95 z-20 flex flex-col items-center justify-center p-6 text-center space-y-4">
+                        <i class="fa-solid fa-triangle-exclamation text-4xl text-cyber-pink animate-bounce"></i>
+                        <h3 class="font-pixel text-electric-lime text-sm">PRODUCTION INCIDENT SIMULATOR</h3>
+                        <p class="text-xs text-gray-300 max-w-sm">You have 60 seconds to mitigate production outages across Kafka partition lags, SPARQL query locks, and sidecar memory spikes!</p>
+                        <button id="startGameBtn" class="retro-btn bg-cyber-pink text-white font-bold px-6 py-2.5 font-pixel text-xs hover:bg-electric-lime hover:text-black">
+                            START_DEBUG_SESSION()
+                        </button>
+                    </div>
+
+                    <!-- Game HUD Header -->
+                    <div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2 mb-3 text-xs">
+                            <span class="text-gray-400">STATUS: <span id="healthScore" class="text-electric-lime font-bold">ONLINE</span></span>
+                            <span class="text-acid-yellow">TIME LEFT: <span id="gameTimer" class="font-pixel text-sm">60</span>s</span>
+                            <span class="text-cyber-pink">RESOLVED: <span id="scoreCount" class="font-pixel text-sm">0</span></span>
+                        </div>
+
+                        <!-- Active Incident Container -->
+                        <div id="incidentBox" class="bg-obsidian-card border border-cyber-pink p-3 min-h-[100px] flex flex-col justify-center">
+                            <div class="text-xs text-cyber-pink font-bold uppercase mb-1" id="incidentType">[INCIDENT #1] KAFKA_CONSUMER_LAG</div>
+                            <div class="text-xs text-gray-200" id="incidentDesc">Partition lag spiking over 500,000 messages. Real-time telemetry pipeline at risk!</div>
+                        </div>
+                    </div>
+
+                    <!-- Game Action Options -->
+                    <div class="space-y-2">
+                        <div class="text-xs text-gray-400">SELECT ENGINEERING REMEDIATION:</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" id="actionButtons">
+                            <!-- Buttons dynamically loaded via JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="win-frame bg-obsidian-card p-6 md:p-8">
+            <div class="win-header -mx-6 -mt-6 md:-mx-8 md:-mt-8 px-4 py-2 mb-6 flex justify-between items-center">
+                <h2 class="font-pixel text-xs text-electric-lime flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group"></i> CAREER_TIMELINE.LOG
+                </h2>
+                <span class="text-xs text-gray-300 font-mono">[3 ROLES REGISTERED]</span>
+            </div>
+
+            <div class="space-y-8 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-electric-cyan">
+                
+                <!-- Schneider Electric -->
+                <div class="relative pl-9 space-y-2">
+                    <div class="absolute left-1.5 top-1.5 -translate-x-1/2 w-4 h-4 bg-electric-lime border-2 border-obsidian"></div>
+                    <div class="flex flex-wrap justify-between items-baseline gap-2">
+                        <h3 class="text-lg font-bold text-electric-lime font-mono">Software Developer Engine @ Schneider Electric</h3>
+                        <span class="text-xs font-mono bg-obsidian border border-electric-lime text-electric-lime px-2 py-0.5">2024 — PRESENT</span>
+                    </div>
+                    <p class="text-xs text-electric-cyan font-mono">Java Spring Boot | C# | Apache Kafka | SPARQL | Ontotext GraphDB | Azure Dapr | Dynatrace</p>
+                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1.5 leading-relaxed font-sans">
+                        <li>Designing and implementing scalable microservices in <span class="text-electric-lime font-mono">Java Spring Boot</span> & <span class="text-electric-lime font-mono">Azure Dapr</span> for global enterprise systems.</li>
+                        <li>Building rich semantic knowledge graph architectures leveraging <span class="text-acid-yellow font-mono">SPARQL</span> and <span class="text-acid-yellow font-mono">Ontotext GraphDB</span> for complex relational queries.</li>
+                        <li>Developing real-time asynchronous message streaming via <span class="text-cyber-pink font-mono">Apache Kafka</span>, ensuring low-latency event processing monitored via Dynatrace.</li>
+                    </ul>
+                </div>
+
+                <!-- NFThing Internship -->
+                <div class="relative pl-9 space-y-2">
+                    <div class="absolute left-1.5 top-1.5 -translate-x-1/2 w-4 h-4 bg-cyber-pink border-2 border-obsidian"></div>
+                    <div class="flex flex-wrap justify-between items-baseline gap-2">
+                        <h3 class="text-lg font-bold text-cyber-pink font-mono">Backend Engineering Intern @ NFThing</h3>
+                        <span class="text-xs font-mono text-gray-400">PAST</span>
+                    </div>
+                    <p class="text-xs text-electric-cyan font-mono">Node.js | Express | REST APIs | PostgreSQL | System Architecture</p>
+                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1.5 leading-relaxed font-sans">
+                        <li>Engineered scalable database schema partitions and RESTful backend micro-endpoints.</li>
+                        <li>Boosted query response speed by 35% through SQL query optimization and redis caching layers.</li>
+                    </ul>
+                </div>
+
+                <!-- Emaar Farm Technik -->
+                <div class="relative pl-9 space-y-2">
+                    <div class="absolute left-1.5 top-1.5 -translate-x-1/2 w-4 h-4 bg-electric-cyan border-2 border-obsidian"></div>
+                    <div class="flex flex-wrap justify-between items-baseline gap-2">
+                        <h3 class="text-lg font-bold text-electric-cyan font-mono">Software Systems Developer @ Emaar Farm Technik</h3>
+                        <span class="text-xs font-mono text-gray-400">PAST</span>
+                    </div>
+                    <p class="text-xs text-electric-cyan font-mono">Python | IoT Telemetry | Microcontrollers | Logic Systems</p>
+                    <ul class="list-disc list-inside text-sm text-gray-300 space-y-1.5 leading-relaxed font-sans">
+                        <li>Constructed automated IoT telemetry collection modules and backend processing pipelines.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-electric-cyan pb-3 gap-4">
+                <div>
+                    <h2 class="font-pixel text-base text-electric-lime glow-lime flex items-center gap-2">
+                        <i class="fa-solid fa-code-branch"></i> FEATURED_PROJECTS.DIR
+                    </h2>
+                    <p class="text-xs font-mono text-gray-400 mt-1">High-impact backend systems, security models & AI integrations</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-2 text-xs font-mono" id="projectFilterGroup">
+                    <button data-filter="all" class="filter-btn bg-electric-lime text-black font-bold px-3 py-1 border border-electric-lime">ALL</button>
+                    <button data-filter="ai" class="filter-btn bg-obsidian text-electric-cyan px-3 py-1 border border-gray-700 hover:border-electric-cyan">AI/ML</button>
+                    <button data-filter="backend" class="filter-btn bg-obsidian text-acid-yellow px-3 py-1 border border-gray-700 hover:border-acid-yellow">BACKEND</button>
+                    <button data-filter="security" class="filter-btn bg-obsidian text-cyber-pink px-3 py-1 border border-gray-700 hover:border-cyber-pink">SECURITY</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
+                
+                <!-- Project 1: StormShield -->
+                <div class="project-card win-frame bg-obsidian-card p-5 flex flex-col justify-between" data-category="ai">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-mono text-cyber-pink font-bold">[THREAT INTEL]</span>
+                            <i class="fa-solid fa-shield-virus text-electric-lime text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-vt">StormShield AI (OmniShield)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4 font-sans">
+                            Multimodal predictive threat intelligence platform combining XGBoost and Gemini LLM for real-time security vulnerability classification and automated telemetry logging.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1 mb-3 text-[10px] font-mono">
+                            <span class="bg-obsidian border border-gray-700 text-electric-lime px-2 py-0.5">XGBoost</span>
+                            <span class="bg-obsidian border border-gray-700 text-electric-lime px-2 py-0.5">Gemini LLM</span>
+                            <span class="bg-obsidian border border-gray-700 text-electric-lime px-2 py-0.5">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: NovaCare Medical Engine -->
+                <div class="project-card win-frame bg-obsidian-card p-5 flex flex-col justify-between" data-category="ai">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-mono text-acid-yellow font-bold">[HEALTH ENGINE]</span>
+                            <i class="fa-solid fa-heart-pulse text-acid-yellow text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-vt">NovaCare Medical Backend</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4 font-sans">
+                            Intelligent medical querying service backed by Amazon Nova models and PostgreSQL for low-latency retrieval of patient records and automated summary diagnostics.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1 mb-3 text-[10px] font-mono">
+                            <span class="bg-obsidian border border-gray-700 text-acid-yellow px-2 py-0.5">Amazon Nova</span>
+                            <span class="bg-obsidian border border-gray-700 text-acid-yellow px-2 py-0.5">FastAPI</span>
+                            <span class="bg-obsidian border border-gray-700 text-acid-yellow px-2 py-0.5">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: CP-ABE Multicloud File Sharing -->
+                <div class="project-card win-frame bg-obsidian-card p-5 flex flex-col justify-between" data-category="security">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-mono text-electric-cyan font-bold">[CRYPTOGRAPHY]</span>
+                            <i class="fa-solid fa-lock text-electric-cyan text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-vt">CP-ABE Multicloud Storage</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4 font-sans">
+                            Ciphertext-Policy Attribute-Based Encryption framework securing sensitive file distributions across multicloud environments without centralized trust.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1 mb-3 text-[10px] font-mono">
+                            <span class="bg-obsidian border border-gray-700 text-electric-cyan px-2 py-0.5">Java</span>
+                            <span class="bg-obsidian border border-gray-700 text-electric-cyan px-2 py-0.5">Cryptography</span>
+                            <span class="bg-obsidian border border-gray-700 text-electric-cyan px-2 py-0.5">AWS / Azure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: EcoPilot Gateway -->
+                <div class="project-card win-frame bg-obsidian-card p-5 flex flex-col justify-between" data-category="backend">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-mono text-electric-lime font-bold">[ENERGY TECH]</span>
+                            <i class="fa-solid fa-bolt text-electric-lime text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-vt">EcoPilot Smart Gateway</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4 font-sans">
+                            WID SheSparks 2026 3rd place winning architecture designed for industrial energy telemetry processing, load balancing, and dynamic throttling.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1 mb-3 text-[10px] font-mono">
+                            <span class="bg-obsidian border border-gray-700 text-electric-lime px-2 py-0.5">Spring Boot</span>
+                            <span class="bg-obsidian border border-gray-700 text-electric-lime px-2 py-0.5">Kafka</span>
+                            <span class="bg-obsidian border border-gray-700 text-electric-lime px-2 py-0.5">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Exam Proctoring Engine -->
+                <div class="project-card win-frame bg-obsidian-card p-5 flex flex-col justify-between" data-category="ai">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-mono text-cyber-pink font-bold">[COMPUTER VISION]</span>
+                            <i class="fa-solid fa-eye text-cyber-pink text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-vt">AI Exam Proctoring Engine</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-4 font-sans">
+                            Real-time automated candidate verification system with gaze tracking, face identification, and anomaly logging pipelines.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1 mb-3 text-[10px] font-mono">
+                            <span class="bg-obsidian border border-gray-700 text-cyber-pink px-2 py-0.5">OpenCV</span>
+                            <span class="bg-obsidian border border-gray-700 text-cyber-pink px-2 py-0.5">Python</span>
+                            <span class="bg-obsidian border border-gray-700 text-cyber-pink px-2 py-0.5">Flask API</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- IEEE Research & Accolades -->
+            <section class="win-frame bg-obsidian-card p-6">
+                <div class="win-header -mx-6 -mt-6 px-4 py-2 mb-5 flex justify-between items-center">
+                    <h3 class="font-pixel text-xs text-acid-yellow flex items-center gap-2">
+                        <i class="fa-solid fa-award"></i> RESEARCH_&_HONORS.SYS
+                    </h3>
+                </div>
+                <div class="space-y-4 text-sm font-mono">
+                    <div class="border-l-2 border-acid-yellow pl-3 space-y-1">
+                        <div class="text-acid-yellow font-bold">🏆 WID SheSparks 2026 Ideathon — 3rd Place Winner</div>
+                        <div class="text-xs text-gray-300 font-sans">Recognized for designing EcoPilot Gateway for smart enterprise energy management.</div>
+                    </div>
+                    <div class="border-l-2 border-electric-lime pl-3 space-y-1">
+                        <div class="text-electric-lime font-bold">📚 IEEE CONECCT 2025 & IEEE COMPUTE 2024 Author</div>
+                        <div class="text-xs text-gray-300 font-sans">Published lead author on predictive forecasting (ARIMA + SHAP) and cloud cryptographic storage models.</div>
+                    </div>
+                    <div class="border-l-2 border-cyber-pink pl-3 space-y-1">
+                        <div class="text-cyber-pink font-bold">⭐ NPTEL Believer & Discipline Star Award</div>
+                        <div class="text-xs text-gray-300 font-sans">Earned elite distinction badges across 5 core computer science domains in one semester.</div>
+                    </div>
+                    <div class="border-l-2 border-electric-cyan pl-3 space-y-1">
+                        <div class="text-electric-cyan font-bold">🏅 Salesforce AI Associate & McKinsey Forward Graduate</div>
+                        <div class="text-xs text-gray-300 font-sans">Certified in AI fundamentals, agile leadership, and strategic problem solving.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEV.to Tech Writing -->
+            <section class="win-frame bg-obsidian-card p-6">
+                <div class="win-header -mx-6 -mt-6 px-4 py-2 mb-5 flex justify-between items-center">
+                    <h3 class="font-pixel text-xs text-cyber-pink flex items-center gap-2">
+                        <i class="fa-solid fa-newspaper"></i> DEV.TO_FIELD_NOTES.LOG
+                    </h3>
+                </div>
+                <div class="space-y-3 font-mono text-sm">
+                    <a href="https://dev.to" target="_blank" class="block p-3 bg-black border border-gray-800 hover:border-cyber-pink transition-all">
+                        <div class="text-electric-lime font-bold text-xs mb-1">FIELD NOTES #1</div>
+                        <div class="text-white text-sm hover:underline">"A totally accurate day in the life of a backend software developer"</div>
+                    </a>
+                    <a href="https://dev.to" target="_blank" class="block p-3 bg-black border border-gray-800 hover:border-cyber-pink transition-all">
+                        <div class="text-electric-lime font-bold text-xs mb-1">FIELD NOTES #2</div>
+                        <div class="text-white text-sm hover:underline">"It worked on my machine... so why is production on fire?"</div>
+                    </a>
+                    <a href="https://dev.to" target="_blank" class="block p-3 bg-black border border-gray-800 hover:border-cyber-pink transition-all">
+                        <div class="text-electric-lime font-bold text-xs mb-1">FIELD NOTES #3</div>
+                        <div class="text-white text-sm hover:underline">"What if complaining was a product requirement?"</div>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <script>
+        /* ---------------------------------------------------
+           Web Audio API Retro Sound Effects
+           --------------------------------------------------- */
+        let soundEnabled = true;
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx;
+
+        function initAudio() {
+            if (!audioCtx) audioCtx = new AudioContext();
+        }
+
+        function playBeep(freq = 440, type = 'sine', duration = 0.08) {
+            if (!soundEnabled) return;
+            try {
+                initAudio();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = type;
+                osc.frequency.value = freq;
+                gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch(e){}
+        }
+
+        /* ---------------------------------------------------
+           Digital Clock
+           --------------------------------------------------- */
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('liveClock').innerText = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        /* ---------------------------------------------------
+           Controls: CRT & Audio Toggles
+           --------------------------------------------------- */
+        document.getElementById('audioToggleBtn').addEventListener('click', () => {
+            soundEnabled = !soundEnabled;
+            document.getElementById('audioToggleBtn').innerText = soundEnabled ? '🔊 SFX: ON' : 'MUTE SFX';
+            playBeep(600);
+        });
+
+        document.getElementById('toggleCrtBtn').addEventListener('click', () => {
+            const crt = document.getElementById('crtOverlay');
+            crt.classList.toggle('opacity-100');
+            crt.classList.toggle('opacity-0');
+            playBeep(800);
+        });
+
+        /* ---------------------------------------------------
+           Interactive CLI Terminal Logic
+           --------------------------------------------------- */
+        const terminalOutput = document.getElementById('terminalOutput');
+        const terminalForm = document.getElementById('terminalForm');
+        const terminalInput = document.getElementById('terminalInput');
+
+        const commands = {
+            help: `Available Commands:
+- <span class="text-electric-lime">skills</span>: List technical languages & backend stack
+- <span class="text-electric-lime">experience</span>: View career roles
+- <span class="text-electric-lime">projects</span>: Highlighted technical builds
+- <span class="text-electric-lime">contact</span>: Email & social links
+- <span class="text-electric-lime">clear</span>: Clear terminal window`,
+
+            skills: `Technical Stack:
+- <span class="text-electric-cyan">Languages:</span> Java, C#, Python, SPARQL, SQL, JavaScript
+- <span class="text-electric-cyan">Frameworks:</span> Spring Boot, Azure Dapr, FastAPI, Node.js
+- <span class="text-electric-cyan">Data & Messaging:</span> Ontotext GraphDB, Apache Kafka, PostgreSQL
+- <span class="text-electric-cyan">Cloud & Ops:</span> Azure, Docker, Kubernetes, Dynatrace APM`,
+
+            experience: `Career Log:
+1. <span class="text-electric-lime">Schneider Electric</span> — Software Developer Engine (Java, Kafka, GraphDB, Dapr)
+2. <span class="text-electric-lime">NFThing</span> — Backend Engineering Intern
+3. <span class="text-electric-lime">Emaar Farm Technik</span> — Software Systems Developer`,
+
+            projects: `Top Builds:
+- <span class="text-acid-yellow">StormShield AI</span> (XGBoost + Gemini LLM Threat Intelligence)
+- <span class="text-acid-yellow">NovaCare Medical Engine</span> (FastAPI + Amazon Nova)
+- <span class="text-acid-yellow">CP-ABE Multicloud File System</span> (Cryptographic Security)`,
+
+            contact: `Direct Contacts:
+- Email: <a href="mailto:tanishasaxena.work@gmail.com" class="underline text-electric-lime">tanishasaxena.work@gmail.com</a>
+- GitHub: Tanishaaaaaaa`
+        };
+
+        terminalForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const raw = terminalInput.value.trim();
+            const input = raw.toLowerCase();
+            playBeep(520);
+
+            if (!input) return;
+
+            const userCmd = document.createElement('p');
+            userCmd.innerHTML = `<span class="text-cyber-pink font-bold">guest@tanisha-os:~$</span> ${raw}`;
+            terminalOutput.appendChild(userCmd);
+
+            if (input === 'clear') {
+                terminalOutput.innerHTML = '';
+            } else if (commands[input]) {
+                const response = document.createElement('div');
+                response.className = 'text-gray-300 text-xs my-1 pl-2 border-l-2 border-electric-lime';
+                response.innerHTML = commands[input];
+                terminalOutput.appendChild(response);
+            } else {
+                const response = document.createElement('p');
+                response.className = 'text-cyber-pink text-xs';
+                response.innerText = `Command '${input}' not recognized. Type 'help' for available system commands.`;
+                terminalOutput.appendChild(response);
+            }
+
+            terminalInput.value = '';
+            terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        });
+
+        /* ---------------------------------------------------
+           Debug Outage Mini-Game Engine
+           --------------------------------------------------- */
+        const incidents = [
+            {
+                title: "[INCIDENT #1] KAFKA_CONSUMER_LAG",
+                desc: "Kafka consumer partition lag spiking above 500,000 messages!",
+                actions: [
+                    { label: "Scale Consumer Worker Partition", correct: true },
+                    { label: "Restart Database Instance", correct: false }
+                ]
+            },
+            {
+                title: "[INCIDENT #2] GRAPHDB_SPARQL_TIMEOUT",
+                desc: "Complex ontology query locking graph database transaction thread.",
+                actions: [
+                    { label: "Optimize SPARQL Graph Pattern Query", correct: true },
+                    { label: "Purge Kafka Stream Topics", correct: false }
+                ]
+            },
+            {
+                title: "[INCIDENT #3] DAPR_SIDECAR_OOM_SPIKE",
+                desc: "Microservice sidecar memory consumption reached 99.8% threshold.",
+                actions: [
+                    { label: "Adjust Sidecar Memory & Cache Policy", correct: true },
+                    { label: "Delete Microservice Logs", correct: false }
+                ]
+            }
+        ];
+
+        let currentIncidentIndex = 0;
+        let gameScore = 0;
+        let gameTimer = 60;
+        let timerInterval;
+
+        const startGameBtn = document.getElementById('startGameBtn');
+        const gameStartOverlay = document.getElementById('gameStartOverlay');
+        const incidentType = document.getElementById('incidentType');
+        const incidentDesc = document.getElementById('incidentDesc');
+        const actionButtons = document.getElementById('actionButtons');
+        const scoreCount = document.getElementById('scoreCount');
+        const gameTimerDisplay = document.getElementById('gameTimer');
+
+        function loadIncident() {
+            const inc = incidents[currentIncidentIndex % incidents.length];
+            incidentType.innerText = inc.title;
+            incidentDesc.innerText = inc.desc;
+            actionButtons.innerHTML = '';
+
+            inc.actions.forEach(act => {
+                const btn = document.createElement('button');
+                btn.className = 'retro-btn bg-obsidian border border-electric-cyan text-electric-cyan text-xs p-2.5 hover:bg-electric-cyan hover:text-black transition-colors font-mono text-left';
+                btn.innerText = `> ${act.label}`;
+                btn.onclick = () => handleAction(act.correct);
+                actionButtons.appendChild(btn);
+            });
+        }
+
+        function handleAction(isCorrect) {
+            if (isCorrect) {
+                playBeep(880, 'triangle', 0.1);
+                gameScore++;
+                scoreCount.innerText = gameScore;
+            } else {
+                playBeep(220, 'sawtooth', 0.2);
+            }
+            currentIncidentIndex++;
+            loadIncident();
+        }
+
+        startGameBtn.addEventListener('click', () => {
+            playBeep(700);
+            gameStartOverlay.style.display = 'none';
+            gameScore = 0;
+            gameTimer = 60;
+            scoreCount.innerText = gameScore;
+            loadIncident();
+
+            if (timerInterval) clearInterval(timerInterval);
+
+            timerInterval = setInterval(() => {
+                gameTimer--;
+                gameTimerDisplay.innerText = gameTimer;
+                if (gameTimer <= 0) {
+                    clearInterval(timerInterval);
+                    gameStartOverlay.style.display = 'flex';
+                    gameStartOverlay.querySelector('h3').innerText = "SIMULATION COMPLETE";
+                    gameStartOverlay.querySelector('p').innerText = `You mitigated ${gameScore} production outages in 60 seconds!`;
+                    startGameBtn.innerText = "RESTART_DEBUG_SESSION()";
+                }
+            }, 1000);
+        });
+
+        /* ---------------------------------------------------
+           Interactive Project Filter Tabs
+           --------------------------------------------------- */
+        const filterBtns = document.querySelectorAll('#projectFilterGroup button');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                playBeep(600);
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-electric-lime', 'text-black', 'font-bold');
+                    b.classList.add('bg-obsidian', 'text-gray-300');
+                });
+                btn.classList.add('bg-electric-lime', 'text-black', 'font-bold');
+                btn.classList.remove('bg-obsidian', 'text-gray-300');
+
+                const filter = btn.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Add subtle acoustic feedback to clickable elements
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('click', () => playBeep(480));
+        });
+    </script>
 </body>
 </html>
