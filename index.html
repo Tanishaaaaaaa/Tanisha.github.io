@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tanisha Saxena — Software Engineer</title>
+
+<style>
+.hero{position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-240px;top:-180px;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 24%,transparent),transparent 68%);pointer-events:none;animation:float 8s ease-in-out infinite}.hero>div{position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent2) 12%,transparent);animation:pulse 2s infinite}.hero h1{max-width:980px}.hero p{max-width:760px}.btn{transition:transform .2s,background .2s,color .2s}.btn:hover{transform:translateY(-2px)}.btn.primary:hover{background:var(--accent);color:white}.hero-side{background:color-mix(in srgb,var(--surface) 70%,transparent);backdrop-filter:blur(12px);padding:25px;border:1px solid var(--line);border-radius:22px}.hero-side strong{font-variant-numeric:tabular-nums}.card{position:relative;overflow:hidden}.card:after{content:"";position:absolute;inset:auto -40px -70px auto;width:150px;height:150px;border-radius:50%;background:color-mix(in srgb,var(--accent) 8%,transparent);transition:.3s}.card:hover:after{transform:scale(1.4)}.section{scroll-margin-top:20px}.item{transition:padding-left .2s}.item:hover{padding-left:10px}.cert{transition:.2s transform,.2s border-color}.cert:hover{transform:translateY(-2px);border-color:var(--accent)}.quote{border-left:3px solid var(--accent);padding-left:25px}.footer a:hover{color:var(--accent)}@keyframes float{50%{transform:translate(-20px,18px)}}@keyframes pulse{50%{box-shadow:0 0 0 10px color-mix(in srgb,var(--accent2) 0%,transparent)}}@media(max-width:800px){.hero:before{width:300px;height:300px;right:-170px;top:-80px}}
+</style>
+
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#f7f5ef,#0b0d0f);--surface:light-dark(#fff,#121619);--surface2:light-dark(#f0eee7,#171c20);--text:light-dark(#151515,#f5f5f2);--muted:light-dark(#66645e,#a8ada9);--line:light-dark(#ddd9cf,#2a3034);--accent:light-dark(#8b5cf6,#a78bfa);--accent2:light-dark(#06b6d4,#22d3ee)}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+.root{min-height:100vh;background:var(--bg)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:auto;padding:0 28px}
+
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font-weight:800;letter-spacing:-.04em}
+.brand span{color:var(--accent)}
+.links{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--text)}
+
+.hero{padding:92px 0 76px;display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:end}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent2);font-weight:800}
+.hero h1{font-size:clamp(52px,8vw,94px);line-height:.92;letter-spacing:-.075em;margin:18px 0 28px;max-width:900px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:20px;color:var(--muted);max-width:720px;margin:0}
+.hero-side{border-left:1px solid var(--line);padding-left:28px}
+.hero-side strong{display:block;font-size:42px;letter-spacing:-.06em}
+.hero-side small{color:var(--muted)}
+
+.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:12px 17px;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:700}
+.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+.section{padding:82px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:baseline;margin-bottom:34px}
+.section h2{font-size:38px;letter-spacing:-.05em;margin:0}
+.section-head p{color:var(--muted);max-width:480px;margin:0}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:25px;transition:.2s transform,.2s border-color}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.card .num{font-size:12px;color:var(--accent);font-weight:800}
+.card h3{font-size:22px;letter-spacing:-.035em;margin:12px 0 8px}
+.card p{color:var(--muted);margin:0}
+
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.tag{font-size:12px;border:1px solid var(--line);padding:5px 9px;border-radius:999px;color:var(--muted)}
+
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feature .card{min-height:285px}
+.feature .card:first-child{background:linear-gradient(135deg,var(--surface),color-mix(in srgb,var(--accent) 10%,var(--surface)))}
+
+.kicker{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.big{font-size:31px;letter-spacing:-.05em;margin:14px 0}
+
+.timeline{position:relative;margin-top:12px}
+.item{display:grid;grid-template-columns:150px 1fr;gap:30px;padding:25px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.date{font-size:13px;color:var(--accent2);font-weight:800}
+.item h3{margin:0 0 6px;font-size:21px}
+.item p{margin:0;color:var(--muted)}
+
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.cert{padding:17px 18px;background:var(--surface2);border:1px solid var(--line);border-radius:14px}
+.cert strong{display:block}
+.cert span{color:var(--muted);font-size:13px}
+
+.quote{font-size:28px;line-height:1.25;letter-spacing:-.04em;max-width:850px}
+
+.footer{padding:70px 0 45px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font-size:14px}
+.footer strong{color:var(--text)}
+
+@media(max-width:800px){
+.links{display:none}
+.hero{grid-template-columns:1fr;padding-top:64px}
+.hero-side{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}
+.grid,.feature,.cert-grid{grid-template-columns:1fr}
+.item{grid-template-columns:1fr;gap:8px}
+.section{padding:60px 0}
+.hero h1{font-size:56px}
+.wrap{padding:0 20px}
+.footer{flex-direction:column}
+}
+</style>
+
+<style>
+.hero{min-height:calc(100vh - 76px);align-items:center}
+.hero-sub{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;color:var(--muted);font-size:13px}
+.pill{padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--surface) 65%,transparent)}
+.scroll-cue{margin-top:54px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.scroll-cue span{display:block;width:42px;height:1px;background:var(--line)}
+.availability{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:18px}
+.availability:before{content:"";width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 5px #22c55e22}
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 0;white-space:nowrap;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.18em}
+.marquee-track{display:inline-block;animation:marquee 24s linear infinite}
+.marquee i{font-style:normal;color:var(--accent);padding:0 22px}
+
+@keyframes marquee{
+to{transform:translateX(-50%)}
+}
+
+@media(max-width:800px){
+.hero{min-height:auto}
+}
+</style>
+</head>
+
+<body>
+<div class="root">
+
+<div class="wrap">
+<nav class="nav">
+<a class="brand" href="#top">tanisha<span>.</span></a>
+
+<div class="links">
+<a href="#work">Work</a>
+<a href="#builds">Builds</a>
+<a href="#journey">Journey</a>
+<a href="#credentials">Credentials</a>
+<a href="https://github.com/Tanishaaaaaaa" target="_blank">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/tanisha-saxena-978237277/" target="_blank">LinkedIn ↗</a>
+</div>
+</nav>
+</div>
+
+<main id="top" class="wrap">
+
+<div class="marquee">
+<div class="marquee-track">
+BACKEND <i>✦</i>
+CLOUD NATIVE <i>✦</i>
+DATA SYSTEMS <i>✦</i>
+AI / ML <i>✦</i>
+DISTRIBUTED SYSTEMS <i>✦</i>
+JAVA <i>✦</i>
+KUBERNETES <i>✦</i>
+BACKEND <i>✦</i>
+CLOUD NATIVE <i>✦</i>
+DATA SYSTEMS <i>✦</i>
+AI / ML <i>✦</i>
+DISTRIBUTED SYSTEMS <i>✦</i>
+JAVA <i>✦</i>
+KUBERNETES <i>✦</i>
+</div>
+</div>
+
+<section class="hero">
+
+<div>
+
+<div class="eyebrow">Software Engineer · Bengaluru</div>
+
+<h1>
+Building systems that <em>actually do something.</em>
+</h1>
+
+<p>
+I’m Tanisha — a backend & data systems engineer who likes turning messy problems into reliable software, from cloud-native microservices to AI-powered prototypes.
+</p>
+
+<div class="hero-sub">
+<span class="pill">Backend</span>
+<span class="pill">Cloud Native</span>
+<span class="pill">Data Systems</span>
+<span class="pill">AI / ML</span>
+</div>
+
+<div class="actions">
+<a class="btn primary" href="#work">Explore my work ↓</a>
+<a class="btn" href="https://github.com/Tanishaaaaaaa" target="_blank">GitHub ↗</a>
+<a class="btn" href="https://www.linkedin.com/in/tanisha-saxena-978237277/" target="_blank">LinkedIn ↗</a>
+</div>
+
+<div class="scroll-cue">
+<span></span>
+scroll to explore
+</div>
+
+</div>
+
+<div class="hero-side">
+
+<strong>1+ yr</strong>
+<small>professional software engineering experience</small>
+
+<br><br>
+
+<strong>1 → ∞</strong>
+<small>Always building, always learning</small>
+
+<div class="availability">
+Building in production at Schneider Electric
+</div>
+
+</div>
+
+</section>
+
+<section id="work" class="section">
+
+<div class="section-head">
+
+<h2>What I work on</h2>
+
+<p>
+My sweet spot sits where backend engineering, data systems, cloud infrastructure and intelligent workflows overlap.
+</p>
+
+</div>
+
+<div class="grid">
+
+<article class="card">
+
+<div class="num">01 / BACKEND</div>
+
+<h3>Cloud-native services</h3>
+
+<p>
+Designing and maintaining scalable microservices and REST APIs with Java, Spring Boot, C# and distributed-system patterns.
+</p>
+
+<div class="tags">
+<span class="tag">Java</span>
+<span class="tag">Spring Boot</span>
+<span class="tag">C#</span>
+<span class="tag">REST</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<div class="num">02 / DATA</div>
+
+<h3>Data & knowledge systems</h3>
+
+<p>
+Working with data pipelines, ontology/graph concepts, SPARQL and SQL/NoSQL systems to make complex information usable.
+</p>
+
+<div class="tags">
+<span class="tag">SPARQL</span>
+<span class="tag">Graph</span>
+<span class="tag">SQL</span>
+<span class="tag">NoSQL</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<div class="num">03 / CLOUD</div>
+
+<h3>Production thinking</h3>
+
+<p>
+Observability, logging, debugging, containers and CI/CD — the unglamorous stuff that makes software survive real users.
+</p>
+
+<div class="tags">
+<span class="tag">Azure</span>
+<span class="tag">AWS</span>
+<span class="tag">Docker</span>
+<span class="tag">Kubernetes</span>
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<section id="builds" class="section">
+
+<div class="section-head">
+
+<h2>Things I’ve built</h2>
+
+<p>
+Not everything belongs in a corporate job description. These are the projects that show how I think when I get to explore.
+</p>
+
+</div>
+
+<div class="feature">
+
+<article class="card">
+
+<div class="kicker">Hackathon · 2026</div>
+
+<div class="big">🌊 StormShield AI</div>
+
+<p>
+An AI-powered flood and weather guardian built with OmniShield. The system combines live environmental data with XGBoost to forecast water levels 30 minutes ahead, Gemini-powered safety guidance, real-time alerts and interactive visualizations.
+</p>
+
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">FastAPI</span>
+<span class="tag">XGBoost</span>
+<span class="tag">Gemini</span>
+<span class="tag">Streamlit</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<div class="kicker">AI · Healthcare</div>
+
+<div class="big">🏥 NovaCare — AI Healthcare Workflow Automation</div>
+
+<p>
+An AI-focused healthcare project designed around accessible, intelligent support and user-centric care workflows, combining software engineering with applied AI concepts.Integrated Amazon Nova models (Sonic, Lite, Act, Multimodal Embeddings) with a Python FastAPI backend and PostgreSQL to automate patient triage and intake, cutting manual registration steps by ~70%.
+</p>
+
+<div class="tags">
+<span class="tag">AI / ML</span>
+<span class="tag">Healthcare</span>
+<span class="tag">Intelligent Systems</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<div class="kicker">Project</div>
+
+<div class="big">⚙️ Multicloud File Sharing using CP-ABE</div>
+
+<p>
+Engineered a privacy-preserving multicloud file-sharing platform leveraging Ciphertext-Policy Attribute-Based Encryption (CP-ABE). The system embeds fine-grained access control policies directly into encrypted data, enabling secure multi-authority file distribution across heterogeneous cloud environments while guaranteeing data confidentiality against semi-trusted cloud providers.
+</p>
+
+<div class="tags">
+<span class="tag">Software Engineering</span>
+<span class="tag">Problem Solving</span>
+<span class="tag">Development</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<div class="kicker">WID SheSparks · 2026</div>
+
+<div class="big">♻️ EcoPilot Gateway</div>
+
+<p>
+An AI gateway for responsible token governance and cost-aware model routing. A knowledge base and LLM router classify prompts and route each request to the appropriate model, avoiding unnecessary use of premium cloud AI credits while keeping model selection intentional and efficient.
+</p>
+
+<div class="tags">
+<span class="tag">LLM Router</span>
+<span class="tag">Knowledge Base</span>
+<span class="tag">Token Governance</span>
+<span class="tag">AI Gateway</span>
+<span class="tag">Cost Optimization</span>
+</div>
+
+</article>
+
+<article class="card">
+
+<div class="kicker">Research · AI / ML</div>
+
+<div class="big">🧠 Intelligent Exam Proctoring</div>
+
+<p>
+An automated online exam-proctoring system focused on authentication and abnormal-behaviour monitoring using image processing and deep learning.
+</p>
+
+<div class="tags">
+<span class="tag">Computer Vision</span>
+<span class="tag">Deep Learning</span>
+<span class="tag">Image Processing</span>
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-head">
+
+<h2>Proof, not just projects</h2>
+
+<p>
+A few milestones that shaped the person behind the code.
+</p>
+
+</div>
+
+<div class="grid">
+
+<article class="card">
+
+<div class="num">03rd PLACE</div>
+
+<h3>WID SheSparks 2026 Ideathon</h3>
+
+<p>
+Secured 3rd place for EcoPilot Gateway, a sustainability-focused AI gateway exploring token governance, knowledge-based prompt classification and intelligent model routing.
+</p>
+
+</article>
+
+<article class="card">
+
+<div class="num">IEEE</div>
+
+<h3>IEEE Lead Researcher & Conference Presenter</h3>
+
+<p>
+Recognized as lead researcher and author at IEEE CONECCT 2025 and IEEE COMPUTE 2024 for contributions to applied machine learning. Published research on Explainable AI (integrating ARIMA with SHAP for time-series forecasting) and presented poster sessions on deep-learning-based behavioral anomaly detection.
+</p>
+
+</article>
+<article class="card">
+
+<div class="num">NPTEL</div>
+
+<h3>NPTEL Believer and Discipline Star Award Winner</h3>
+
+<p>
+Awarded for exceptional commitment to continuous upskilling by sitting for and successfully getting certified in 5 proctored technical exams in a single semester (Jan–Apr 2025). Completed certifications with Elite + Silver medals across Data Analytics with Python, Business Intelligence, and Java Programming.
+</p>
+
+</article>
+
+<article class="card">
+
+<div class="num">LEARNING</div>
+
+<h3>McKinsey Forward</h3>
+
+<p>
+Completed the McKinsey.org Forward Learning Program, focused on structured problem solving, communication, adaptability and professional growth.
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+<section id="journey" class="section">
+
+<div class="section-head">
+
+<h2>The journey</h2>
+
+<p>
+From Information Science student to building production software — with plenty of experiments in between.
+</p>
+
+</div>
+
+<div class="timeline">
+
+<div class="item">
+
+<div class="date">2025 — NOW</div>
+
+<div>
+<h3>Software Engineer · Schneider Electric</h3>
+
+<p>
+Building enterprise-scale cloud-native systems, including high-volume notification and alerting services across email, push and SMS, alongside data/knowledge-system work.
+</p>
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="date">2021 — 2025</div>
+
+<div>
+<h3>B.E. (Honors), Information Science · Ramaiah Institute of Technology</h3>
+
+<p>
+Graduated with a 9.18/10. Built across software engineering, AI/ML, web development and research while contributing to IEEE and student projects.
+</p>
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="date">2023 — 2025</div>
+
+<div>
+<h3>Research, documentation & community</h3>
+
+<p>
+Worked on AI/ML research and technical documentation, while volunteering in education initiatives supporting school students.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="credentials" class="section">
+
+<div class="section-head">
+
+<h2>Credentials</h2>
+
+<p>
+A growing toolkit — with a bias toward learning things well enough to build with them.
+</p>
+
+</div>
+
+<div class="cert-grid">
+
+<div class="cert">
+<strong>Salesforce Certified AI Associate</strong>
+<span>Salesforce · Oct 2024</span>
+</div>
+
+<div class="cert">
+<strong>Contentstack for Developers + Launch</strong>
+<span>Contentstack · Sep 2024</span>
+</div>
+
+<div class="cert">
+<strong>AWS Knowledge: Cloud Essentials</strong>
+<span>Amazon Web Services · Jul 2024</span>
+</div>
+
+<div class="cert">
+<strong>Postman API Fundamentals Student Expert</strong>
+<span>Postman · Jul 2024</span>
+</div>
+
+<div class="cert">
+<strong>Google Cloud Computing Foundations</strong>
+<span>Google · May 2024</span>
+</div>
+
+<div class="cert">
+<strong>AI Foundation Certification</strong>
+<span>Infosys Springboard · Nov 2023</span>
+</div>
+
+<div class="cert">
+<strong>Research: AI / ML systems</strong>
+<span>Academic + IEEE ecosystem</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<p class="quote">
+“I like building at the intersection of reliable engineering and curiosity — the kind of work where you learn something new because the problem refuses to be boring.”
+</p>
+
+</section>
+
+</main>
+
+<div class="wrap">
+
+<footer class="footer">
+
+<div>
+<strong>Tanisha Saxena</strong>
+<br>
+Software Engineer · Bengaluru, India
+</div>
+
+<div>
+
+<a href="https://github.com/Tanishaaaaaaa" target="_blank">GitHub ↗</a>
+<br>
+
+<a href="https://www.linkedin.com/in/tanisha-saxena-978237277/" target="_blank">LinkedIn ↗</a>
+<br>
+
+<span>Built with curiosity.</span>
+
+</div>
+
+</footer>
+
+</div>
+
+</div>
+
+<script>
+
+const navLinks=[
+  ...document.querySelectorAll('.links a[href^="#"]')
+];
+
+const sections=navLinks
+  .map(a=>document.querySelector(a.getAttribute('href')))
+  .filter(Boolean);
+
+const activate=()=>{
+  let current=
+    sections.find(s=>s.getBoundingClientRect().top>80)?.id
+    ||sections.at(-1)?.id;
+
+  navLinks.forEach(a=>{
+    a.style.color=
+      a.getAttribute('href')==='#'+current
+      ?'var(--text)'
+      :'';
+  });
+};
+
+addEventListener('scroll',activate,{passive:true});
+activate();
+
+</script>
+
+</body>
+</html>
