@@ -1,57 +1,103 @@
 <!doctype html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Tanisha Saxena — Software Engineer</title>
 
 <style>
+
 .hero{position:relative;overflow:hidden}
+
 .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-240px;top:-180px;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 24%,transparent),transparent 68%);pointer-events:none;animation:float 8s ease-in-out infinite}
+
 .hero>div{position:relative;z-index:1}
+
 .eyebrow{display:inline-flex;align-items:center;gap:9px}
+
 .eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent2) 12%,transparent);animation:pulse 2s infinite}
+
 .hero h1{max-width:980px}
+
 .hero p{max-width:760px}
-.btn{transition:transform .2s,background .2s,color .2s}
+
+.btn{transition:transform .2s,*background* .2s,color .2s}
+
 .btn:hover{transform:translateY(-2px)}
+
 .btn.primary:hover{background:var(--accent);color:white}
+
 .hero-side{background:color-mix(in srgb,var(--surface) 70%,transparent);backdrop-filter:blur(12px);padding:25px;border:1px solid var(--line);border-radius:22px}
+
 .hero-side strong{font-variant-numeric:tabular-nums}
+
 .card{position:relative;overflow:hidden}
+
 .card:after{content:"";position:absolute;inset:auto -40px -70px auto;width:150px;height:150px;border-radius:50%;background:color-mix(in srgb,var(--accent) 8%,transparent);transition:.3s}
+
 .card:hover:after{transform:scale(1.4)}
+
 .section{scroll-margin-top:20px}
+
 .item{transition:padding-left .2s}
+
 .item:hover{padding-left:10px}
+
 .cert{transition:.2s transform,.2s border-color}
+
 .cert:hover{transform:translateY(-2px);border-color:var(--accent)}
+
 .quote{border-left:3px solid var(--accent);padding-left:25px}
+
 .footer a:hover{color:var(--accent)}
 
 @keyframes float{
+
 50%{transform:translate(-20px,18px)}
+
 }
+
 @keyframes pulse{
+
 50%{box-shadow:0 0 0 10px color-mix(in srgb,var(--accent2) 0%,transparent)}
+
 }
 
 @media(max-width:800px){
+
 .hero:before{width:300px;height:300px;right:-170px;top:-80px}
+
 }
+
 </style>
 
 <style>
+
 :root{
+
 color-scheme:light dark;
---bg:light-dark(#f7f5ef,#0b0d0f);
---surface:light-dark(#fff,#121619);
---surface2:light-dark(#f0eee7,#171c20);
---text:light-dark(#151515,#f5f5f2);
---muted:light-dark(#66645e,#a8ada9);
---line:light-dark(#ddd9cf,#2a3034);
---accent:light-dark(#8b5cf6,#a78bfa);
---accent2:light-dark(#06b6d4,#22d3ee)
+
+--bg:light-dark(#fbfaf7,#101012);
+
+--surface:light-dark(#ffffff,#17171a);
+
+--surface2:light-dark(#f4f0ed,#1e1e22);
+
+--text:light-dark(#171515,#f7f5f3);
+
+--muted:light-dark(#706b68,#b6b0ae);
+
+--line:light-dark(#e5dfdb,#343236);
+
+--accent:light-dark(#c87998,#e39ab5);
+
+--accent2:light-dark(#7e91a8,#aebdd0)
+
 }
 
 *{box-sizing:border-box}
@@ -59,11 +105,17 @@ color-scheme:light dark;
 html{scroll-behavior:smooth}
 
 body{
+
 margin:0;
+
 background:var(--bg);
+
 color:var(--text);
+
 font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
 line-height:1.55
+
 }
 
 .root{min-height:100vh;background:var(--bg)}
@@ -71,302 +123,497 @@ line-height:1.55
 a{color:inherit;text-decoration:none}
 
 .wrap{
+
 max-width:1120px;
+
 margin:auto;
+
 padding:0 28px
+
 }
 
 .nav{
+
 height:76px;
+
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
+
 border-bottom:1px solid var(--line)
+
 }
 
 .brand{
+
 font-weight:800;
+
 letter-spacing:-.04em
+
 }
 
 .brand span{color:var(--accent)}
 
 .links{
+
 display:flex;
+
 gap:24px;
+
 font-size:14px;
+
 color:var(--muted)
+
 }
 
 .links a:hover{color:var(--text)}
 
 .hero{
+
 padding:92px 0 76px;
+
 display:grid;
+
 grid-template-columns:1.35fr .65fr;
+
 gap:60px;
+
 align-items:end
+
 }
 
 .eyebrow{
+
 font-size:13px;
+
 text-transform:uppercase;
+
 letter-spacing:.16em;
+
 color:var(--accent2);
+
 font-weight:800
+
 }
 
 .hero h1{
+
 font-size:clamp(52px,8vw,94px);
+
 line-height:.92;
+
 letter-spacing:-.075em;
+
 margin:18px 0 28px;
+
 max-width:900px
+
 }
 
 .hero h1 em{
+
 font-style:normal;
+
 color:var(--accent)
+
 }
 
 .hero p{
+
 font-size:20px;
+
 color:var(--muted);
+
 max-width:720px;
+
 margin:0
+
 }
 
 .hero-side{
+
 border-left:1px solid var(--line);
+
 padding-left:28px
+
 }
 
 .hero-side strong{
+
 display:block;
+
 font-size:42px;
+
 letter-spacing:-.06em
+
 }
 
 .hero-side small{color:var(--muted)}
 
 .actions{
+
 display:flex;
+
 gap:12px;
+
 margin-top:30px;
+
 flex-wrap:wrap
+
 }
 
 .btn{
+
 padding:12px 17px;
+
 border:1px solid var(--line);
+
 border-radius:999px;
+
 font-size:14px;
+
 font-weight:700
+
 }
 
 .btn.primary{
+
 background:var(--text);
+
 color:var(--bg);
+
 border-color:var(--text)
+
 }
 
 .section{
+
 padding:82px 0;
+
 border-top:1px solid var(--line)
+
 }
 
 .section-head{
+
 display:flex;
+
 justify-content:space-between;
+
 gap:30px;
+
 align-items:baseline;
+
 margin-bottom:34px
+
 }
 
 .section h2{
+
 font-size:38px;
+
 letter-spacing:-.05em;
+
 margin:0
+
 }
 
 .section-head p{
+
 color:var(--muted);
+
 max-width:480px;
+
 margin:0
+
 }
 
 .grid{
+
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:16px
+
 }
 
 .card{
+
 background:var(--surface);
+
 border:1px solid var(--line);
+
 border-radius:20px;
+
 padding:25px;
+
 transition:.2s transform,.2s border-color
+
 }
 
 .card:hover{
+
 transform:translateY(-3px);
+
 border-color:var(--accent)
+
 }
 
 .card .num{
+
 font-size:12px;
+
 color:var(--accent);
+
 font-weight:800
+
 }
 
 .card h3{
+
 font-size:22px;
+
 letter-spacing:-.035em;
+
 margin:12px 0 8px
+
 }
 
 .card p{
+
 color:var(--muted);
+
 margin:0
+
 }
 
 .tags{
+
 display:flex;
+
 flex-wrap:wrap;
+
 gap:7px;
+
 margin-top:18px
+
 }
 
 .tag{
+
 font-size:12px;
+
 border:1px solid var(--line);
+
 padding:5px 9px;
+
 border-radius:999px;
+
 color:var(--muted)
+
 }
 
 .feature{
+
 display:grid;
+
 grid-template-columns:1fr 1fr;
+
 gap:18px
+
 }
 
 .feature .card{min-height:285px}
 
 .feature .card:first-child{
+
 background:linear-gradient(
+
 135deg,
+
 var(--surface),
+
 color-mix(in srgb,var(--accent) 10%,var(--surface))
+
 )
+
 }
 
 .kicker{
+
 font-size:12px;
+
 color:var(--muted);
+
 text-transform:uppercase;
+
 letter-spacing:.12em
+
 }
 
 .big{
+
 font-size:31px;
+
 letter-spacing:-.05em;
+
 margin:14px 0
+
 }
 
 .timeline{
+
 position:relative;
+
 margin-top:12px
+
 }
 
 .item{
+
 display:grid;
+
 grid-template-columns:150px 1fr;
+
 gap:30px;
+
 padding:25px 0;
+
 border-bottom:1px solid var(--line)
+
 }
 
 .item:last-child{border-bottom:0}
 
 .date{
+
 font-size:13px;
+
 color:var(--accent2);
+
 font-weight:800
+
 }
 
 .item h3{
+
 margin:0 0 6px;
+
 font-size:21px
+
 }
 
 .item p{
+
 margin:0;
+
 color:var(--muted)
+
 }
 
 .cert-grid{
+
 display:grid;
+
 grid-template-columns:repeat(2,1fr);
+
 gap:10px
+
 }
 
 .cert{
+
 padding:17px 18px;
+
 background:var(--surface2);
+
 border:1px solid var(--line);
+
 border-radius:14px
+
 }
 
 .cert strong{display:block}
 
 .cert span{
+
 color:var(--muted);
+
 font-size:13px
+
 }
 
 .quote{
+
 font-size:28px;
+
 line-height:1.25;
+
 letter-spacing:-.04em;
+
 max-width:850px
+
 }
 
 .footer{
+
 padding:70px 0 45px;
+
 display:flex;
+
 justify-content:space-between;
+
 gap:30px;
+
 color:var(--muted);
+
 font-size:14px
+
 }
 
 .footer strong{color:var(--text)}
 
 @media(max-width:800px){
+
 .links{display:none}
 
 .hero{
+
 grid-template-columns:1fr;
+
 padding-top:64px
+
 }
 
 .hero-side{
+
 border-left:0;
+
 border-top:1px solid var(--line);
+
 padding:24px 0 0
+
 }
 
 .grid,
+
 .feature,
+
 .cert-grid{
+
 grid-template-columns:1fr
+
 }
 
 .item{
+
 grid-template-columns:1fr;
+
 gap:8px
+
 }
 
 .section{padding:60px 0}
@@ -376,401 +623,689 @@ gap:8px
 .wrap{padding:0 20px}
 
 .footer{flex-direction:column}
+
 }
+
 </style>
 
 <style>
+
 .hero{
+
 min-height:calc(100vh - 76px);
+
 align-items:center
+
 }
 
 .hero-sub{
+
 display:flex;
+
 gap:10px;
+
 flex-wrap:wrap;
+
 margin-top:22px;
+
 color:var(--muted);
+
 font-size:13px
+
 }
 
 .pill{
+
 padding:7px 11px;
+
 border:1px solid var(--line);
+
 border-radius:999px;
+
 background:color-mix(in srgb,var(--surface) 65%,transparent)
+
 }
 
 .scroll-cue{
+
 margin-top:54px;
+
 font-size:12px;
+
 color:var(--muted);
+
 display:flex;
+
 align-items:center;
+
 gap:10px
+
 }
 
 .scroll-cue span{
+
 display:block;
+
 width:42px;
+
 height:1px;
+
 background:var(--line)
+
 }
 
 .availability{
+
 display:inline-flex;
+
 align-items:center;
+
 gap:8px;
+
 font-size:12px;
+
 color:var(--muted);
+
 margin-top:18px
+
 }
 
 .availability:before{
+
 content:"";
+
 width:7px;
+
 height:7px;
+
 border-radius:50%;
+
 background:#22c55e;
+
 box-shadow:0 0 0 5px #22c55e22
+
 }
 
 .marquee{
+
 overflow:hidden;
+
 border-top:1px solid var(--line);
+
 border-bottom:1px solid var(--line);
+
 padding:15px 0;
+
 white-space:nowrap;
+
 color:var(--muted);
+
 font-size:12px;
+
 text-transform:uppercase;
+
 letter-spacing:.18em
+
 }
 
 .marquee-track{
+
 display:inline-block;
+
 animation:marquee 24s linear infinite
+
 }
 
 .marquee i{
+
 font-style:normal;
+
 color:var(--accent);
+
 padding:0 22px
+
 }
 
 @keyframes marquee{
+
 to{transform:translateX(-50%)}
+
 }
 
 @media(max-width:800px){
+
 .hero{min-height:auto}
+
 }
+
 </style>
 
 <style>
+
 .lab-launch{
+
 margin-top:26px;
+
 display:grid;
+
 gap:10px
+
 }
 
 .lab-title{
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
 margin-bottom:10px
+
 }
 
 .lab-title span:first-child{
+
 font-size:11px;
+
 text-transform:uppercase;
+
 letter-spacing:.15em;
+
 color:var(--accent2);
+
 font-weight:800
+
 }
 
 .lab-title span:last-child{
+
 font-size:11px;
+
 color:var(--muted)
+
 }
 
 .lab-btn{
+
 width:100%;
+
 display:grid;
+
 grid-template-columns:auto 1fr auto;
+
 align-items:center;
+
 gap:12px;
+
 text-align:left;
+
 border:1px solid var(--line);
+
 background:color-mix(in srgb,var(--surface) 82%,transparent);
+
 color:var(--text);
+
 backdrop-filter:blur(14px);
+
 padding:14px 15px;
+
 border-radius:17px;
+
 font:700 13px inherit;
+
 cursor:pointer;
+
 box-shadow:0 12px 35px #00000010;
-transition:.25s transform,.25s border-color,.25s background
+
+transition:.25s transform,.25s border-color,.25s *background*
+
 }
 
 .lab-btn:hover{
+
 transform:translateX(-4px);
+
 border-color:var(--accent);
+
 background:color-mix(in srgb,var(--accent) 7%,var(--surface))
+
 }
 
 .lab-btn .lab-icon{
+
 width:30px;
+
 height:30px;
+
 display:grid;
+
 place-items:center;
+
 border-radius:10px;
+
 background:var(--surface2);
+
 font-size:15px
+
 }
 
 .lab-btn .lab-copy{
+
 display:grid;
+
 gap:2px
+
 }
 
 .lab-btn .lab-copy small{
+
 font-size:11px;
+
 font-weight:500;
+
 color:var(--muted)
+
 }
 
 .lab-btn .lab-arrow{
+
 color:var(--muted);
+
 transition:.2s transform
+
 }
 
 .lab-btn:hover .lab-arrow{
+
 transform:translateX(3px);
+
 color:var(--accent)
+
 }
 
 .lab-modal{
+
 position:fixed;
+
 inset:0;
+
 background:#00000055;
+
 backdrop-filter:blur(6px);
+
 z-index:60;
+
 display:none;
+
 align-items:flex-end;
+
 justify-content:flex-end;
+
 padding:24px
+
 }
 
 .lab-modal.open{display:flex}
 
 .lab-panel{
+
 width:min(440px,100%);
+
 max-height:min(680px,calc(100vh - 48px));
+
 overflow:auto;
+
 background:var(--surface);
+
 color:var(--text);
+
 border:1px solid var(--line);
+
 border-radius:24px;
+
 padding:22px;
+
 box-shadow:0 25px 80px #00000033
+
 }
 
 .lab-head{
+
 display:flex;
+
 align-items:flex-start;
+
 justify-content:space-between;
+
 gap:18px
+
 }
 
 .lab-head h3{
+
 margin:0;
+
 font-size:24px;
+
 letter-spacing:-.04em
+
 }
 
 .lab-head p{
+
 margin:4px 0 0;
+
 color:var(--muted);
+
 font-size:13px
+
 }
 
 .lab-close{
+
 border:0;
+
 background:var(--surface2);
+
 color:var(--text);
+
 width:36px;
+
 height:36px;
+
 border-radius:50%;
+
 cursor:pointer;
+
 font-size:18px
+
 }
 
 .chat-log{
+
 display:grid;
+
 gap:10px;
+
 margin:20px 0;
+
 max-height:330px;
+
 overflow:auto
+
 }
 
 .chat-msg{
+
 padding:11px 13px;
+
 border-radius:15px;
+
 background:var(--surface2);
+
 font-size:14px
+
 }
 
 .chat-msg.user{
+
 background:color-mix(in srgb,var(--accent) 12%,var(--surface));
+
 margin-left:28px
+
 }
 
 .quick{
+
 display:flex;
+
 flex-wrap:wrap;
+
 gap:7px;
+
 margin-bottom:12px
+
 }
 
 .quick button,
+
 .game-option{
+
 border:1px solid var(--line);
+
 background:transparent;
+
 color:var(--text);
+
 border-radius:999px;
+
 padding:8px 10px;
+
 font:600 12px inherit;
+
 cursor:pointer
+
 }
 
 .quick button:hover,
+
 .game-option:hover{
+
 border-color:var(--accent);
+
 background:color-mix(in srgb,var(--accent) 8%,transparent)
+
 }
 
 .chat-input{
+
 display:flex;
+
 gap:8px
+
 }
 
 .chat-input input{
+
 min-width:0;
+
 flex:1;
+
 border:1px solid var(--line);
+
 background:var(--surface2);
+
 color:var(--text);
+
 border-radius:12px;
+
 padding:11px 12px;
+
 font:14px inherit
+
 }
 
 .chat-input button,
+
 .game-next{
+
 border:0;
+
 background:var(--text);
+
 color:var(--bg);
+
 border-radius:12px;
+
 padding:11px 14px;
+
 font:800 13px inherit;
+
 cursor:pointer
+
 }
 
 .game-kicker{
+
 font-size:11px;
+
 color:var(--accent2);
+
 font-weight:800;
+
 letter-spacing:.12em;
+
 text-transform:uppercase;
+
 margin-top:20px
+
 }
 
 .game-question{
+
 font-size:21px;
+
 line-height:1.25;
+
 letter-spacing:-.03em;
+
 margin:8px 0 15px
+
 }
 
 .game-options{
+
 display:grid;
+
 gap:9px
+
 }
 
 .game-option{
+
 text-align:left;
+
 border-radius:13px;
+
 padding:12px
+
 }
 
 .game-result{
+
 margin-top:15px;
+
 padding:13px;
+
 border:1px solid var(--line);
+
 border-radius:14px;
+
 background:var(--surface2);
+
 font-size:13px;
+
 color:var(--muted)
+
 }
 
 .game-progress{
+
 height:4px;
+
 background:var(--surface2);
+
 border-radius:99px;
+
 overflow:hidden;
+
 margin-top:16px
+
 }
 
 .game-progress span{
+
 display:block;
+
 height:100%;
+
 width:33%;
+
 background:var(--accent);
+
 transition:.3s width
+
 }
 
 @media(max-width:800px){
+
 .lab-launch{margin-top:4px}
 
 .lab-btn:hover{
+
 transform:translateY(-2px)
+
 }
+
 }
 
 @media(max-width:600px){
+
 .lab-modal{padding:12px}
 
 .lab-panel{border-radius:20px}
+
 }
 
 .hero-side{position:relative}
 
 .hero-side:before{
+
 content:"01";
+
 position:absolute;
+
 top:12px;
+
 right:15px;
+
 font:800 10px ui-monospace,SFMono-Regular,Menlo,monospace;
+
 color:var(--muted);
+
 opacity:.65
+
 }
 
 .status-card{
+
 margin-top:26px;
+
 padding:14px 15px;
+
 border:1px dashed var(--line);
+
 border-radius:16px;
+
 background:color-mix(in srgb,var(--surface2) 55%,transparent);
+
 font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+
 font-size:11px
+
 }
 
 .status-row{
+
 display:flex;
+
 justify-content:space-between;
+
 gap:15px;
+
 padding:4px 0
+
 }
 
 .status-row span:first-child{color:var(--muted)}
@@ -778,43 +1313,71 @@ padding:4px 0
 .status-live{color:#22c55e}
 
 .status-live:before{
+
 content:"●";
+
 margin-right:6px
+
 }
 
 .now-card{
+
 margin-top:18px;
+
 display:grid;
+
 grid-template-columns:8px 1fr;
+
 gap:10px;
+
 align-items:start
+
 }
 
 .now-card:before{
+
 content:"";
+
 width:8px;
+
 height:8px;
+
 margin-top:6px;
+
 border-radius:50%;
+
 background:var(--accent);
+
 box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 10%,transparent);
+
 animation:pulse 2s infinite
+
 }
 
 .now-card strong{font-size:12px}
 
 .now-card small{
+
 display:block;
+
 color:var(--muted);
+
 font-size:11px;
+
 margin-top:2px
+
 }
 
 .hero-note{
+
 display:inline-block;
+
 margin-top:22px;
+
 font:600 12px ui-monospace,SFMono-Regular,Menlo,monospace;
+
 color:var(--muted)
+
 }
 
 .hero-note b{color:var(--accent)}
@@ -822,26 +1385,2134 @@ color:var(--muted)
 .section-head h2{position:relative}
 
 .section-head h2:after{
+
 content:"↘";
+
 font-size:17px;
+
 color:var(--accent);
+
 vertical-align:top;
+
 margin-left:7px
+
 }
 
 .feature .card:hover,
+
 .grid .card:hover{
+
 box-shadow:0 18px 55px #00000012
+
 }
 
 .kicker{
+
 font-family:ui-monospace,SFMono-Regular,Menlo,monospace
+
 }
 
 .footer{
+
 border-top:1px solid var(--line)
+
+}
+
+</style>
+
+<style>
+
+/* =========================================================
+   TANISHA — CHIC Y2K SKIN
+   Content and typography intentionally preserved.
+   ========================================================= */
+
+:root{
+  --pink:#c87998;
+  --pink-soft:#f2dce4;
+  --pink-bright:#ef9fbd;
+  --chrome:#eef0f2;
+  --chrome-dark:#c9cdd2;
+  --ink:#171515;
+  --paper:#fbfaf7;
+  --soft:#f5f0ed;
+  --shadow:0 18px 60px rgba(40,25,30,.08);
+}
+
+body{
+  background:
+    radial-gradient(circle at 8% 8%, rgba(200,121,152,.075), transparent 23rem),
+    radial-gradient(circle at 92% 16%, rgba(174,189,208,.10), transparent 24rem),
+    var(--bg);
+}
+
+/* A very quiet old-web texture — decorative, not distracting. */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  opacity:.28;
+  background-image:radial-gradient(rgba(80,70,70,.16) .55px, transparent .55px);
+  background-size:13px 13px;
+  mask-image:linear-gradient(to bottom, black, transparent 75%);
+}
+
+.root,
+.wrap,
+footer{
+  position:relative;
+  z-index:1;
+}
+
+.nav{
+  position:relative;
+  border-bottom-color:var(--line);
+}
+
+.nav::after{
+  content:"✦  EST. 2000s INTERNET ENERGY";
+  position:absolute;
+  left:50%;
+  bottom:-9px;
+  transform:translateX(-50%);
+  padding:0 10px;
+  background:var(--bg);
+  color:var(--muted);
+  font:700 9px/18px ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+  white-space:nowrap;
+}
+
+.brand{
+  font-size:16px;
+  position:relative;
+}
+
+.brand::after{
+  content:"✦";
+  position:absolute;
+  right:-17px;
+  top:-9px;
+  color:var(--pink);
+  font-size:9px;
+  animation:tinyTwinkle 2.8s ease-in-out infinite;
+}
+
+.links{
+  gap:20px;
+}
+
+.links a{
+  position:relative;
+  transition:color .2s, transform .2s;
+}
+
+.links a:hover{
+  color:var(--accent);
+  transform:translateY(-1px);
+}
+
+.hero{
+  position:relative;
+  isolation:isolate;
+}
+
+.hero::after{
+  content:"✦  ✧  ✦";
+  position:absolute;
+  right:3%;
+  top:16%;
+  color:var(--pink);
+  font-size:18px;
+  letter-spacing:13px;
+  opacity:.5;
+  animation:floatSparkle 6s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.hero:before{
+  width:460px;
+  height:460px;
+  right:-190px;
+  top:-130px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(200,121,152,.14), transparent 55%),
+    radial-gradient(circle, rgba(174,189,208,.12), transparent 70%);
+  filter:blur(2px);
+}
+
+.eyebrow{
+  color:#7b7180;
+}
+
+.eyebrow::before{
+  background:var(--pink);
+  box-shadow:0 0 0 5px rgba(200,121,152,.11);
+}
+
+.hero h1 em{
+  color:var(--pink);
+  position:relative;
+}
+
+.hero h1 em::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:3%;
+  bottom:-5px;
+  height:7px;
+  border-radius:50%;
+  background:rgba(200,121,152,.15);
+  transform:rotate(-1deg);
+  z-index:-1;
+}
+
+.hero-side{
+  border:1px solid rgba(200,121,152,.22);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.84), rgba(250,242,245,.66));
+}
+
+.hero-side::after{
+  content:"♡";
+  position:absolute;
+  right:18px;
+  bottom:14px;
+  color:var(--pink);
+  opacity:.4;
+  font-size:14px;
+}
+
+.hero-side strong:first-of-type{
+  color:var(--pink);
+}
+
+.btn{
+  border-radius:13px;
+  box-shadow:0 5px 0 rgba(25,20,22,.06);
+  transition:transform .2s, box-shadow .2s, background .2s, color .2s, border-color .2s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 0 rgba(25,20,22,.06);
+}
+
+.btn.primary{
+  background:var(--text);
+  border-color:var(--text);
+}
+
+.btn.primary:hover{
+  background:var(--pink);
+  border-color:var(--pink);
+  color:#fff;
+}
+
+.pill{
+  border-radius:9px;
+  background:rgba(255,255,255,.62);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.pill:nth-child(2n){
+  border-color:rgba(200,121,152,.25);
+}
+
+.marquee{
+  background:rgba(255,255,255,.28);
+  letter-spacing:.16em;
+}
+
+.marquee i{
+  color:var(--pink);
+}
+
+.section{
+  position:relative;
+}
+
+.section-head h2::after{
+  color:var(--pink);
+}
+
+.card{
+  border-radius:18px;
+  box-shadow:0 2px 0 rgba(30,20,25,.025);
+  transition:transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+}
+
+.card:hover{
+  transform:translateY(-5px) rotate(-.15deg);
+  border-color:rgba(200,121,152,.58);
+  box-shadow:0 16px 45px rgba(40,25,30,.075);
+}
+
+.card .num{
+  color:var(--pink);
+}
+
+.card::after{
+  background:radial-gradient(circle, rgba(200,121,152,.10), transparent 68%);
+}
+
+.tag{
+  border-radius:8px;
+  background:rgba(255,255,255,.35);
+}
+
+.feature .card:first-child{
+  background:
+    radial-gradient(circle at 90% 10%, rgba(200,121,152,.13), transparent 30%),
+    linear-gradient(135deg,var(--surface),color-mix(in srgb,var(--pink) 7%,var(--surface)));
+}
+
+.feature .card:nth-child(2){
+  background:
+    radial-gradient(circle at 10% 90%, rgba(174,189,208,.15), transparent 30%),
+    var(--surface);
+}
+
+.big{
+  line-height:1.05;
+}
+
+.kicker{
+  color:#8a7d84;
+}
+
+.item{
+  position:relative;
+}
+
+.item:hover{
+  padding-left:14px;
+}
+
+.item:hover::before{
+  content:"✦";
+  position:absolute;
+  left:-2px;
+  top:28px;
+  color:var(--pink);
+  font-size:10px;
+}
+
+.date{
+  color:#7e91a8;
+}
+
+.cert{
+  border-radius:12px;
+  transition:transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.cert:hover{
+  transform:translateY(-3px) rotate(.2deg);
+  border-color:rgba(200,121,152,.55);
+  box-shadow:0 10px 28px rgba(40,25,30,.06);
+}
+
+.quote{
+  border-left:3px solid var(--pink);
+}
+
+.footer{
+  border-top:1px solid var(--line);
+}
+
+.footer a:hover{
+  color:var(--pink);
+}
+
+/* ---------- Little Playground ---------- */
+
+.lab-title span:first-child{
+  color:var(--pink);
+}
+
+.lab-title span:last-child::after{
+  content:"  ✦";
+  color:var(--pink);
+}
+
+.lab-btn{
+  border-radius:13px;
+  border-color:rgba(200,121,152,.22);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.88), rgba(248,240,243,.72));
+  box-shadow:0 9px 28px rgba(40,25,30,.055), inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.lab-btn:hover{
+  transform:translateX(-4px) rotate(-.3deg);
+  border-color:var(--pink);
+  background:linear-gradient(135deg,#fff,rgba(242,220,228,.72));
+}
+
+.lab-btn .lab-icon{
+  border:1px solid rgba(200,121,152,.18);
+  background:linear-gradient(145deg,#fff,#ececef);
+  color:var(--pink);
+  box-shadow:inset 0 1px 1px #fff;
+}
+
+.lab-btn.ai .lab-icon{
+  position:relative;
+}
+
+.lab-btn.ai .lab-icon::after{
+  content:"✧";
+  position:absolute;
+  right:-5px;
+  top:-6px;
+  font-size:8px;
+  color:var(--pink);
+}
+
+.lab-arrow{
+  color:#8c8588 !important;
+}
+
+.lab-modal{
+  background:rgba(27,20,24,.34);
+}
+
+.lab-panel{
+  position:relative;
+  border-radius:14px;
+  border:1px solid #c8c3c5;
+  background:#fbfaf9;
+  box-shadow:
+    0 30px 90px rgba(25,15,20,.28),
+    0 0 0 5px rgba(255,255,255,.24);
+  padding:0 22px 22px;
+  overflow:auto;
+}
+
+.lab-panel::before{
+  content:"";
+  display:block;
+  height:34px;
+  margin:0 -22px 20px;
+  border-bottom:1px solid #cbc6c8;
+  background:
+    radial-gradient(circle at 18px 17px,#e7a6bc 0 4px,transparent 4.5px),
+    radial-gradient(circle at 36px 17px,#d5d7dc 0 4px,transparent 4.5px),
+    radial-gradient(circle at 54px 17px,#d5d7dc 0 4px,transparent 4.5px),
+    linear-gradient(#f7f7f8,#dedfe2);
+}
+
+.lab-head h3{
+  color:var(--ink);
+}
+
+.lab-close{
+  border:1px solid #d4ced0;
+  background:linear-gradient(#fff,#ece9ea);
+  box-shadow:inset 0 1px #fff;
+}
+
+.chat-msg{
+  border:1px solid #e4dedf;
+  border-radius:12px;
+  background:#f4f1f1;
+}
+
+.chat-msg.user{
+  background:#f3dfe6;
+  border-color:#e7becd;
+}
+
+.quick button,
+.game-option{
+  border-radius:9px;
+  background:#fff;
+}
+
+.quick button:hover,
+.game-option:hover{
+  border-color:var(--pink);
+  background:#f8e9ee;
+}
+
+.chat-input input{
+  border-radius:9px;
+}
+
+.chat-input button,
+.game-next{
+  border-radius:9px;
+  background:var(--ink);
+}
+
+.chat-input button:hover,
+.game-next:hover{
+  background:var(--pink);
+}
+
+.game-kicker{
+  color:var(--pink);
+}
+
+.game-progress{
+  background:#ece8e9;
+}
+
+.game-progress span{
+  background:linear-gradient(90deg,#d887a3,#b9a2ac);
+}
+
+.game-result{
+  border-radius:11px;
+  background:#f5f1f1;
+}
+
+/* Tiny chrome / sparkle accents around the interactive world. */
+.lab-launch::after{
+  content:"✦";
+  position:absolute;
+  margin-top:-6px;
+  margin-left:-8px;
+  color:var(--pink);
+  font-size:10px;
+  opacity:.7;
+  animation:tinyTwinkle 3.2s ease-in-out infinite;
+}
+
+.status-card{
+  border-color:rgba(200,121,152,.22);
+  background:rgba(255,255,255,.32);
+}
+
+.status-live{
+  color:#4c9b72;
+}
+
+.now-card::before{
+  background:var(--pink);
+  box-shadow:0 0 0 5px rgba(200,121,152,.10);
+}
+
+.hero-note b{
+  color:var(--pink);
+}
+
+@keyframes tinyTwinkle{
+  0%,100%{opacity:.35;transform:scale(.9) rotate(0deg)}
+  50%{opacity:1;transform:scale(1.18) rotate(12deg)}
+}
+
+@keyframes floatSparkle{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  50%{transform:translateY(10px) rotate(5deg)}
+}
+
+@media(max-width:800px){
+  .nav::after{
+    display:none;
+  }
+
+  .hero::after{
+    right:4%;
+    top:7%;
+    font-size:13px;
+    letter-spacing:8px;
+  }
+
+  .lab-panel{
+    border-radius:13px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+  }
+}
+
+</style>
+<style>
+
+/* =========================================================
+   Y2K CHIC v2 — more personality, less generic portfolio
+   ========================================================= */
+
+/* Layered "desktop wallpaper" atmosphere */
+body{
+  background:
+    radial-gradient(circle at 12% 18%, rgba(239,159,189,.16), transparent 17rem),
+    radial-gradient(circle at 88% 10%, rgba(185,198,215,.16), transparent 19rem),
+    radial-gradient(circle at 72% 82%, rgba(239,159,189,.07), transparent 23rem),
+    var(--bg);
+}
+
+/* faint diagonal digital texture */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  opacity:.12;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 18px,
+      rgba(120,110,115,.08) 19px,
+      transparent 20px
+    );
+}
+
+/* Navigation becomes a floating old-web chrome strip */
+.nav{
+  height:68px;
+  border:1px solid rgba(140,130,135,.20);
+  border-top:0;
+  padding:0 15px;
+  border-radius:0 0 17px 17px;
+  background:rgba(255,255,255,.66);
+  box-shadow:0 8px 25px rgba(35,25,30,.045);
+  backdrop-filter:blur(12px);
+}
+
+.nav::before{
+  content:"●  ●  ●";
+  position:absolute;
+  left:15px;
+  top:7px;
+  font-size:6px;
+  letter-spacing:3px;
+  color:#d0c9cc;
+}
+
+.nav::after{
+  content:"tanisha.exe  //  online";
+  left:auto;
+  right:14px;
+  bottom:auto;
+  top:7px;
+  transform:none;
+  padding:0;
+  background:transparent;
+  color:#9b9095;
+  font-size:8px;
+  letter-spacing:.08em;
+}
+
+.brand{
+  margin-left:2px;
+  font-size:17px;
+  padding-top:4px;
+}
+
+.brand::before{
+  content:"✦";
+  display:inline-block;
+  margin-right:7px;
+  color:var(--pink);
+  font-size:12px;
+  transform:translateY(-1px);
+}
+
+.links{
+  padding-top:4px;
+}
+
+.links a{
+  font-size:12px;
+  letter-spacing:.02em;
+}
+
+.links a::after{
+  content:"";
+  display:block;
+  height:2px;
+  width:0;
+  margin-top:3px;
+  background:var(--pink);
+  border-radius:99px;
+  transition:width .2s;
+}
+
+.links a:hover::after{
+  width:100%;
+}
+
+/* Hero: less corporate, more personal desktop */
+.hero{
+  min-height:calc(100vh - 68px);
+  padding-top:72px;
+}
+
+.hero::before{
+  width:560px;
+  height:560px;
+  right:-220px;
+  top:-110px;
+  background:
+    radial-gradient(circle at 45% 45%, rgba(239,159,189,.17), transparent 42%),
+    radial-gradient(circle at 70% 30%, rgba(195,205,219,.14), transparent 56%);
+}
+
+.hero::after{
+  content:"✦  ✧  ♡  ✧  ✦";
+  right:5%;
+  top:11%;
+  color:var(--pink);
+  opacity:.62;
+  font-size:16px;
+  letter-spacing:8px;
+}
+
+/* little "sticker" beside eyebrow */
+.eyebrow{
+  position:relative;
+}
+
+.eyebrow::after{
+  content:"★";
+  position:absolute;
+  left:calc(100% + 10px);
+  top:-8px;
+  color:var(--pink);
+  font-size:10px;
+  transform:rotate(12deg);
+}
+
+/* Make the giant headline feel editorial */
+.hero h1{
+  text-wrap:balance;
+}
+
+.hero h1 em{
+  text-shadow:1px 1px 0 rgba(239,159,189,.18);
+}
+
+/* Hero status panel becomes a faux mini desktop widget */
+.hero-side{
+  padding:29px 24px 23px;
+  border:1px solid #d4cdd0;
+  border-radius:14px;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.94),rgba(248,237,242,.78));
+  box-shadow:
+    0 20px 55px rgba(40,25,30,.08),
+    inset 0 1px 0 #fff;
+}
+
+.hero-side::before{
+  content:"SYSTEM // TANISHA";
+  display:block;
+  margin:-10px 0 18px;
+  padding-bottom:9px;
+  border-bottom:1px solid #e5dfe1;
+  color:#958a90;
+  font:700 8px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.16em;
+}
+
+.hero-side::after{
+  content:"✦";
+  right:15px;
+  bottom:12px;
+  color:var(--pink);
+}
+
+/* Add a chrome shine to primary buttons */
+.btn.primary{
+  position:relative;
+  overflow:hidden;
+}
+
+.btn.primary::after{
+  content:"";
+  position:absolute;
+  width:65px;
+  height:180%;
+  top:-40%;
+  left:-100px;
+  transform:rotate(20deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+  transition:left .5s ease;
+}
+
+.btn.primary:hover::after{
+  left:120%;
+}
+
+/* Pills = tiny Y2K labels */
+.pill{
+  border-radius:6px;
+  position:relative;
+  background:linear-gradient(#fff,#f1ecee);
+  box-shadow:inset 0 1px #fff,0 2px 5px rgba(30,20,25,.04);
+}
+
+.pill:nth-child(1)::before{content:"✦ ";color:var(--pink)}
+.pill:nth-child(3)::before{content:"◌ ";color:#9baabd}
+.pill:nth-child(4)::before{content:"♡ ";color:var(--pink)}
+
+/* marquee gets a more 2000s ticker feel */
+.marquee{
+  position:relative;
+  background:rgba(255,255,255,.55);
+  box-shadow:inset 0 1px rgba(255,255,255,.8);
+}
+
+.marquee::before,
+.marquee::after{
+  position:absolute;
+  top:0;
+  bottom:0;
+  display:grid;
+  place-items:center;
+  z-index:2;
+  padding:0 8px;
+  background:var(--bg);
+  color:var(--pink);
+  font-size:12px;
+}
+
+.marquee::before{content:"‹";left:0}
+.marquee::after{content:"›";right:0}
+
+/* Sections become less uniform */
+.section:nth-of-type(even){
+  background:linear-gradient(90deg,transparent,rgba(239,159,189,.018),transparent);
+}
+
+.section-head{
+  position:relative;
+}
+
+.section-head::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:-19px;
+  width:30px;
+  height:3px;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--pink),#c8d0da);
+}
+
+/* Cards: less SaaS, more collectible objects */
+.card{
+  border-radius:12px;
+  border-color:#ded7da;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.93),rgba(249,247,245,.85));
+  box-shadow:0 7px 24px rgba(35,25,30,.035);
+}
+
+.card:hover{
+  transform:translateY(-7px) rotate(-.35deg);
+  box-shadow:0 20px 50px rgba(35,25,30,.09);
+}
+
+.card:nth-child(3n+1)::before{
+  content:"01";
+  position:absolute;
+  right:14px;
+  top:12px;
+  font:700 8px ui-monospace,SFMono-Regular,Menlo,monospace;
+  color:#c8c0c4;
+}
+
+.card:nth-child(3n+2)::before{
+  content:"✦";
+  position:absolute;
+  right:15px;
+  top:11px;
+  font-size:10px;
+  color:#dba0b4;
+}
+
+.card:nth-child(3n)::before{
+  content:"♡";
+  position:absolute;
+  right:15px;
+  top:10px;
+  font-size:11px;
+  color:#aeb8c5;
+}
+
+.card .num{
+  letter-spacing:.08em;
+}
+
+.tag{
+  border-radius:5px;
+  background:linear-gradient(#fff,#f1edef);
+  box-shadow:inset 0 1px #fff;
+}
+
+/* Project cards get mini "window labels" */
+.feature .card{
+  overflow:visible;
+}
+
+.feature .card::after{
+  border-radius:50%;
+}
+
+.feature .card .kicker::before{
+  content:"● ● ●  ";
+  font-size:5px;
+  letter-spacing:2px;
+  color:#d0c9cc;
+  vertical-align:2px;
+}
+
+/* Timeline gets a visible Y2K vertical spine */
+.timeline{
+  padding-left:18px;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:2px;
+  top:5px;
+  bottom:5px;
+  width:1px;
+  background:linear-gradient(var(--pink),#d8dce2,var(--pink));
+}
+
+.item{
+  position:relative;
+  padding-left:20px;
+}
+
+.item::before{
+  content:"";
+  position:absolute;
+  left:-20px;
+  top:31px;
+  width:7px;
+  height:7px;
+  border:2px solid var(--pink);
+  border-radius:50%;
+  background:var(--bg);
+  box-shadow:0 0 0 4px rgba(200,121,152,.08);
+}
+
+.item:hover{
+  padding-left:27px;
+}
+
+/* Credentials feel like little collectible tabs */
+.cert{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#f8f5f5,#f0ecee);
+}
+
+.cert::after{
+  content:"✦";
+  position:absolute;
+  right:12px;
+  bottom:7px;
+  color:#d6a1b3;
+  opacity:.5;
+  font-size:9px;
+}
+
+/* Quote gets a sticker-like treatment */
+.quote{
+  position:relative;
+  border-left:0;
+  padding:38px 42px;
+  border:1px solid #dfd5d9;
+  border-radius:14px;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.82),rgba(248,232,238,.5));
+  box-shadow:var(--shadow);
+}
+
+.quote::before{
+  content:"“";
+  position:absolute;
+  left:18px;
+  top:2px;
+  color:var(--pink);
+  font:700 54px Georgia,serif;
+  opacity:.55;
+}
+
+/* ---------- PLAYGROUND: make this the Y2K centerpiece ---------- */
+
+.lab-launch{
+  position:relative;
+}
+
+.lab-title{
+  padding:0 2px;
+}
+
+.lab-title span:first-child{
+  color:var(--pink);
+}
+
+.lab-title span:first-child::before{
+  content:"✦ ";
+}
+
+.lab-btn{
+  position:relative;
+  min-height:62px;
+  border-radius:10px;
+  border:1px solid #d3ccd0;
+  background:
+    linear-gradient(135deg,#ffffff 0%,#f5f2f3 48%,#eceef1 49%,#fff 100%);
+  box-shadow:
+    0 7px 0 rgba(205,195,200,.28),
+    0 14px 30px rgba(45,30,38,.06),
+    inset 0 1px #fff;
+}
+
+.lab-btn::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  border-radius:10px 0 0 10px;
+  background:linear-gradient(var(--pink),#bfcbd7);
+}
+
+.lab-btn:hover{
+  transform:translate(-3px,-4px) rotate(-.4deg);
+  box-shadow:
+    0 10px 0 rgba(205,195,200,.22),
+    0 18px 35px rgba(45,30,38,.08);
+}
+
+.lab-btn .lab-icon{
+  border-radius:7px;
+  background:linear-gradient(145deg,#fff,#d9dce1);
+  border:1px solid #cdd0d5;
+  box-shadow:inset 0 1px #fff,0 2px 3px #0000000a;
+}
+
+/* Popups become actual retro application windows */
+.lab-modal{
+  background:
+    radial-gradient(circle at 15% 15%,rgba(239,159,189,.16),transparent 18rem),
+    rgba(22,17,20,.38);
+  backdrop-filter:blur(10px);
+}
+
+.lab-panel{
+  width:min(455px,100%);
+  border-radius:11px;
+  padding:0 20px 20px;
+  border:1px solid #aaa5a8;
+  background:#f8f7f7;
+  box-shadow:
+    0 35px 100px rgba(20,12,18,.34),
+    0 0 0 3px rgba(255,255,255,.22);
+}
+
+.lab-panel::before{
+  height:39px;
+  margin:0 -20px 18px;
+  background:
+    radial-gradient(circle at 15px 19px,#df8faa 0 4px,transparent 4.5px),
+    radial-gradient(circle at 31px 19px,#c9cbd0 0 4px,transparent 4.5px),
+    radial-gradient(circle at 47px 19px,#c9cbd0 0 4px,transparent 4.5px),
+    linear-gradient(#fafafa,#d7d8dc);
+}
+
+/* fake titlebar text */
+.lab-head::before{
+  content:"TANISHA.EXE";
+  position:absolute;
+  top:13px;
+  left:75px;
+  color:#80777c;
+  font:700 8px ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+}
+
+.lab-head{
+  position:relative;
+}
+
+.lab-head h3{
+  font-size:22px;
+}
+
+.lab-head h3::first-letter{
+  color:var(--pink);
+}
+
+.lab-close{
+  border:1px solid #c7c3c5;
+  border-radius:6px;
+  background:linear-gradient(#fff,#dddde0);
+  box-shadow:inset 0 1px #fff;
+  font-weight:800;
+}
+
+.lab-close:hover{
+  background:#f0c8d4;
+}
+
+/* Chat/game controls */
+.quick button,
+.game-option{
+  border-radius:7px;
+  background:linear-gradient(#fff,#f0edef);
+  box-shadow:inset 0 1px #fff;
+}
+
+.quick button:hover,
+.game-option:hover{
+  transform:translateY(-1px);
+  border-color:var(--pink);
+  background:#f4dce5;
+}
+
+.chat-input input{
+  background:#fff;
+  border-radius:7px;
+}
+
+.chat-input button,
+.game-next{
+  border-radius:7px;
+  background:linear-gradient(#292426,#121012);
+  box-shadow:0 3px 0 #b8aeb2;
+}
+
+.chat-input button:hover,
+.game-next:hover{
+  background:var(--pink);
+}
+
+.game-question{
+  font-size:20px;
+}
+
+.game-result{
+  background:#f1edef;
+  border-color:#ded4d8;
+}
+
+.game-progress{
+  border:1px solid #d4ced1;
+  padding:1px;
+  height:7px;
+  background:#eee9eb;
+}
+
+.game-progress span{
+  background:linear-gradient(90deg,#d884a2,#e8b0c4,#bfc9d5);
+}
+
+/* tiny "secret sticker" feel */
+.hero-note::before{
+  content:"✧ ";
+  color:var(--pink);
+}
+
+.scroll-cue::after{
+  content:"✦";
+  color:var(--pink);
+  animation:tinyTwinkle 2.2s ease-in-out infinite;
+}
+
+/* Footer gets a retro status line */
+.footer::before{
+  content:"♡ thank you for visiting my little corner of the internet ♡";
+  position:absolute;
+  top:18px;
+  left:0;
+  font:700 8px ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.08em;
+  color:#aaa0a5;
+}
+
+/* Subtle animated shine — only on a few objects */
+@keyframes chromeShimmer{
+  0%{background-position:200% 0}
+  100%{background-position:-200% 0}
+}
+
+@media(max-width:800px){
+  .nav{
+    border-radius:0 0 13px 13px;
+  }
+
+  .nav::after{
+    content:"● ONLINE";
+    right:12px;
+  }
+
+  .nav::before{
+    display:none;
+  }
+
+  .hero{
+    padding-top:65px;
+  }
+
+  .hero::after{
+    right:4%;
+    top:7%;
+    font-size:12px;
+    letter-spacing:5px;
+  }
+
+  .timeline{
+    padding-left:12px;
+  }
+
+  .item{
+    padding-left:14px;
+  }
+
+  .item::before{
+    left:-15px;
+  }
+
+  .quote{
+    padding:32px 25px;
+  }
+
+  .footer::before{
+    position:static;
+    display:block;
+    margin-bottom:18px;
+  }
+}
+
+</style>
+
+<style>
+/* =========================================================
+   SECRET SIDE QUESTS — TANISHA.EXE + DEBUG TANISHA
+   The main portfolio stays elegant; the popups go full Y2K.
+   ========================================================= */
+
+/* ---------- shared retro app shell ---------- */
+
+#ask.lab-modal,
+#debug.lab-modal{
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+}
+
+#ask .lab-panel,
+#debug .lab-panel{
+  width:min(500px,100%);
+  position:relative;
+  overflow:hidden;
+  border:1px solid #aaa5a8;
+  border-radius:9px;
+  padding:0 24px 24px;
+  background:
+    linear-gradient(rgba(255,255,255,.72),rgba(248,246,247,.96)),
+    #f8f7f7;
+  box-shadow:
+    0 30px 100px rgba(20,12,18,.34),
+    0 0 0 2px rgba(255,255,255,.75),
+    0 0 0 5px rgba(200,121,152,.10);
+}
+
+/* actual old-school window chrome */
+#ask .lab-panel::before,
+#debug .lab-panel::before{
+  content:"";
+  display:block;
+  height:43px;
+  margin:0 -24px 21px;
+  border-bottom:1px solid #aaa8ab;
+  background:
+    radial-gradient(circle at 16px 21px,#df8eab 0 4px,transparent 4.6px),
+    radial-gradient(circle at 32px 21px,#c8cbd0 0 4px,transparent 4.6px),
+    radial-gradient(circle at 48px 21px,#c8cbd0 0 4px,transparent 4.6px),
+    linear-gradient(180deg,#fcfcfd 0%,#e5e6e9 47%,#d0d2d6 100%);
+  box-shadow:inset 0 1px #fff;
+}
+
+/* tiny title in the title bar */
+#ask .lab-panel::after{
+  content:"TANISHA.EXE  •  PERSONAL ASSISTANT";
+  position:absolute;
+  top:15px;
+  left:82px;
+  color:#82787d;
+  font:700 8px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+}
+
+#debug .lab-panel::after{
+  content:"DEBUG_TANISHA.EXE  •  SIDE QUEST";
+  position:absolute;
+  top:15px;
+  left:82px;
+  color:#82787d;
+  font:700 8px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.10em;
+}
+
+#ask .lab-head,
+#debug .lab-head{
+  position:relative;
+}
+
+#ask .lab-head h3,
+#debug .lab-head h3{
+  font-size:25px;
+  letter-spacing:-.05em;
+  color:#211d1f;
+}
+
+#ask .lab-head h3::first-letter,
+#debug .lab-head h3::first-letter{
+  color:var(--pink);
+}
+
+#ask .lab-head p,
+#debug .lab-head p{
+  font-size:12px;
+  color:#857b80;
+}
+
+#ask .lab-close,
+#debug .lab-close{
+  width:26px;
+  height:23px;
+  padding:0;
+  display:grid;
+  place-items:center;
+  border:1px solid #bdb9bc;
+  border-radius:4px;
+  background:linear-gradient(#fff,#dedfe2);
+  color:#514a4e;
+  font:700 14px/1 Arial,sans-serif;
+  box-shadow:inset 0 1px #fff,0 1px 0 rgba(0,0,0,.08);
+  cursor:pointer;
+}
+
+#ask .lab-close:hover,
+#debug .lab-close:hover{
+  background:linear-gradient(#f8d6e1,#e8a9bc);
+  color:#5b2537;
+}
+
+/* ---------- TANISHA.EXE ---------- */
+
+#ask .lab-panel{
+  background:
+    linear-gradient(180deg,#fcfbfb 0%,#f5f1f3 100%);
+}
+
+#ask .lab-head{
+  border-bottom:1px dashed #d9d0d4;
+  padding-bottom:15px;
+  margin-bottom:13px;
+}
+
+#ask .lab-head h3{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+#ask .lab-head h3::after{
+  content:"● ONLINE";
+  display:inline-block;
+  padding:4px 6px;
+  border:1px solid #cfe0d5;
+  border-radius:4px;
+  background:#eff8f1;
+  color:#4b9469;
+  font:700 7px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.08em;
+  vertical-align:middle;
+}
+
+/* little status display */
+#ask .chat-log{
+  min-height:210px;
+  max-height:310px;
+  padding:14px;
+  border:1px solid #d5ced2;
+  border-radius:6px;
+  background:
+    linear-gradient(rgba(255,255,255,.6),rgba(248,244,246,.7)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(80,60,70,.025) 0 1px,
+      transparent 1px 4px
+    );
+  box-shadow:inset 0 2px 8px rgba(40,25,30,.035);
+}
+
+/* chat bubbles become message cards, not generic pills */
+#ask .chat-msg{
+  max-width:90%;
+  border-radius:4px 12px 12px 12px;
+  border:1px solid #ddd4d8;
+  background:#fff;
+  padding:11px 13px;
+  font-size:13px;
+  box-shadow:0 2px 5px rgba(40,25,30,.04);
+}
+
+#ask .chat-msg::before{
+  content:"tanisha.exe  ›";
+  display:block;
+  margin-bottom:4px;
+  color:#b47b91;
+  font:700 8px ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.05em;
+}
+
+#ask .chat-msg.user{
+  margin-left:auto;
+  border-radius:12px 4px 12px 12px;
+  border-color:#e6bccb;
+  background:#f9e8ee;
+}
+
+#ask .chat-msg.user::before{
+  content:"you  ›";
+  color:#7e91a8;
+}
+
+/* quick questions = old CD-ROM buttons */
+#ask .quick{
+  margin-top:11px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+}
+
+#ask .quick button{
+  min-height:36px;
+  border:1px solid #d1c9cd;
+  border-radius:5px;
+  padding:7px 9px;
+  background:linear-gradient(#fff,#ece9eb);
+  color:#544c50;
+  font-size:10px;
+  font-weight:700;
+  text-align:left;
+  box-shadow:inset 0 1px #fff,0 2px 0 #d7d0d3;
+  cursor:pointer;
+  transition:.16s transform,.16s background,.16s border-color;
+}
+
+#ask .quick button::before{
+  content:"✦ ";
+  color:var(--pink);
+}
+
+#ask .quick button:hover{
+  transform:translateY(-2px);
+  border-color:#d18ca5;
+  background:linear-gradient(#fff,#f3dbe4);
+}
+
+/* input looks like a little search bar from an old portal */
+#ask .chat-input{
+  margin-top:10px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:7px;
+}
+
+#ask .chat-input input{
+  min-width:0;
+  border:1px solid #c9c2c6;
+  border-radius:5px;
+  background:#fff;
+  padding:10px 11px;
+  outline:none;
+  font:13px inherit;
+  box-shadow:inset 0 2px 5px rgba(30,20,25,.035);
+}
+
+#ask .chat-input input:focus{
+  border-color:#d28da6;
+  box-shadow:0 0 0 3px rgba(200,121,152,.11);
+}
+
+#ask .chat-input button{
+  min-width:57px;
+  border:1px solid #4c4549;
+  border-radius:5px;
+  background:linear-gradient(#383235,#171416);
+  color:#fff;
+  font-weight:800;
+  box-shadow:0 2px 0 #bdb4b8;
+  cursor:pointer;
+}
+
+#ask .chat-input button:hover{
+  background:linear-gradient(#d989a5,#b96382);
+}
+
+/* ---------- DEBUG TANISHA: actual tiny game ---------- */
+
+#debug .lab-panel{
+  background:
+    linear-gradient(180deg,#fbfafb,#f1eff1);
+}
+
+#debug .lab-head{
+  margin-bottom:13px;
+}
+
+#debug .lab-head h3{
+  color:#242022;
+}
+
+/* game progress becomes an arcade HUD */
+#debug .game-progress{
+  position:relative;
+  height:13px;
+  margin:0 0 18px;
+  padding:2px;
+  border:1px solid #aaa5a8;
+  border-radius:3px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #ece8ea 0 9px,
+      #e4dfe2 9px 10px
+    );
+  box-shadow:inset 0 1px 3px rgba(20,15,18,.08);
+}
+
+#debug .game-progress::before{
+  content:"SYSTEM LOAD";
+  position:absolute;
+  top:-14px;
+  left:0;
+  color:#91878c;
+  font:700 7px ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+}
+
+#debug .game-progress::after{
+  content:"100% READY";
+  position:absolute;
+  top:-14px;
+  right:0;
+  color:#91878c;
+  font:700 7px ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+#debug .game-progress span{
+  display:block;
+  height:100%;
+  border-radius:1px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #cf7998 0 8px,
+      #e5a3ba 8px 10px
+    );
+  box-shadow:0 0 8px rgba(200,121,152,.28);
+}
+
+/* the game area feels like an actual tiny game cartridge */
+#debug #game-content{
+  position:relative;
+  min-height:335px;
+  padding:23px 20px 20px;
+  overflow:hidden;
+  border:1px solid #b9b3b6;
+  border-radius:5px;
+  background:
+    radial-gradient(circle at 85% 12%,rgba(239,159,189,.15),transparent 7rem),
+    radial-gradient(circle at 12% 82%,rgba(174,189,208,.12),transparent 8rem),
+    #f8f5f6;
+  box-shadow:
+    inset 0 0 35px rgba(70,50,60,.035),
+    0 3px 0 #d8d2d5;
+}
+
+/* scanlines */
+#debug #game-content::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.14;
+  background:repeating-linear-gradient(
+    0deg,
+    transparent 0 3px,
+    rgba(80,65,72,.12) 3px 4px
+  );
+}
+
+/* pixel-style decorative stars */
+#debug #game-content::after{
+  content:"✦      ·   ✧        ✦   ·        ♡";
+  position:absolute;
+  top:11px;
+  right:12px;
+  color:#c890a4;
+  font:11px ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:7px;
+  opacity:.55;
+  pointer-events:none;
+}
+
+#debug .game-kicker{
+  position:relative;
+  z-index:1;
+  display:inline-block;
+  padding:5px 7px;
+  border:1px solid #d8c1c9;
+  border-radius:3px;
+  background:#f8e8ed;
+  color:#a65d79;
+  font:800 8px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+#debug .game-question{
+  position:relative;
+  z-index:1;
+  max-width:390px;
+  margin:18px 0 18px;
+  font-size:22px;
+  line-height:1.15;
+  letter-spacing:-.04em;
+  color:#211d20;
+}
+
+/* options become four game tiles */
+#debug .game-options{
+  position:relative;
+  z-index:1;
+  display:grid;
+  gap:8px;
+}
+
+#debug .game-option{
+  position:relative;
+  min-height:48px;
+  border:1px solid #c8c1c5;
+  border-radius:5px;
+  padding:10px 12px;
+  background:linear-gradient(135deg,#fff,#efebed);
+  color:#3e383c;
+  text-align:left;
+  font-size:12px;
+  font-weight:700;
+  box-shadow:
+    inset 0 1px #fff,
+    0 3px 0 #d8d1d4;
+  cursor:pointer;
+  transition:.15s transform,.15s background,.15s border-color,.15s box-shadow;
+}
+
+#debug .game-option::first-letter{
+  color:var(--pink);
+}
+
+#debug .game-option:hover{
+  transform:translate(2px,-2px);
+  border-color:#d18ba5;
+  background:linear-gradient(135deg,#fff,#f4dce5);
+  box-shadow:inset 0 1px #fff,0 5px 0 #d5c1c8;
+}
+
+#debug .game-option:active{
+  transform:translate(2px,1px);
+  box-shadow:inset 0 1px #fff,0 1px 0 #d5c1c8;
+}
+
+/* result screen feels like an arcade achievement panel */
+#debug .game-result{
+  position:relative;
+  z-index:1;
+  padding:15px;
+  border:1px dashed #cdbec4;
+  border-radius:5px;
+  background:
+    linear-gradient(135deg,#fff,#f3e8ec);
+  color:#5b5055;
+  font-size:12px;
+  line-height:1.6;
+}
+
+#debug .game-next{
+  position:relative;
+  z-index:1;
+  border:1px solid #4a4246;
+  border-radius:5px;
+  padding:10px 14px;
+  background:linear-gradient(#3b3438,#151214);
+  color:#fff;
+  font-weight:800;
+  box-shadow:0 3px 0 #b9aeb3;
+  cursor:pointer;
+}
+
+#debug .game-next:hover{
+  transform:translateY(-2px);
+  background:linear-gradient(#d989a5,#b96382);
+}
+
+/* little footer/status on the game */
+#debug .game-content::marker{
+  color:var(--pink);
+}
+
+/* Mobile: preserve the retro feel without squeezing */
+@media(max-width:560px){
+  #ask.lab-modal,
+  #debug.lab-modal{
+    padding:12px;
+  }
+
+  #ask .lab-panel,
+  #debug .lab-panel{
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  #ask .lab-panel::before,
+  #debug .lab-panel::before{
+    margin-left:-16px;
+    margin-right:-16px;
+  }
+
+  #ask .lab-head h3,
+  #debug .lab-head h3{
+    font-size:21px;
+  }
+
+  #ask .quick{
+    grid-template-columns:1fr;
+  }
+
+  #debug #game-content{
+    min-height:350px;
+    padding:20px 14px;
+  }
+
+  #debug .game-question{
+    font-size:19px;
+  }
 }
 </style>
+
+
+<style id="heading-cleanup">
+/* Keep the Y2K app chrome, but make the modal headings completely clean. */
+#ask .lab-head h3,
+#debug .lab-head h3,
+#ask .lab-head p,
+#debug .lab-head p{
+  position:relative;
+  z-index:3;
+  background:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+}
+
+/* Prevent any window-chrome layer from visually sitting underneath the heading. */
+#ask .lab-head,
+#debug .lab-head{
+  position:relative;
+  z-index:2;
+  background:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+}
+</style>
+
+
+<style id="modern-2026-layer">
+/* =========================================================
+   TANISHA PORTFOLIO — MODERN 2026 EDITION
+   Editorial + bento + subtle Y2K + intentional motion
+   ========================================================= */
+
+:root{
+  --ink:#171515;
+  --muted:#716b6b;
+  --paper:#f7f4ef;
+  --paper-2:#fffdf9;
+  --line:rgba(23,21,21,.11);
+  --pink:#eaa9bd;
+  --pink-strong:#d9789b;
+  --ice:#dcecf0;
+  --silver:#d9d6d2;
+  --shadow:0 20px 60px rgba(31,22,26,.10);
+}
+
+/* Premium page atmosphere */
+html{scroll-behavior:smooth;}
+body{
+  background:
+    radial-gradient(circle at 8% 18%, rgba(234,169,189,.13), transparent 24rem),
+    radial-gradient(circle at 92% 48%, rgba(220,236,240,.20), transparent 25rem),
+    var(--paper);
+  overflow-x:hidden;
+}
+
+/* Fine editorial grain without making the page noisy */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9990;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+/* Scroll progress */
+#modern-scroll-progress{
+  position:fixed;
+  top:0;
+  left:0;
+  width:0;
+  height:3px;
+  z-index:10001;
+  background:linear-gradient(90deg,var(--pink-strong),#d7a6ff,var(--ice));
+  box-shadow:0 0 14px rgba(217,120,155,.45);
+}
+
+/* Floating cursor halo — desktop only */
+#cursor-halo{
+  position:fixed;
+  width:18px;
+  height:18px;
+  border:1px solid rgba(217,120,155,.5);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:10000;
+  transform:translate(-50%,-50%);
+  opacity:0;
+  transition:width .25s ease,height .25s ease,opacity .25s ease,background .25s ease;
+  mix-blend-mode:multiply;
+}
+@media (hover:hover) and (pointer:fine){
+  body:hover #cursor-halo{opacity:1;}
+  a:hover ~ #cursor-halo,
+  button:hover ~ #cursor-halo{
+    width:34px;height:34px;
+    background:rgba(234,169,189,.08);
+  }
+}
+
+/* Modern section rhythm */
+section{
+  position:relative;
+}
+section::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--line) 18%,var(--line) 82%,transparent);
+  opacity:.65;
+}
+
+/* Hero: more editorial and less template-like */
+.hero{
+  min-height:clamp(680px,88vh,920px);
+  display:flex;
+  align-items:center;
+}
+.hero h1{
+  letter-spacing:-.055em !important;
+  text-wrap:balance;
+  max-width:900px;
+}
+.hero h1 .accent,
+.hero h1 em{
+  text-decoration-thickness:1px;
+  text-underline-offset:.12em;
+  text-decoration-color:var(--pink-strong);
+}
+
+/* Small modern eyebrow */
+.hero .eyebrow,
+.section-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid var(--line);
+  background:rgba(255,253,249,.68);
+  backdrop-filter:blur(14px);
+  border-radius:999px;
+  padding:7px 11px;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  box-shadow:0 8px 30px rgba(30,20,25,.04);
+}
+
+/* Bento-like stat cards */
+.hero-side,
+.work-grid,
+.builds-grid,
+.proof-grid,
+.credentials-grid{
+  perspective:1200px;
+}
+
+.hero-side > *,
+.work-card,
+.build-card,
+.proof-card,
+.credential-card{
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s cubic-bezier(.2,.8,.2,1),
+    border-color .35s ease;
+  will-change:transform;
+}
+
+.work-card:hover,
+.build-card:hover,
+.proof-card:hover,
+.credential-card:hover{
+  transform:translateY(-7px) rotateX(1.2deg);
+  box-shadow:0 24px 65px rgba(31,22,26,.12);
+  border-color:rgba(217,120,155,.30);
+}
+
+/* Give major cards a subtle glass/editorial depth */
+.work-card,
+.build-card,
+.proof-card,
+.credential-card{
+  background:rgba(255,253,249,.72);
+  backdrop-filter:blur(12px);
+}
+
+/* Work cards: oversized index = current editorial look */
+.work-card .number,
+.work-card .index,
+.build-card .number{
+  font-variant-numeric:tabular-nums;
+}
+
+/* Add a quiet spotlight to cards */
+.work-card::after,
+.build-card::after,
+.proof-card::after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  top:-90px;
+  right:-70px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(234,169,189,.13),transparent 68%);
+  pointer-events:none;
+  transition:transform .5s ease,opacity .5s ease;
+  opacity:.55;
+}
+.work-card:hover::after,
+.build-card:hover::after,
+.proof-card:hover::after{
+  transform:translate(-25px,25px) scale(1.15);
+  opacity:1;
+}
+
+/* Journey timeline gets a more contemporary marker */
+.timeline-item::before{
+  box-shadow:0 0 0 5px var(--paper),0 0 0 6px rgba(217,120,155,.28);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.timeline-item:hover::before{
+  transform:scale(1.3);
+  box-shadow:0 0 0 5px var(--paper),0 0 0 7px rgba(217,120,155,.42),0 0 24px rgba(217,120,155,.22);
+}
+
+/* Floating micro-labels */
+.modern-float-label{
+  position:absolute;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 10px;
+  border:1px solid rgba(23,21,21,.12);
+  border-radius:10px;
+  background:rgba(255,253,249,.82);
+  backdrop-filter:blur(16px);
+  box-shadow:0 12px 35px rgba(23,21,21,.08);
+  font-size:9px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  pointer-events:none;
+}
+.modern-float-label::before{
+  content:"";
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--pink-strong);
+  box-shadow:0 0 0 4px rgba(217,120,155,.12);
+}
+
+/* CTA buttons become more tactile */
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+button:not(.close),
+a.btn,
+.hero a{
+  transition:
+    transform .25s cubic-bezier(.2,.8,.2,1),
+    box-shadow .25s ease,
+    background .25s ease;
+}
+button:not(.close):active,
+a.btn:active,
+.hero a:active{
+  transform:translateY(1px) scale(.98);
+}
+
+/* New marquee — intentionally restrained */
+.modern-marquee{
+  overflow:hidden;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:rgba(255,253,249,.45);
+  white-space:nowrap;
+}
+.modern-marquee-track{
+  display:flex;
+  width:max-content;
+  animation:marquee 24s linear infinite;
+}
+.modern-marquee span{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  padding:15px 22px;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#595254;
+}
+.modern-marquee i{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--pink-strong);
+}
+@keyframes marquee{
+  to{transform:translateX(-50%);}
+}
+
+/* Reveal animation */
+.reveal-modern{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.2,1);
+}
+.reveal-modern.is-visible{
+  opacity:1;
+  transform:none;
+}
+
+/* Little “object” sticker */
+.modern-object{
+  position:absolute;
+  display:grid;
+  place-items:center;
+  width:58px;height:58px;
+  border-radius:17px;
+  background:linear-gradient(145deg,#fff,#dedbd7);
+  border:1px solid rgba(23,21,21,.14);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.9),
+    0 18px 35px rgba(23,21,21,.10);
+  transform:rotate(-8deg);
+  z-index:4;
+}
+.modern-object .disc{
+  width:28px;height:28px;border-radius:50%;
+  background:
+    radial-gradient(circle,#f8f5ef 0 10%,#252326 11% 17%,#4d4850 18% 28%,#1c1a1e 29% 48%,#77717b 49% 52%,#29262b 53%);
+  box-shadow:0 3px 9px rgba(0,0,0,.22);
+}
+
+/* Keep the special modals premium, not over-decorated */
+#ask .lab-panel,
+#debug .lab-panel{
+  box-shadow:
+    0 35px 100px rgba(20,15,18,.24),
+    0 0 0 1px rgba(255,255,255,.55);
+}
+#ask .lab-head,
+#debug .lab-head{
+  border-bottom:1px solid rgba(23,21,21,.10);
+}
+
+/* Cleaner game screen with HUD */
+#debug .game-progress{
+  position:relative;
+}
+#debug .game-progress::before{
+  content:"LEVEL 01";
+  position:absolute;
+  left:0;
+  top:-18px;
+  font-size:8px;
+  letter-spacing:.16em;
+  color:#7a6d72;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto !important;
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+  .reveal-modern{
+    opacity:1;transform:none;
+  }
+}
+
+/* Mobile polish */
+@media (max-width:760px){
+  .hero{
+    min-height:auto;
+    padding-top:110px;
+    padding-bottom:80px;
+  }
+  .modern-float-label{display:none;}
+  .modern-marquee span{padding:13px 16px;}
+  body::after{opacity:.025;}
+}
+</style>
+
 </head>
 
 <body>
@@ -853,27 +3524,39 @@ border-top:1px solid var(--line)
 <nav class="nav">
 
 <a class="brand" href="#top">
+
 tanisha<span>.</span>
+
 </a>
 
 <div class="links">
 
 <a href="#work">Work</a>
+
 <a href="#builds">Builds</a>
+
 <a href="#notes">Notes</a>
+
 <a href="#journey">Journey</a>
+
 <a href="#credentials">Credentials</a>
 
 <a href="https://dev.to/tanisha_saxena_6ee4977663" target="_blank">
+
 DEV.to ↗
+
 </a>
 
 <a href="https://github.com/Tanishaaaaaaa" target="_blank">
+
 GitHub ↗
+
 </a>
 
 <a href="https://www.linkedin.com/in/tanisha-saxena-978237277/" target="_blank">
+
 LinkedIn ↗
+
 </a>
 
 </div>
@@ -887,9 +3570,13 @@ LinkedIn ↗
 <!-- ASK TANISHA -->
 
 <div id="ask"
+
 class="lab-modal"
+
 role="dialog"
+
 aria-modal="true"
+
 aria-labelledby="ask-title">
 
 <div class="lab-panel">
@@ -899,20 +3586,29 @@ aria-labelledby="ask-title">
 <div>
 
 <h3 id="ask-title">
+
 ✦ Ask Tanisha
+
 </h3>
 
 <p>
+
 A tiny portfolio guide — ask about the work, not the buzzwords.
+
 </p>
 
 </div>
 
 <button
+
 class="lab-close"
+
 type="button"
+
 aria-label="Close">
+
 ×
+
 </button>
 
 </div>
@@ -920,9 +3616,13 @@ aria-label="Close">
 <div id="chat-log" class="chat-log">
 
 <div class="chat-msg">
+
 Hey 👋 I’m the portfolio version of Tanisha.
+
 Ask me about her engineering work, AI projects,
+
 research, or what she likes building.
+
 </div>
 
 </div>
@@ -930,27 +3630,43 @@ research, or what she likes building.
 <div class="quick">
 
 <button
+
 type="button"
+
 data-q="What does Tanisha work on?">
+
 What does she work on?
+
 </button>
 
 <button
+
 type="button"
+
 data-q="Tell me about her AI work.">
+
 AI & research
+
 </button>
 
 <button
+
 type="button"
+
 data-q="What has she built?">
+
 Projects
+
 </button>
 
 <button
+
 type="button"
+
 data-q="What makes her an engineer?">
+
 Engineering style
+
 </button>
 
 </div>
@@ -958,12 +3674,17 @@ Engineering style
 <form class="chat-input" id="chat-form">
 
 <input
+
 id="chat-input"
+
 aria-label="Ask about Tanisha"
+
 placeholder="Ask something about Tanisha…">
 
 <button type="submit">
+
 Ask
+
 </button>
 
 </form>
@@ -973,12 +3694,17 @@ Ask
 </div>
 
 
+
 <!-- DEBUG TANISHA -->
 
 <div id="debug"
+
 class="lab-modal"
+
 role="dialog"
+
 aria-modal="true"
+
 aria-labelledby="debug-title">
 
 <div class="lab-panel">
@@ -988,20 +3714,29 @@ aria-labelledby="debug-title">
 <div>
 
 <h3 id="debug-title">
+
 ⌘ Debug Tanisha
+
 </h3>
 
 <p>
+
 60 seconds. Three production decisions. No trick questions.
+
 </p>
 
 </div>
 
 <button
+
 class="lab-close"
+
 type="button"
+
 aria-label="Close">
+
 ×
+
 </button>
 
 </div>
@@ -1019,6 +3754,7 @@ aria-label="Close">
 </div>
 
 
+
 <!-- MARQUEE -->
 
 <div class="marquee">
@@ -1026,50 +3762,65 @@ aria-label="Close">
 <div class="marquee-track">
 
 BACKEND
+
 <i>✦</i>
 
 CLOUD NATIVE
+
 <i>✦</i>
 
 DATA SYSTEMS
+
 <i>✦</i>
 
 AI / ML
+
 <i>✦</i>
 
 DISTRIBUTED SYSTEMS
+
 <i>✦</i>
 
 JAVA
+
 <i>✦</i>
 
 KUBERNETES
+
 <i>✦</i>
 
 BACKEND
+
 <i>✦</i>
 
 CLOUD NATIVE
+
 <i>✦</i>
 
 DATA SYSTEMS
+
 <i>✦</i>
 
 AI / ML
+
 <i>✦</i>
 
 DISTRIBUTED SYSTEMS
+
 <i>✦</i>
 
 JAVA
+
 <i>✦</i>
 
 KUBERNETES
+
 <i>✦</i>
 
 </div>
 
 </div>
+
 
 
 <!-- HERO -->
@@ -1079,27 +3830,39 @@ KUBERNETES
 <div>
 
 <div class="eyebrow">
+
 Software Engineer · Bengaluru
+
 </div>
 
 <h1>
+
 Building systems that
+
 <em>actually do something.</em>
+
 </h1>
 
 <p>
+
 I’m Tanisha — a backend & data systems engineer who likes turning messy problems into reliable software, from cloud-native microservices to AI-powered prototypes.
+
 </p>
 
 <div class="hero-note">
+
 // currently shipping <b>reliable things</b>, occasionally breaking them
+
 </div>
 
 <div class="hero-sub">
 
 <span class="pill">Backend</span>
+
 <span class="pill">Cloud Native</span>
+
 <span class="pill">Data Systems</span>
+
 <span class="pill">AI / ML</span>
 
 </div>
@@ -1107,21 +3870,33 @@ I’m Tanisha — a backend & data systems engineer who likes turning messy prob
 <div class="actions">
 
 <a class="btn primary" href="#work">
+
 Explore my work ↓
+
 </a>
 
 <a
+
 class="btn"
+
 href="https://github.com/Tanishaaaaaaa"
+
 target="_blank">
+
 GitHub ↗
+
 </a>
 
 <a
+
 class="btn"
+
 href="https://www.linkedin.com/in/tanisha-saxena-978237277/"
+
 target="_blank">
+
 LinkedIn ↗
+
 </a>
 
 </div>
@@ -1129,6 +3904,7 @@ LinkedIn ↗
 <div class="scroll-cue">
 
 <span></span>
+
 scroll to explore
 
 </div>
@@ -1136,12 +3912,15 @@ scroll to explore
 </div>
 
 
+
 <div class="hero-side">
 
 <strong>1+ yr</strong>
 
 <small>
+
 professional software engineering experience
+
 </small>
 
 <br><br>
@@ -1149,12 +3928,17 @@ professional software engineering experience
 <strong>1 → ∞</strong>
 
 <small>
+
 Always building, always learning
+
 </small>
 
 <div class="availability">
+
 Building in production at Schneider Electric
+
 </div>
+
 
 
 <!-- SYSTEM STATUS -->
@@ -1166,7 +3950,9 @@ Building in production at Schneider Electric
 <span>system.status</span>
 
 <span class="status-live">
+
 ONLINE
+
 </span>
 
 </div>
@@ -1176,7 +3962,9 @@ ONLINE
 <span>stack</span>
 
 <span>
+
 JAVA · K8S · CLOUD
+
 </span>
 
 </div>
@@ -1186,12 +3974,15 @@ JAVA · K8S · CLOUD
 <span>mode</span>
 
 <span>
+
 BUILD / LEARN / REPEAT
+
 </span>
 
 </div>
 
 </div>
+
 
 
 <!-- NOW -->
@@ -1203,12 +3994,15 @@ BUILD / LEARN / REPEAT
 <strong>NOW</strong>
 
 <small>
+
 Making backend systems less dramatic.
+
 </small>
 
 </div>
 
 </div>
+
 
 
 <!-- PLAYGROUND -->
@@ -1218,23 +4012,33 @@ Making backend systems less dramatic.
 <div class="lab-title">
 
 <span>
+
 tiny playground
+
 </span>
 
 <span>
+
 pick your side quest ↘
+
 </span>
 
 </div>
 
 
+
 <button
+
 class="lab-btn ai"
+
 type="button"
+
 data-open="ask">
 
 <span class="lab-icon">
+
 ✦
+
 </span>
 
 <span class="lab-copy">
@@ -1242,25 +4046,35 @@ data-open="ask">
 Ask Tanisha
 
 <small>
+
 Ask the portfolio anything
+
 </small>
 
 </span>
 
 <span class="lab-arrow">
+
 →
+
 </span>
 
 </button>
 
 
+
 <button
+
 class="lab-btn"
+
 type="button"
+
 data-open="debug">
 
 <span class="lab-icon">
+
 ⌘
+
 </span>
 
 <span class="lab-copy">
@@ -1268,13 +4082,17 @@ data-open="debug">
 Debug Tanisha
 
 <small>
+
 Make 3 production calls
+
 </small>
 
 </span>
 
 <span class="lab-arrow">
+
 →
+
 </span>
 
 </button>
@@ -1286,6 +4104,7 @@ Make 3 production calls
 </section>
 
 
+
 <!-- WORK -->
 
 <section id="work" class="section">
@@ -1293,14 +4112,19 @@ Make 3 production calls
 <div class="section-head">
 
 <h2>
+
 What I work on
+
 </h2>
 
 <p>
+
 My sweet spot sits where backend engineering, data systems, cloud infrastructure and intelligent workflows overlap.
+
 </p>
 
 </div>
+
 
 
 <div class="grid">
@@ -1308,22 +4132,31 @@ My sweet spot sits where backend engineering, data systems, cloud infrastructure
 <article class="card">
 
 <div class="num">
+
 01 / BACKEND
+
 </div>
 
 <h3>
+
 Cloud-native services
+
 </h3>
 
 <p>
+
 Designing and maintaining scalable microservices and REST APIs with Java, Spring Boot, C# and distributed-system patterns.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">Java</span>
+
 <span class="tag">Spring Boot</span>
+
 <span class="tag">C#</span>
+
 <span class="tag">REST</span>
 
 </div>
@@ -1331,25 +4164,35 @@ Designing and maintaining scalable microservices and REST APIs with Java, Spring
 </article>
 
 
+
 <article class="card">
 
 <div class="num">
+
 02 / DATA
+
 </div>
 
 <h3>
+
 Data & knowledge systems
+
 </h3>
 
 <p>
+
 Working with data pipelines, ontology/graph concepts, SPARQL and SQL/NoSQL systems to make complex information usable.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">SPARQL</span>
+
 <span class="tag">Graph</span>
+
 <span class="tag">SQL</span>
+
 <span class="tag">NoSQL</span>
 
 </div>
@@ -1357,25 +4200,35 @@ Working with data pipelines, ontology/graph concepts, SPARQL and SQL/NoSQL syste
 </article>
 
 
+
 <article class="card">
 
 <div class="num">
+
 03 / CLOUD
+
 </div>
 
 <h3>
+
 Production thinking
+
 </h3>
 
 <p>
+
 Observability, logging, debugging, containers and CI/CD — the unglamorous stuff that makes software survive real users.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">Azure</span>
+
 <span class="tag">AWS</span>
+
 <span class="tag">Docker</span>
+
 <span class="tag">Kubernetes</span>
 
 </div>
@@ -1387,6 +4240,7 @@ Observability, logging, debugging, containers and CI/CD — the unglamorous stuf
 </section>
 
 
+
 <!-- BUILDS -->
 
 <section id="builds" class="section">
@@ -1394,39 +4248,55 @@ Observability, logging, debugging, containers and CI/CD — the unglamorous stuf
 <div class="section-head">
 
 <h2>
+
 Things I’ve built
+
 </h2>
 
 <p>
+
 Not everything belongs in a corporate job description. These are the projects that show how I think when I get to explore.
+
 </p>
 
 </div>
+
 
 
 <div class="feature">
 
 
+
 <article class="card">
 
 <div class="kicker">
+
 Hackathon · 2026
+
 </div>
 
 <div class="big">
+
 🌊 StormShield AI
+
 </div>
 
 <p>
+
 An AI-powered flood and weather guardian built with OmniShield. The system combines live environmental data with XGBoost to forecast water levels 30 minutes ahead, Gemini-powered safety guidance, real-time alerts and interactive visualizations.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">Python</span>
+
 <span class="tag">FastAPI</span>
+
 <span class="tag">XGBoost</span>
+
 <span class="tag">Gemini</span>
+
 <span class="tag">Streamlit</span>
 
 </div>
@@ -1434,24 +4304,33 @@ An AI-powered flood and weather guardian built with OmniShield. The system combi
 </article>
 
 
+
 <article class="card">
 
 <div class="kicker">
+
 AI · Healthcare
+
 </div>
 
 <div class="big">
+
 🏥 NovaCare — AI Healthcare Workflow Automation
+
 </div>
 
 <p>
+
 An AI-focused healthcare project designed around accessible, intelligent support and user-centric care workflows, combining software engineering with applied AI concepts.Integrated Amazon Nova models (Sonic, Lite, Act, Multimodal Embeddings) with a Python FastAPI backend and PostgreSQL to automate patient triage and intake, cutting manual registration steps by ~70%.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">AI / ML</span>
+
 <span class="tag">Healthcare</span>
+
 <span class="tag">Intelligent Systems</span>
 
 </div>
@@ -1459,24 +4338,33 @@ An AI-focused healthcare project designed around accessible, intelligent support
 </article>
 
 
+
 <article class="card">
 
 <div class="kicker">
+
 Project
+
 </div>
 
 <div class="big">
+
 ⚙️ Multicloud File Sharing using CP-ABE
+
 </div>
 
 <p>
+
 Engineered a privacy-preserving multicloud file-sharing platform leveraging Ciphertext-Policy Attribute-Based Encryption (CP-ABE). The system embeds fine-grained access control policies directly into encrypted data, enabling secure multi-authority file distribution across heterogeneous cloud environments while guaranteeing data confidentiality against semi-trusted cloud providers.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">Software Engineering</span>
+
 <span class="tag">Problem Solving</span>
+
 <span class="tag">Development</span>
 
 </div>
@@ -1484,26 +4372,37 @@ Engineered a privacy-preserving multicloud file-sharing platform leveraging Ciph
 </article>
 
 
+
 <article class="card">
 
 <div class="kicker">
+
 WID SheSparks · 2026
+
 </div>
 
 <div class="big">
+
 ♻️ EcoPilot Gateway
+
 </div>
 
 <p>
+
 An AI gateway for responsible token governance and cost-aware model routing. A knowledge base and LLM router classify prompts and route each request to the appropriate model, avoiding unnecessary use of premium cloud AI credits while keeping model selection intentional and efficient.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">LLM Router</span>
+
 <span class="tag">Knowledge Base</span>
+
 <span class="tag">Token Governance</span>
+
 <span class="tag">AI Gateway</span>
+
 <span class="tag">Cost Optimization</span>
 
 </div>
@@ -1511,24 +4410,33 @@ An AI gateway for responsible token governance and cost-aware model routing. A k
 </article>
 
 
+
 <article class="card">
 
 <div class="kicker">
+
 Research · AI / ML
+
 </div>
 
 <div class="big">
+
 🧠 Intelligent Exam Proctoring
+
 </div>
 
 <p>
+
 An automated online exam-proctoring system focused on authentication and abnormal-behaviour monitoring using image processing and deep learning.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">Computer Vision</span>
+
 <span class="tag">Deep Learning</span>
+
 <span class="tag">Image Processing</span>
 
 </div>
@@ -1540,6 +4448,7 @@ An automated online exam-proctoring system focused on authentication and abnorma
 </section>
 
 
+
 <!-- DEV.TO -->
 
 <section id="notes" class="section">
@@ -1547,37 +4456,51 @@ An automated online exam-proctoring system focused on authentication and abnorma
 <div class="section-head">
 
 <h2>
+
 Field notes from the dev trenches
+
 </h2>
 
 <p>
+
 The less-serious side of being a developer: weird workdays, questionable architecture and turning everyday frustrations into things worth building.
+
 </p>
 
 </div>
+
 
 
 <div class="feature">
 
 
+
 <article class="card">
 
 <div class="kicker">
+
 Dev journal · DEV.to
+
 </div>
 
 <div class="big">
+
 “A totally accurate day in the life of a software developer.”
+
 </div>
 
 <p>
+
 17 browser tabs, a “quick question” that is never quick, debugging rituals and the mysterious bug that only makes sense at 10:47 PM. Basically: a normal Tuesday.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">Developer Life</span>
+
 <span class="tag">Debugging</span>
+
 <span class="tag">Relatable</span>
 
 </div>
@@ -1585,8 +4508,11 @@ Dev journal · DEV.to
 <div class="actions">
 
 <a
+
 class="btn"
+
 href="https://dev.to/tanisha_saxena_6ee4977663/a-totally-accurate-day-in-the-life-of-a-software-developer-3i1m"
+
 target="_blank">
 
 Read the chaos ↗
@@ -1598,24 +4524,33 @@ Read the chaos ↗
 </article>
 
 
+
 <article class="card">
 
 <div class="kicker">
+
 Hot take · DEV.to
+
 </div>
 
 <div class="big">
+
 “It worked on my machine… so why is production on fire?”
+
 </div>
 
 <p>
+
 A playful look at the universal developer experience: local success, production betrayal, and the tiny gap between “works for me” and “please don't page me again.”
+
 </p>
 
 <div class="tags">
 
 <span class="tag">Production</span>
+
 <span class="tag">Debugging</span>
+
 <span class="tag">Developer Humor</span>
 
 </div>
@@ -1623,8 +4558,11 @@ A playful look at the universal developer experience: local success, production 
 <div class="actions">
 
 <a
+
 class="btn"
+
 href="https://dev.to/tanisha_saxena_6ee4977663/it-worked-on-my-machine-so-why-is-production-on-fire-4b3d"
+
 target="_blank">
 
 Read the hot take ↗
@@ -1636,24 +4574,33 @@ Read the hot take ↗
 </article>
 
 
+
 <article class="card">
 
 <div class="kicker">
+
 Builder brain · DEV.to
+
 </div>
 
 <div class="big">
+
 “What if complaining was a product requirement?”
+
 </div>
 
 <p>
+
 Problem Radar turns everyday frustrations into hackathon-ready ideas, complete with users, solutions, tech stack and a build plan. Because apparently complaining can be productive.
+
 </p>
 
 <div class="tags">
 
 <span class="tag">Hackathons</span>
+
 <span class="tag">React</span>
+
 <span class="tag">Problem Solving</span>
 
 </div>
@@ -1661,8 +4608,11 @@ Problem Radar turns everyday frustrations into hackathon-ready ideas, complete w
 <div class="actions">
 
 <a
+
 class="btn"
+
 href="https://dev.to/tanisha_saxena_6ee4977663/-i-built-an-app-that-turns-daily-frustrations-into-hackathon-ideas-and-it-might-replace-4lai"
+
 target="_blank">
 
 Read the idea ↗
@@ -1676,11 +4626,15 @@ Read the idea ↗
 </div>
 
 
+
 <div class="actions">
 
 <a
+
 class="btn primary"
+
 href="https://dev.to/tanisha_saxena_6ee4977663"
+
 target="_blank">
 
 Explore all my DEV.to writing ↗
@@ -1692,6 +4646,7 @@ Explore all my DEV.to writing ↗
 </section>
 
 
+
 <!-- PROOF -->
 
 <section class="section">
@@ -1699,78 +4654,109 @@ Explore all my DEV.to writing ↗
 <div class="section-head">
 
 <h2>
+
 Proof, not just projects
+
 </h2>
 
 <p>
+
 A few milestones that shaped the person behind the code — from building and competing to publishing research and contributing to technical communities.
+
 </p>
 
 </div>
+
 
 
 <div class="grid">
 
 
+
 <article class="card">
 
 <div class="num">
+
 03rd PLACE
+
 </div>
 
 <h3>
+
 WID SheSparks 2026 Ideathon
+
 </h3>
 
 <p>
+
 Secured 3rd place for EcoPilot Gateway, a sustainability-focused AI gateway exploring token governance, knowledge-based prompt classification and intelligent model routing.
+
 </p>
 
 </article>
 
 
+
 <article class="card">
 
 <div class="num">
+
 RESEARCH
+
 </div>
 
 <h3>
+
 IEEE Lead Researcher & Conference Presenter
+
 </h3>
 
 <p>
+
 Recognized as lead researcher and author at IEEE CONECCT 2025 and IEEE COMPUTE 2024 for contributions to applied machine learning. Published research on Explainable AI (integrating ARIMA with SHAP for time-series forecasting) and presented poster sessions on deep-learning-based behavioral anomaly detection.
+
 </p>
 
 </article>
+
 
 
 <article class="card">
 
 <div class="num">
+
 AUTHOR
+
 </div>
 
 <h3>
+
 NPTEL Believer and Discipline Star Award Winner
+
 </h3>
 
 <p>
+
 Awarded for exceptional commitment to continuous upskilling by sitting for and successfully getting certified in 5 proctored technical exams in a single semester (Jan–Apr 2025). Completed certifications with Elite + Silver medals across Data Analytics with Python, Business Intelligence, and Java Programming.
+
 </p>
 
 </article>
 
 <article class="card">
+
   <div class="num">LEARNING</div>
+
   <h3>McKinsey Forward</h3>
+
   <p>Completed the McKinsey.org Forward Learning Program, focused on structured problem solving, communication, adaptability and professional growth.</p>
+
 </article>
 
 </div>
 
 </section>
+
 
 
 <!-- JOURNEY -->
@@ -1780,33 +4766,45 @@ Awarded for exceptional commitment to continuous upskilling by sitting for and s
 <div class="section-head">
 
 <h2>
+
 The journey
+
 </h2>
 
 <p>
+
 Chronological, because the interesting part is seeing how the experiments turned into the engineer I am today.
+
 </p>
 
 </div>
+
 
 
 <div class="timeline">
 
 
+
 <div class="item">
 
 <div class="date">
+
 2021 — 2025
+
 </div>
 
 <div>
 
 <h3>
+
 B.E. with Honors, Information Science · Ramaiah Institute of Technology
+
 </h3>
 
 <p>
+
 2021 – Jun 2025 · Grade 9.18/10 · Bengaluru. Built a foundation across software engineering, AI/ML, web development and research while contributing to technical communities and student projects.
+
 </p>
 
 </div>
@@ -1814,20 +4812,27 @@ B.E. with Honors, Information Science · Ramaiah Institute of Technology
 </div>
 
 
+
 <div class="item">
 
 <div class="date">
+
 Aug 2022 — Jan 2024
+
 </div>
 
 <div>
 
 <h3>
+
 Frontend Coordinator · NFThing + {dw3ll}
+
 </h3>
 
 <p>
+
 Part-time · Remote · London Area, United Kingdom. Worked across front-end development, Git and collaborative product workflows.
+
 </p>
 
 </div>
@@ -1835,20 +4840,27 @@ Part-time · Remote · London Area, United Kingdom. Worked across front-end deve
 </div>
 
 
+
 <div class="item">
 
 <div class="date">
+
 Sep — Oct 2023
+
 </div>
 
 <div>
 
 <h3>
+
 Information Technology Specialist · Emaar Farm Technik
+
 </h3>
 
 <p>
+
 Internship · Remote · Mumbai, Maharashtra. Worked with MongoDB and information technology infrastructure.
+
 </p>
 
 </div>
@@ -1856,20 +4868,27 @@ Internship · Remote · Mumbai, Maharashtra. Worked with MongoDB and information
 </div>
 
 
+
 <div class="item">
 
 <div class="date">
+
 Oct — Nov 2023
+
 </div>
 
 <div>
 
 <h3>
+
 Internship Trainee · Alfido Tech
+
 </h3>
 
 <p>
+
 Internship · Remote · Bengaluru. Worked with Java, JDBC and related development technologies.
+
 </p>
 
 </div>
@@ -1877,20 +4896,27 @@ Internship · Remote · Bengaluru. Worked with Java, JDBC and related developmen
 </div>
 
 
+
 <div class="item">
 
 <div class="date">
+
 Jan — Aug 2025
+
 </div>
 
 <div>
 
 <h3>
+
 Software Development Intern · Schneider Electric
+
 </h3>
 
 <p>
+
 Internship · Bangalore Urban, Karnataka. Worked in software development and DevOps-oriented workflows, including Azure DevOps Server.
+
 </p>
 
 </div>
@@ -1898,46 +4924,65 @@ Internship · Bangalore Urban, Karnataka. Worked in software development and Dev
 </div>
 
 
+
 <div class="item">
 
 <div class="date">
+
 Aug 2025 — NOW
+
 </div>
 
 <div>
 
 <h3>
+
 Software Developer · Schneider Electric
+
 </h3>
 
 <p>
+
 Full-time · On-site · Bengaluru, Karnataka.
+
 </p>
 
 <ul class="journey-list">
 
 <li>
+
 Engineered enterprise notification microservices in Java Spring Boot and C# for email, push, and SMS channels, serving 10+ internal and external clients.
+
 </li>
 
 <li>
+
 Built Kafka-based event processors for high-volume, low-latency messaging and a centralized template management system.
+
 </li>
 
 <li>
+
 Reduced production debugging time by 30% by architecting observability frameworks using Dynatrace.
+
 </li>
 
 <li>
+
 Built authentication middleware, request validation logic, and standardized third-party integrations using OpenAPI/Swagger.
+
 </li>
 
 <li>
+
 Manage and query enterprise ontology data using SPARQL against Ontotext GraphDB with Azure Blob Storage and Cosmos DB.
+
 </li>
 
 <li>
+
 Piloted event-driven data workflows with Azure Dapr and managed cloud-native deployments on Azure Container Apps.
+
 </li>
 
 </ul>
@@ -1951,6 +4996,7 @@ Piloted event-driven data workflows with Azure Dapr and managed cloud-native dep
 </section>
 
 
+
 <!-- CREDENTIALS -->
 
 <section id="credentials" class="section">
@@ -1958,14 +5004,19 @@ Piloted event-driven data workflows with Azure Dapr and managed cloud-native dep
 <div class="section-head">
 
 <h2>
+
 Credentials
+
 </h2>
 
 <p>
+
 A growing toolkit — with a bias toward learning things well enough to build with them.
+
 </p>
 
 </div>
+
 
 
 <div class="cert-grid">
@@ -1973,102 +5024,141 @@ A growing toolkit — with a bias toward learning things well enough to build wi
 <div class="cert">
 
 <strong>
+
 Salesforce Certified AI Associate
+
 </strong>
 
 <span>
+
 Salesforce · Oct 2024
+
 </span>
 
 </div>
 
 
+
 <div class="cert">
 
 <strong>
+
 Contentstack for Developers + Launch
+
 </strong>
 
 <span>
+
 Contentstack · Sep 2024
+
 </span>
 
 </div>
 
 
+
 <div class="cert">
 
 <strong>
+
 AWS Knowledge: Cloud Essentials
+
 </strong>
 
 <span>
+
 Amazon Web Services · Jul 2024
+
 </span>
 
 </div>
 
 
+
 <div class="cert">
 
 <strong>
+
 Postman API Fundamentals Student Expert
+
 </strong>
 
 <span>
+
 Postman · Jul 2024
+
 </span>
 
 </div>
 
 
+
 <div class="cert">
 
 <strong>
+
 Google Cloud Computing Foundations
+
 </strong>
 
 <span>
+
 Google · May 2024
+
 </span>
 
 </div>
 
 
+
 <div class="cert">
 
 <strong>
+
 AI Foundation Certification
+
 </strong>
 
 <span>
+
 Infosys Springboard · Nov 2023
+
 </span>
 
 </div>
 
 
+
 <div class="cert">
 
 <strong>
+
 Java Development
+
 </strong>
 
 <span>
+
 Alfido Tech
+
 </span>
 
 </div>
 
 
+
 <div class="cert">
 
 <strong>
+
 Research: AI / ML systems
+
 </strong>
 
 <span>
+
 Academic + IEEE ecosystem
+
 </span>
 
 </div>
@@ -2076,6 +5166,7 @@ Academic + IEEE ecosystem
 </div>
 
 </section>
+
 
 
 <!-- QUOTE -->
@@ -2093,6 +5184,7 @@ Academic + IEEE ecosystem
 </main>
 
 
+
 <!-- FOOTER -->
 
 <div class="wrap">
@@ -2102,7 +5194,9 @@ Academic + IEEE ecosystem
 <div>
 
 <strong>
+
 Tanisha Saxena
+
 </strong>
 
 <br>
@@ -2112,26 +5206,37 @@ Software Engineer · Bengaluru, India
 </div>
 
 
+
 <div>
 
 <a
+
 href="https://github.com/Tanishaaaaaaa"
+
 target="_blank">
+
 GitHub ↗
+
 </a>
 
 <br>
 
 <a
+
 href="https://www.linkedin.com/in/tanisha-saxena-978237277/"
+
 target="_blank">
+
 LinkedIn ↗
+
 </a>
 
 <br>
 
 <span>
+
 Built with curiosity.
+
 </span>
 
 </div>
@@ -2143,43 +5248,65 @@ Built with curiosity.
 </div>
 
 
+
 <script>
 
 const navLinks=[
+
 ...document.querySelectorAll('.links a[href^="#"]')
+
 ];
 
 const sections=
+
 navLinks
+
 .map(a=>document.querySelector(a.getAttribute('href')))
+
 .filter(Boolean);
 
 const activate=()=>{
 
 let current=
+
 sections.find(
+
 s=>s.getBoundingClientRect().top>80
+
 )?.id
+
 ||
+
 sections.at(-1)?.id;
 
 navLinks.forEach(
+
 a=>
+
 a.style.color=
+
 a.getAttribute('href')==='#'+current
+
 ?'var(--text)'
+
 :''
+
 );
 
 };
 
 addEventListener(
+
 'scroll',
+
 activate,
+
 {passive:true}
+
 );
 
 activate();
+
 
 
 /* ASK TANISHA */
@@ -2187,85 +5314,139 @@ activate();
 const answers={
 
 "what does tanisha work on?":
+
 "Tanisha is a backend & data systems engineer at Schneider Electric, working with cloud-native microservices, notification and alerting systems, APIs, data/knowledge systems and production observability.",
 
 "tell me about her ai work.":
+
 "Her AI side spans applied projects like StormShield AI, EcoPilot Gateway and Nova Care, plus academic research in intelligent exam proctoring. She has also published a thesis and poster and contributed as a research author.",
 
 "what has she built?":
+
 "Her portfolio includes StormShield AI, Nova Care, CP Abe, EcoPilot Gateway and Intelligent Exam Proctoring — a mix of AI, software engineering, cloud and research work.",
 
 "what makes her an engineer?":
+
 "She likes the part after the demo: failure modes, APIs, data flow, observability, debugging and making systems reliable enough for real users. Her sweet spot is where backend engineering meets curiosity."
 
 };
 
 
+
 const openModal=
+
 id=>
+
 document
+
 .getElementById(id)
+
 ?.classList
+
 .add('open');
 
 
+
 const closeModal=
+
 m=>
+
 m.classList.remove('open');
 
 
+
 document
+
 .querySelectorAll('[data-open]')
+
 .forEach(
+
 b=>
+
 b.addEventListener(
+
 'click',
+
 ()=>{
+
 openModal(b.dataset.open)
+
 }
+
 )
+
 );
 
 
+
 document
+
 .querySelectorAll('.lab-close')
+
 .forEach(
+
 b=>
+
 b.addEventListener(
+
 'click',
+
 ()=>{
+
 closeModal(b.closest('.lab-modal'))
+
 }
+
 )
+
 );
+
 
 
 document
+
 .querySelectorAll('.lab-modal')
+
 .forEach(
+
 m=>
+
 m.addEventListener(
+
 'click',
+
 e=>{
+
 if(e.target===m)
+
 closeModal(m)
+
 }
+
 )
+
 );
+
 
 
 const log=
+
 document.getElementById('chat-log');
 
 
+
 const addChat=
+
 (text,user=false)=>{
 
 const d=
+
 document.createElement('div');
 
 d.className=
+
 'chat-msg'+
+
 (user?' user':'');
 
 d.textContent=text;
@@ -2273,55 +5454,85 @@ d.textContent=text;
 log.appendChild(d);
 
 log.scrollTop=
+
 log.scrollHeight;
 
 };
 
 
+
 const reply=
+
 q=>{
 
 const key=
+
 q.toLowerCase().trim();
 
 let r=
+
 answers[key];
 
 if(!r){
 
 if(
+
 key.includes('schneider')||
+
 key.includes('work')
+
 )
+
 r=
+
 answers['what does tanisha work on?'];
 
 else if(
+
 key.includes('ai')||
+
 key.includes('research')||
+
 key.includes('thesis')||
+
 key.includes('poster')
+
 )
+
 r=
+
 answers['tell me about her ai work.'];
 
 else if(
+
 key.includes('project')||
+
 key.includes('build')
+
 )
+
 r=
+
 answers['what has she built?'];
 
 else if(
+
 key.includes('skill')||
+
 key.includes('engineering')||
+
 key.includes('backend')
+
 )
+
 r=
+
 answers['what makes her an engineer?'];
 
 else
+
 r=
+
 'Try asking about her work, projects, AI & research, or engineering style.';
 
 }
@@ -2331,32 +5542,51 @@ addChat(r);
 };
 
 
+
 document
+
 .querySelectorAll('[data-q]')
+
 .forEach(
+
 b=>
+
 b.addEventListener(
+
 'click',
+
 ()=>{
+
 addChat(b.dataset.q,true);
+
 reply(b.dataset.q);
+
 }
+
 )
+
 );
 
 
+
 document
+
 .getElementById('chat-form')
+
 .addEventListener(
+
 'submit',
+
 e=>{
 
 e.preventDefault();
 
 const i=
+
 document.getElementById('chat-input');
 
 const q=
+
 i.value.trim();
 
 if(!q)return;
@@ -2368,7 +5598,9 @@ reply(q);
 i.value='';
 
 }
+
 );
+
 
 
 /* DEBUG TANISHA */
@@ -2376,103 +5608,169 @@ i.value='';
 const questions=[
 
 {
+
 q:'A notification service is suddenly slow. What do you inspect first?',
+
 o:[
+
 'Add more servers immediately',
+
 'Check logs, metrics and traces',
+
 'Rewrite the service',
+
 'Restart everything'
+
 ],
+
 a:1,
+
 r:'Observability first. Understand the failure before changing the system.'
+
 },
 
 {
+
 q:'A downstream SMS provider starts timing out. What protects the rest of the system?',
+
 o:[
+
 'Let every request wait',
+
 'Retry forever',
+
 'Use timeouts + controlled retries / circuit breaking',
+
 'Ignore the errors'
+
 ],
+
 a:2,
+
 r:'Bounded failure is the goal: protect resources while recovering safely.'
+
 },
 
 {
+
 q:'Your system now has 10× the traffic. What should happen next?',
+
 o:[
+
 'Hope autoscaling handles it',
+
 'Measure bottlenecks, then scale deliberately',
+
 'Delete features',
+
 'Move everything to one bigger server'
+
 ],
+
 a:1,
+
 r:'Scale from evidence: identify the bottleneck, then choose the right architectural response.'
+
 }
 
 ];
 
 
+
 let qi=0;
+
 let score=0;
+
 
 
 const renderGame=()=>{
 
 const q=
+
 questions[qi];
 
 const c=
+
 document.getElementById('game-content');
 
 
+
 document
+
 .getElementById('game-progress')
+
 .style.width=
+
 (qi/questions.length*100)+'%';
+
 
 
 c.innerHTML=
 
 '<div class="game-kicker">Scenario '+
+
 (qi+1)+
+
 ' / '+
+
 questions.length+
+
 '</div>'+
 
 '<div class="game-question">'+
+
 q.q+
+
 '</div>'+
 
 '<div class="game-options">'+
 
 q.o
+
 .map(
+
 (x,i)=>
+
 '<button class="game-option" type="button" data-i="'+i+'">'+
+
 String.fromCharCode(65+i)+
+
 ' · '+
+
 x+
+
 '</button>'
+
 )
+
 .join('')+
 
 '</div>';
 
 
+
 c
+
 .querySelectorAll('.game-option')
+
 .forEach(
+
 b=>
+
 b.addEventListener(
+
 'click',
+
 ()=>{
 
 if(
+
 Number(b.dataset.i)===q.a
+
 )
+
 score++;
+
 
 
 c.innerHTML=
@@ -2482,15 +5780,21 @@ c.innerHTML=
 '<div class="game-question">'+
 
 (
+
 Number(b.dataset.i)===q.a
+
 ?'✓ Good instinct.'
+
 :'→ Interesting choice.'
+
 )+
 
 '</div>'+
 
 '<div class="game-result">'+
+
 q.r+
+
 '</div>'+
 
 '<br>'+
@@ -2498,18 +5802,27 @@ q.r+
 '<button class="game-next" type="button">'+
 
 (
+
 qi<questions.length-1
+
 ?'Next scenario →'
+
 :'See result →'
+
 )+
 
 '</button>';
 
 
+
 c
+
 .querySelector('.game-next')
+
 .addEventListener(
+
 'click',
+
 ()=>{
 
 if(qi<questions.length-1){
@@ -2523,8 +5836,11 @@ renderGame();
 else{
 
 document
+
 .getElementById('game-progress')
+
 .style.width='100%';
+
 
 
 c.innerHTML=
@@ -2532,61 +5848,195 @@ c.innerHTML=
 '<div class="game-kicker">Production survived</div>'+
 
 '<div class="game-question">'+
+
 'You scored '+
+
 score+
+
 '/'+
+
 questions.length+
+
 '.'+
+
 '</div>'+
 
 '<div class="game-result">'+
+
 'The point isn’t getting every answer right — it’s thinking about failure, observability and trade-offs. That’s the kind of engineering Tanisha enjoys.'+
+
 '</div>'+
 
 '<br>'+
 
 '<button class="game-next" type="button" id="game-close">'+
+
 'Back to portfolio ↗'+
+
 '</button>';
 
 
+
 document
+
 .getElementById('game-close')
+
 .addEventListener(
+
 'click',
+
 ()=>
+
 closeModal(
+
 document.getElementById('debug')
+
 )
+
 );
 
 }
 
 }
+
 );
 
 }
+
 )
+
 );
 
 };
 
 
+
 document
+
 .querySelector('[data-open="debug"]')
+
 .addEventListener(
+
 'click',
+
 ()=>{
 
 qi=0;
+
 score=0;
 
 renderGame();
 
 }
+
 );
 
 </script>
 
+
+<script id="modern-2026-js">
+(function(){
+  const body = document.body;
+
+  // Scroll progress
+  const progress = document.createElement('div');
+  progress.id = 'modern-scroll-progress';
+  body.appendChild(progress);
+
+  function updateProgress(){
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+
+  // Cursor halo on pointer devices
+  if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    const halo = document.createElement('div');
+    halo.id = 'cursor-halo';
+    body.appendChild(halo);
+    let x = -100, y = -100, tx = -100, ty = -100;
+    window.addEventListener('pointermove', e => {
+      tx = e.clientX; ty = e.clientY;
+    }, {passive:true});
+    function tick(){
+      x += (tx-x)*.18;
+      y += (ty-y)*.18;
+      halo.style.left = x + 'px';
+      halo.style.top = y + 'px';
+      requestAnimationFrame(tick);
+    }
+    tick();
+  }
+
+  // Intersection reveal — only for safe, non-modal content.
+  const candidates = document.querySelectorAll(
+    '.work-card, .build-card, .proof-card, .credential-card, .timeline-item'
+  );
+  candidates.forEach((el, i) => {
+    el.classList.add('reveal-modern');
+    el.style.transitionDelay = Math.min(i * 35, 220) + 'ms';
+  });
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.12});
+  candidates.forEach(el => io.observe(el));
+
+  // Gentle pointer tilt for larger cards — no dependency.
+  if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    document.querySelectorAll('.work-card, .build-card').forEach(card => {
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX-r.left)/r.width-.5;
+        const py = (e.clientY-r.top)/r.height-.5;
+        card.style.transform =
+          'perspective(900px) rotateX(' + (-py*2.1) + 'deg) rotateY(' + (px*2.1) + 'deg) translateY(-5px)';
+      });
+      card.addEventListener('pointerleave', () => {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  // Add a subtle modern marquee before the Work section.
+  const work = document.querySelector('#work');
+  if(work && !document.querySelector('.modern-marquee')){
+    const marquee = document.createElement('div');
+    marquee.className = 'modern-marquee';
+    marquee.setAttribute('aria-hidden','true');
+    marquee.innerHTML =
+      '<div class="modern-marquee-track">' +
+      '<span>backend systems <i></i> cloud native <i></i> data systems <i></i> AI workflows <i></i> distributed thinking <i></i></span>' +
+      '<span>backend systems <i></i> cloud native <i></i> data systems <i></i> AI workflows <i></i> distributed thinking <i></i></span>' +
+      '</div>';
+    work.parentNode.insertBefore(marquee, work);
+  }
+
+  // Tiny physical/digital object in hero if a suitable container exists.
+  const hero = document.querySelector('.hero');
+  if(hero && !hero.querySelector('.modern-object')){
+    const obj = document.createElement('div');
+    obj.className = 'modern-object';
+    obj.setAttribute('aria-hidden','true');
+    obj.innerHTML = '<div class="disc"></div>';
+    obj.style.right = '7%';
+    obj.style.top = '18%';
+    obj.style.animation = 'modernFloat 5.5s ease-in-out infinite';
+    hero.appendChild(obj);
+
+    const style = document.createElement('style');
+    style.textContent =
+      '@keyframes modernFloat{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-4deg) translateY(-9px)}}';
+    document.head.appendChild(style);
+  }
+})();
+</script>
+
 </body>
+
 </html>
