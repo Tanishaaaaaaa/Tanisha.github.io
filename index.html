@@ -2016,7 +2016,7 @@ body::after{
 }
 
 .brand::before{
-  content:"✦";
+  content:"♡";
   display:inline-block;
   margin-right:7px;
   color:var(--pink);
@@ -3510,6 +3510,340 @@ a.btn:active,
   .modern-float-label{display:none;}
   .modern-marquee span{padding:13px 16px;}
   body::after{opacity:.025;}
+}
+</style>
+
+
+<style id="mobile-dark-fix">
+/* =========================================================
+   V6 — MOBILE + DARK MODE FIXES
+   Keep the design; make every important interaction visible.
+   ========================================================= */
+
+/* Mobile: never hide the playground. Stack it cleanly. */
+@media (max-width: 800px){
+  .hero{
+    grid-template-columns:1fr !important;
+    min-height:auto !important;
+    padding-top:70px !important;
+    padding-bottom:60px !important;
+  }
+
+  .hero-side{
+    display:block !important;
+    width:100% !important;
+    margin-top:28px !important;
+  }
+
+  .lab-launch{
+    display:grid !important;
+    width:100% !important;
+    margin-top:18px !important;
+    visibility:visible !important;
+    opacity:1 !important;
+  }
+
+  .lab-btn{
+    display:grid !important;
+    width:100% !important;
+    min-height:64px !important;
+    visibility:visible !important;
+    opacity:1 !important;
+  }
+
+  .lab-title{
+    display:flex !important;
+  }
+
+  /* Don't let the giant hero decorations cover the buttons. */
+  .hero::after{
+    pointer-events:none !important;
+    z-index:0 !important;
+  }
+
+  .hero > div{
+    position:relative !important;
+    z-index:2 !important;
+  }
+
+  /* Keep the modal usable on a phone. */
+  .lab-modal{
+    align-items:flex-end !important;
+    justify-content:center !important;
+    padding:10px !important;
+  }
+
+  .lab-panel{
+    width:100% !important;
+    max-width:520px !important;
+    max-height:calc(100dvh - 20px) !important;
+    padding-left:16px !important;
+    padding-right:16px !important;
+    padding-bottom:18px !important;
+  }
+
+  .lab-panel::before{
+    margin-left:-16px !important;
+    margin-right:-16px !important;
+  }
+
+  .lab-head{
+    gap:10px !important;
+  }
+
+  .lab-head h3{
+    font-size:21px !important;
+  }
+
+  .quick button,
+  .game-option{
+    min-height:42px !important;
+  }
+
+  .chat-input{
+    flex-wrap:nowrap !important;
+  }
+
+  .chat-input input{
+    min-width:0 !important;
+  }
+}
+
+/* Dark mode: use explicit dark values instead of relying on the
+   light Y2K gradients that were added later in the stylesheet. */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b0d0f !important;
+    --surface:#121619 !important;
+    --surface2:#171c20 !important;
+    --text:#f5f5f2 !important;
+    --muted:#b5bbb8 !important;
+    --line:#30373b !important;
+    --accent:#e79ab7 !important;
+    --accent2:#b7c6d7 !important;
+    --pink:#e79ab7 !important;
+    --paper:#0b0d0f !important;
+    --soft:#15191c !important;
+  }
+
+  body{
+    background:
+      radial-gradient(circle at 8% 8%,rgba(231,154,183,.09),transparent 23rem),
+      radial-gradient(circle at 92% 16%,rgba(183,198,215,.08),transparent 24rem),
+      #0b0d0f !important;
+    color:var(--text) !important;
+  }
+
+  /* Override light-only Y2K objects */
+  .nav,
+  .hero-side,
+  .card,
+  .cert,
+  .quote,
+  .lab-btn,
+  .pill{
+    background:linear-gradient(145deg,#15191c,#101315) !important;
+    color:var(--text) !important;
+    border-color:#30373b !important;
+    box-shadow:0 14px 45px rgba(0,0,0,.25) !important;
+  }
+
+  .nav::after{
+    background:var(--bg) !important;
+    color:#8f9999 !important;
+  }
+
+  .brand,
+  .links a,
+  .hero h1,
+  .hero p,
+  .section h2,
+  .card h3,
+  .card p,
+  .item h3,
+  .item p,
+  .footer strong,
+  .quote,
+  .lab-btn,
+  .lab-head h3,
+  .game-question{
+    color:var(--text) !important;
+  }
+
+  .links,
+  .hero-side small,
+  .section-head p,
+  .card p,
+  .item p,
+  .footer,
+  .lab-head p,
+  .lab-btn .lab-copy small,
+  .lab-btn .lab-arrow,
+  .hero-note,
+  .scroll-cue,
+  .availability,
+  .cert span{
+    color:var(--muted) !important;
+  }
+
+  .tag,
+  .cert{
+    background:linear-gradient(145deg,#171b1e,#121618) !important;
+    color:var(--text) !important;
+    border-color:#30373b !important;
+  }
+
+  .tag{
+    box-shadow:inset 0 1px rgba(255,255,255,.04) !important;
+  }
+
+  .feature .card:first-child,
+  .feature .card:nth-child(2){
+    background:
+      radial-gradient(circle at 90% 10%,rgba(231,154,183,.09),transparent 30%),
+      #121619 !important;
+  }
+
+  .status-card{
+    background:#101416 !important;
+    border-color:#3a3438 !important;
+    color:var(--text) !important;
+  }
+
+  .status-row span:first-child,
+  .kicker{
+    color:#aeb6b4 !important;
+  }
+
+  .marquee{
+    background:#0e1113 !important;
+    color:#aeb6b4 !important;
+    border-color:#30373b !important;
+  }
+
+  .marquee::before,
+  .marquee::after{
+    background:#0b0d0f !important;
+  }
+
+  .hero-side::before{
+    color:#899391 !important;
+  }
+
+  .hero-side::after,
+  .section-head h2::after{
+    color:var(--pink) !important;
+  }
+
+  /* Interactive buttons must have clear contrast */
+  .btn{
+    border-color:#3a4145 !important;
+    color:var(--text) !important;
+    background:#15191c !important;
+  }
+
+  .btn.primary,
+  .chat-input button,
+  .game-next{
+    background:#f5f5f2 !important;
+    color:#0b0d0f !important;
+    border-color:#f5f5f2 !important;
+  }
+
+  .btn.primary:hover,
+  .chat-input button:hover,
+  .game-next:hover{
+    background:var(--pink) !important;
+    color:#111 !important;
+  }
+
+  /* Popup windows */
+  .lab-modal{
+    background:rgba(0,0,0,.70) !important;
+  }
+
+  .lab-panel{
+    background:#111517 !important;
+    color:var(--text) !important;
+    border-color:#41484c !important;
+    box-shadow:0 35px 100px rgba(0,0,0,.65) !important;
+  }
+
+  .lab-panel::before{
+    background:
+      radial-gradient(circle at 15px 19px,#d985a3 0 4px,transparent 4.5px),
+      radial-gradient(circle at 31px 19px,#6f777b 0 4px,transparent 4.5px),
+      radial-gradient(circle at 47px 19px,#6f777b 0 4px,transparent 4.5px),
+      linear-gradient(#252a2d,#171b1e) !important;
+    border-bottom-color:#41484c !important;
+  }
+
+  .lab-close{
+    background:#202529 !important;
+    color:var(--text) !important;
+    border-color:#454d51 !important;
+  }
+
+  .chat-msg{
+    background:#1a2023 !important;
+    color:var(--text) !important;
+    border-color:#30383c !important;
+  }
+
+  .chat-msg.user{
+    background:rgba(231,154,183,.15) !important;
+    border-color:rgba(231,154,183,.35) !important;
+  }
+
+  .quick button,
+  .game-option{
+    background:#181d20 !important;
+    color:var(--text) !important;
+    border-color:#3b4448 !important;
+  }
+
+  .quick button:hover,
+  .game-option:hover{
+    background:rgba(231,154,183,.16) !important;
+    border-color:var(--pink) !important;
+  }
+
+  .chat-input input{
+    background:#181d20 !important;
+    color:var(--text) !important;
+    border-color:#3b4448 !important;
+  }
+
+  .chat-input input::placeholder{
+    color:#8e9794 !important;
+  }
+
+  .game-result{
+    background:#181d20 !important;
+    color:#c3c9c7 !important;
+    border-color:#353e42 !important;
+  }
+
+  .game-progress{
+    background:#22282b !important;
+    border-color:#3b4448 !important;
+  }
+
+  .game-kicker,
+  .game-progress::before{
+    color:var(--pink) !important;
+  }
+
+  .footer{
+    border-color:#30373b !important;
+  }
+
+  /* Keep the small chrome object visible but make it dark-mode appropriate */
+  .modern-object{
+    background:linear-gradient(145deg,#272d31,#111416) !important;
+    border-color:#41484c !important;
+    box-shadow:inset 0 1px rgba(255,255,255,.10),0 18px 35px rgba(0,0,0,.4) !important;
+  }
 }
 </style>
 
